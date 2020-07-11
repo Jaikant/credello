@@ -1,8 +1,8 @@
 {
-  "name": "with-typescript-eslint-jest",
-  "author": "@erikdstock",
-  "license": "MIT",
-  "version": "1.0.0",
+  "name": "credello",
+  "author": "@Jaikant",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "version": "0.0.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +11,8 @@
     "format": "prettier --write **/*.{js,ts,tsx}",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "analyze": "ANALYZE=true yarn build"
   },
   "husky": {
     "hooks": {
@@ -26,19 +27,31 @@
     ]
   },
   "dependencies": {
-    "next": "latest",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@next/bundle-analyzer": "^9.4.4",
+    "imagemin-svgo": "^8.0.0",
+    "next": "9.3.6",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-burger-menu": "^2.7.0",
+    "react-dom": "^16.13.1",
+    "react-responsive": "^8.1.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
     "@types/node": "^13.9.5",
     "@types/react": "^16.9.27",
+    "@types/styled-components": "^5.1.0",
     "@types/testing-library__react": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "babel-jest": "^25.2.3",
+    "babel-plugin-inline-react-svg": "^1.1.1",
+    "babel-plugin-styled-components": "^1.10.7",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-react": "^7.19.0",
@@ -47,6 +60,8 @@
     "jest-watch-typeahead": "^0.5.0",
     "lint-staged": "^10.0.10",
     "prettier": "^2.0.2",
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.25.4",
     "typescript": "^3.8.3"
   }
 }
