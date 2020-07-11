@@ -133,12 +133,12 @@ const CompanyInfo = () => (
       © 2020 Credello. All Rights Reserved.
     </CaptionTypography>
     <PrivacyPolicyBox>
-      <GatsbyLink to={`/privacy`}>
+      <GatsbyLink href={`/privacy`}>
         <PrivacyTypography variant="subtitle2">
           Privacy Policy
         </PrivacyTypography>
       </GatsbyLink>
-      <GatsbyLink to={`/terms`}>
+      <GatsbyLink href={`/terms`}>
         <CaptionTypography variant="subtitle2">Terms of use</CaptionTypography>
       </GatsbyLink>
     </PrivacyPolicyBox>
