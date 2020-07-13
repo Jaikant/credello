@@ -1,4 +1,5 @@
 import Layout from 'components/Layout';
+import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
 import Header from 'components/Header';
 import CompareProducts from 'components/CompareProducts';
@@ -8,15 +9,19 @@ import ArticleGrid from 'components/ArticleGrid';
 import SectionWithButton from 'components/SectionWithButton';
 import Footer from 'components/Footer';
 
+const StyledWrapper = styled.div``;
+
 export const Home: CredelloFC = () => (
   <>
     <Header />
     <CompareProducts />
     <PopularCalculators />
     <FeaturedArticles />
-    <ArticleGrid />
-    <SectionWithButton />
-    <Footer />
+    <StyledWrapper>
+      <ArticleGrid />
+      <SectionWithButton />
+      <Footer />
+    </StyledWrapper>
   </>
 );
 

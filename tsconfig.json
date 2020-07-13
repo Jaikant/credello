@@ -17,7 +17,7 @@
     "jsx": "preserve",
     "baseUrl": "src"
   },
-  "exclude": ["node_modules", ".next", "out"],
+  "exclude": ["node_modules", ".next", "out", "coverage", "test"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js"]
 }
 

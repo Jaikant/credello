@@ -25,7 +25,10 @@ const TextBody = styled(TextMedium)`
 `;
 
 const StyledCard = styled(Card)`
-  max-width: 345px;
+  max-width: 500px;
+  &.MuiPaper-root {
+    box-shadow: none;
+  }
 `;
 
 const StyledCardMedia = styled(CardMedia)`
@@ -71,14 +74,19 @@ MediaCard.defaultProps = {
   feel anxious. Read on to see what debt looks like for an...`,
 };
 
+const MobileCenterWrapper = styled.div`
+  display: grid;
+  justify-content: center;
+`;
+
 const Block = () => {
   return (
-    <>
-      <TextBold size="24px" mb="8 px">
+    <MobileCenterWrapper>
+      <TextBold size="24px" mb="16px">
         Featured articles
       </TextBold>
       <MediaCard />
-    </>
+    </MobileCenterWrapper>
   );
 };
 

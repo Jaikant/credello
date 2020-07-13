@@ -7,7 +7,7 @@ interface SvgProps {
   className?: string;
 }
 
-const ManageDebtGrid = styled.div`
+const CompareProductsGrid = styled.div`
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
@@ -28,8 +28,9 @@ const ManageDebtGrid = styled.div`
     grid-template-rows: minmax(120px, 1fr);
   }
   @media ${device.laptop} {
+    margin: 0px -64px;
     grid-gap: 64px;
-    grid-template-columns: 10px repeat(4, calc(20% - 40px)) 10px;
+    grid-template-columns: 0px repeat(4, calc(20% - 40px)) 0px;
     grid-template-rows: minmax(120px, 1fr);
   }
 `;
@@ -60,16 +61,29 @@ const PayOffDebt = styled.div`
   }
 `;
 
+const GridWrapper = styled.div`
+  @media ${device.tablet} {
+    display: grid;
+    grid-gap: 32px;
+  }
+  @media ${device.laptop} {
+    display: grid;
+    grid-gap: 64px;
+  }
+`;
+
 const CompareProducts = () => {
   return (
-    <div>
-      <TextBold size="24px" mb="8px">
-        Compare financial products
-      </TextBold>
-      <Text mb="16px" color="rgb(108, 127, 135)">
-        Estimate your chances of approval
-      </Text>
-      <ManageDebtGrid>
+    <GridWrapper>
+      <div>
+        <TextBold size="24px" mb="8px">
+          Compare financial products
+        </TextBold>
+        <Text mb="16px" color="rgb(108, 127, 135)">
+          Estimate your chances of approval
+        </Text>
+      </div>
+      <CompareProductsGrid>
         <PayOffDebt>
           <div>
             <img src={require('../assets/images/personalLoan.png')} />
@@ -105,8 +119,8 @@ const CompareProducts = () => {
             Mortgage Refinance
           </DivText>
         </PayOffDebt>
-      </ManageDebtGrid>
-    </div>
+      </CompareProductsGrid>
+    </GridWrapper>
   );
 };
 

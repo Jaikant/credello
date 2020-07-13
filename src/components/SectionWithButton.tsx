@@ -10,16 +10,16 @@ const SectionWrapper = styled.div`
   padding: 32px 16px;
   color: #fff;
   background-color: #5cdb95;
-  margin: 16px -16px;
+  margin: 0px -16px;
   @media ${device.tablet} {
     grid-gap: 32px;
-    margin: 16px -24px;
+    margin: 0px -24px;
     padding: 32px 24px;
     justify-content: center;
   }
   @media ${device.laptop} {
     grid-gap: 32px;
-    margin: 16px -128px;
+    margin: 0px -128px;
     padding: 32px 128px;
     justify-content: center;
   }

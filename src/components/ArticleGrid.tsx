@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold, TextMedium } from 'components/Typography';
+import { TextBold, Text } from 'components/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -13,6 +13,9 @@ const ManageDebtGrid = styled.div`
   grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
   grid-template-rows: minmax(120px, 1fr);
   overflow: scroll;
+  background: rgb(243, 244, 253);
+  margin: 0px -16px;
+  padding: 16px 16px;
   scroll-snap-type: x proximity;
   &:before {
     content: '';
@@ -26,11 +29,15 @@ const ManageDebtGrid = styled.div`
     grid-gap: 32px;
     grid-template-columns: 10px repeat(4, calc(20%)) 10px;
     grid-template-rows: minmax(120px, 1fr);
+    padding: 24px 24px;
+    margin: 0px -24px;
   }
   @media ${device.laptop} {
     grid-gap: 64px;
     grid-template-columns: 10px repeat(4, calc(20% - 40px)) 10px;
     grid-template-rows: minmax(120px, 1fr);
+    padding: 32px 128px;
+    margin: 0px -128px;
   }
 `;
 
@@ -47,21 +54,23 @@ const UpdatedOn = styled(TextBold)`
   color: #808080;
 `;
 
-const TextBody = styled(TextMedium)`
-  line-height: 1.43;
-  letter-spacing: 0.01071em;
-`;
-
 const StyledCard = styled(Card)`
-  max-width: 345px;
+  &.MuiPaper-root {
+    background: inherit;
+    box-shadow: none;
+  }
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 140px;
+  height: 80px;
+`;
+
+const StyledCardContent = styled(CardContent)`
+  height: 110px;
 `;
 
 function MediaCard(props) {
-  const { image, category, updated, title, content, small = false } = props;
+  const { image, category, updated, title, small = false } = props;
   return (
     <StyledCard>
       <CardActionArea>
@@ -69,7 +78,7 @@ function MediaCard(props) {
           image={require(`../assets/images/${image}`)}
           title={title}
         />
-        <CardContent>
+        <StyledCardContent>
           <InlineDiv>
             {small && (
               <Category size="12px" mb="8px">
@@ -82,15 +91,10 @@ function MediaCard(props) {
               </UpdatedOn>
             )}
           </InlineDiv>
-          <TextBold size="18px" mb="8px">
+          <Text mb="8px" color="#6c7f87">
             {title}
-          </TextBold>
-          {small && (
-            <TextBody size="14px" color="#808080">
-              {content}
-            </TextBody>
-          )}
-        </CardContent>
+          </Text>
+        </StyledCardContent>
       </CardActionArea>
     </StyledCard>
   );

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 //https://stackoverflow.com/questions/55969769/typing-a-dynamic-tag-in-react-with-typescript
 type Props = {
-  tag?: keyof JSX.IntrinsicElements;
+  // tag?: keyof JSX.IntrinsicElements;
   size?: string;
   tabletSize?: string;
   laptopSize?: string;
@@ -15,14 +15,16 @@ type Props = {
 
 const StyledDynamicComponent = styled.div``;
 
-const DynamicComponent = ({ tag = 'div', children, ...props }: Props) => {
-  const WithComponent = StyledDynamicComponent.withComponent(tag);
+const DynamicComponent = ({ children, ...props }: Props) => {
+  // const DynamicComponent = ({ tag = 'div', children, ...props }: Props) => {
+  // const WithComponent = StyledDynamicComponent.withComponent(tag);
 
-  return <WithComponent {...props}>{children}</WithComponent>;
+  return <StyledDynamicComponent {...props}>{children}</StyledDynamicComponent>;
 };
 
 DynamicComponent.defaultProps = {
   tag: 'div',
+  size: '16px',
 };
 
 export default DynamicComponent;

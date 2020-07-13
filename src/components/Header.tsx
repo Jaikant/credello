@@ -17,38 +17,34 @@ const HeroWrapper = styled.div`
     margin: -32px -16px;
     padding: 32px 16px;
     @media ${device.tablet} { 
+      display: grid;
+      grid-gap: 32px;  
       background-image: url('${require('../assets/images/HeroDesktop.png')}');
-      background-size: 50%, contain;
+      background-size: 50% 100%, contain;
       margin: -32px -24px;
       padding: 32px 24px;
-
     };
     @media ${device.laptop} { 
+      display: grid;
+      grid-gap: 64px;
       background-image: url('${require('../assets/images/HeroDesktop.png')}');
-      background-size: 50%, contain;
+      background-size: 50% auto, contain;
       margin: -32px -128px;
       padding: 32px 128px;
     }  
 `;
 
-// @media ${device.tablet} {
-//   margin: 16px -24px;
-//   padding: 16px 24px;
-// };
-// @media ${device.laptop} {
-//   margin: 16px -128px;
-//   padding: 16px 128px;
-// }
-
 const Header = ({ title, subtitle }: Props) => {
   return (
     <HeroWrapper>
-      <TextBold tag="h1" size="32px" mb="8px">
-        {title}
-      </TextBold>
-      <Text laptopSize="16px" mb="32px">
-        {subtitle}
-      </Text>
+      <div>
+        <TextBold tag="h1" size="32px" mb="8px">
+          {title}
+        </TextBold>
+        <Text laptopSize="16px" mb="32px">
+          {subtitle}
+        </Text>
+      </div>
       <ManageDebt />
     </HeroWrapper>
   );

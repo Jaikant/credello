@@ -9,10 +9,13 @@ const BodyDiv = styled.div`
   padding: 32px 16px;
   // border: 1px solid black;
   background: #fff;
+  justify-content: center;
   @media ${device.tablet} {
     padding: 32px 24px;
+    justify-content: left;
   }
   @media ${device.laptop} {
+    grid-gap: 128px;
     padding: 32px 128px;
   }
 `;
@@ -20,7 +23,7 @@ const BodyDiv = styled.div`
 const EmptyDiv = styled.div`
   width: 100%;
   background: #fff;
-  height: 58px;
+  height: 49px;
 `;
 
 const Layout: React.FC = ({ children }) => {

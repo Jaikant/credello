@@ -1,7 +1,8 @@
 import * as React from 'react';
+import Link from 'next/link';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold } from 'components/Typography';
+import { TextBold, TextMedium } from 'components/Typography';
 
 const ManageDebtGrid = styled.div`
   display: grid;
@@ -78,6 +79,20 @@ const PayOffDebt = styled.div`
     text-align: center;
 `;
 
+const UnderLineText = styled(TextMedium)`
+  text-decoration: underline;
+`;
+
+const LinkWrapper = styled.div`
+  margin: 8px;
+  @media ${device.tablet} {
+    margin: 16px;
+  }
+  @media ${device.laptop} {
+    margin: 32px;
+  }
+`;
+
 const ManageDebt = () => {
   return (
     <div>
@@ -88,9 +103,13 @@ const ManageDebt = () => {
         <Consolidate>Ways to consolidate</Consolidate>
         <EstimateSaving>Estimate savings</EstimateSaving>
       </ManageDebtGrid>
-      <TextBold mt="8px" center>
-        Learn more about debt consolidation
-      </TextBold>
+      <LinkWrapper>
+        <Link href="/LearnAboutDebt">
+          <UnderLineText size="12px" mt="8px" color="#5cdb95" center>
+            Learn more about debt consolidation
+          </UnderLineText>
+        </Link>
+      </LinkWrapper>
     </div>
   );
 };

@@ -18,13 +18,28 @@ const ListStyled = styled(List)`
   top: -48px;
   max-width: 360;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(227, 227, 227, 1);
-  -moz-box-shadow: 0px 0px 5px 3px rgba(227, 227, 227, 1);
-  box-shadow: 0px 0px 5px 3px rgba(227, 227, 227, 1);
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
+  box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
 `;
 
 const ListItemStyled = styled(ListItem)`
   line-height: 1;
+`;
+
+const StyledListItemText = styled(ListItemText)`
+  span {
+    line-height: 1;
+  }
+  &.MuiListItemText-root {
+    flex: inherit;
+  }
+`;
+
+const StyledListIcon = styled(ListItemIcon)`
+  &.MuiListItemIcon-root {
+    min-width: 36px;
+  }
 `;
 
 function NestedList() {
@@ -37,41 +52,41 @@ function NestedList() {
   return (
     <ListStyled aria-labelledby="popular calculators">
       <ListItem button onClick={handleClick}>
-        <ListItemIcon>
+        <StyledListIcon>
           <img width="24px" src={require('../assets/images/calculator.png')} />
-        </ListItemIcon>
-        <ListItemText primary={<TextBold> Debt </TextBold>} />
+        </StyledListIcon>
+        <ListItemText primary={<TextBold size="18px"> Debt </TextBold>} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemStyled button>
-            <ListItemText primary="Debt consolidation calculator" />
-            <NavigateNextIcon />
+            <StyledListItemText primary="Debt consolidation calculator" />
+            <NavigateNextIcon fontSize="small" />
           </ListItemStyled>
           <ListItemStyled button>
-            <ListItemText primary="Debt pay-off calculator" />
-            <NavigateNextIcon />
+            <StyledListItemText primary="Debt pay-off calculator" />
+            <NavigateNextIcon fontSize="small" />
           </ListItemStyled>
           <ListItemStyled button>
-            <ListItemText primary="Debt free-date calculator" />
-            <NavigateNextIcon />
+            <StyledListItemText primary="Debt free-date calculator" />
+            <NavigateNextIcon fontSize="small" />
           </ListItemStyled>
         </List>
       </Collapse>
       <hr />
       <ListItem button onClick={handleClick}>
-        <ListItemIcon>
+        <StyledListIcon>
           <img width="24px" src={require('../assets/images/more.png')} />
-        </ListItemIcon>
-        <ListItemText primary={<TextBold> More </TextBold>} />
+        </StyledListIcon>
+        <ListItemText primary={<TextBold size="18px"> More </TextBold>} />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
-      <Collapse in={open} timeout="auto" unmountOnExit>
+      {/* <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItem button></ListItem>
         </List>
-      </Collapse>
+      </Collapse> */}
     </ListStyled>
   );
 }
@@ -91,16 +106,29 @@ const PopularCalculatorDiv = styled.div`
   }
 `;
 
+const StyledWrapper = styled.div`
+  display: grid;
+  grid-gap: 32px;
+  @media ${device.tablet} {
+    display: grid;
+    grid-gap: 32px;
+  }
+  @media ${device.laptop} {
+    display: grid;
+    grid-gap: 64px;
+  }
+`;
+
 const PopularCalculators = () => {
   return (
-    <>
+    <StyledWrapper>
       <TextBold size="24px" mb="8px">
         Popular calculators
       </TextBold>
       <PopularCalculatorDiv>
         <NestedList />
       </PopularCalculatorDiv>
-    </>
+    </StyledWrapper>
   );
 };
 

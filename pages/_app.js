@@ -2,7 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useEffect } from 'react';
 
-const theme = {
+export const theme = {
   colors: {
     primary: 'pink',
     grey: 'grey',
