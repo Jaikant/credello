@@ -73,8 +73,8 @@ type Props = {
   color?: string;
 } & React.HTMLAttributes<HTMLOrSVGElement>;
 
-const UnderLineText = React.forwardRef(({ children, ...props }: Props, ref) => {
-  return <UnderLine> {children} </UnderLine>;
+const UnderLineText = React.forwardRef(({ children, ...props }: Props) => {
+  return <UnderLine {...props}> {children} </UnderLine>;
 });
 
 const LinkWrapper = styled.div`
