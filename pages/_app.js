@@ -1,10 +1,20 @@
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useEffect } from 'react';
 
+const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Roboto', sans-serif;
+      src: url('/static/fonts/Roboto-Regular.ttf');
+  }
+  p {
+    font-family: 'Roboto';
+  }
+`;
+
 export const theme = {
   colors: {
-    primary: 'pink',
+    primary: '#02254d',
     grey: 'grey',
   },
 };
@@ -24,6 +34,7 @@ function Credello({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <GlobalStyle />
       <Layout>
         <Component {...pageProps} />
       </Layout>

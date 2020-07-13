@@ -7,7 +7,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-const ManageDebtGrid = styled.div`
+const WrapperArticleGrid = styled.div`
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
@@ -111,11 +111,11 @@ MediaCard.defaultProps = {
 
 const ArticleGrid = ({ cards }) => {
   return (
-    <ManageDebtGrid>
+    <WrapperArticleGrid>
       {cards.map((c, index) => {
         return <MediaCard key={index} {...c} />;
       })}
-    </ManageDebtGrid>
+    </WrapperArticleGrid>
   );
 };
 

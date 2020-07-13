@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c2 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+}
+
+.c1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+}
+
+.c4 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+}
+
+.c0 {
+  display: grid;
+  grid-gap: 16px;
+  padding: 32px 16px;
+  color: #fff;
+  background-color: #5cdb95;
+  margin: 0px -16px;
+}
+
+.c3 {
+  background: #fff;
+}
+
+.c3.MuiButton-contained {
+  color: #5cdb95;
+  padding: 16px;
+  background: #fff;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c1 {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}
+
+@media (min-width:768px) {
+  .c4 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c4 {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    grid-gap: 32px;
+    margin: 0px -24px;
+    padding: 32px 24px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    grid-gap: 32px;
+    margin: 0px -128px;
+    padding: 32px 128px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    max-width: 400px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c3 {
+    max-width: 400px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      Take control of your finances
+    </div>
+    <div
+      class="c2"
+    >
+      We analyze all of your options, so you can act with confidence
+    </div>
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained c3 MuiButton-disableElevation"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label"
+      >
+        <div
+          class="c4"
+        >
+          Manage Debt
+        </div>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

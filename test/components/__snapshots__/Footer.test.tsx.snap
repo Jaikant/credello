@@ -1,0 +1,391 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c6 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  webkit-font-smoothing: antialiased;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+}
+
+.c9 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  webkit-font-smoothing: antialiased;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+  line-height: 1.66;
+  -webkit-letter-spacing: 0.03333em;
+  -moz-letter-spacing: 0.03333em;
+  -ms-letter-spacing: 0.03333em;
+  letter-spacing: 0.03333em;
+}
+
+.c0 {
+  display: grid;
+  background: rgb(243,244,253);
+  min-height: 300px;
+  margin: 0px -16px -32px -16px;
+  padding: 32px 16px 0px 16px;
+}
+
+.c1 {
+  display: grid;
+  grid-template-rows: auto;
+  font-size: 10px;
+  font-family: Roboto;
+  color: #6c7f87;
+}
+
+.c7 {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 16px 0px;
+}
+
+.c2 {
+  margin-bottom: 32px;
+}
+
+.c11 {
+  margin-right: 32px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 8px 0px;
+  color: 02254d;
+}
+
+.c5 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:hover {
+  color: green;
+}
+
+.c3 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0 auto;
+  width: 150px;
+}
+
+.c4 {
+  display: grid;
+  max-width: 800px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+}
+
+@media (min-width:768px) {
+  .c6 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c6 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width:768px) {
+  .c9 {
+    font-size: 10px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c9 {
+    font-size: 10px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    margin: 0px -24px -32px -24px;
+    padding: 32px 24px 0px 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    margin: 0px -128px -32px -128px;
+    padding: 32px 128px 0px 128px;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    grid-template-columns: 8fr 1fr 2fr;
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c10 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c8 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width:1224px) {
+
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class=""
+    >
+      <div
+        class="c1"
+      >
+        <div>
+          <div
+            class="c2"
+          >
+            <svg
+              class="c3"
+              height="31"
+              viewBox="0 0 209 31"
+              width="209"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <image
+                height="31"
+                width="209"
+                xlink:href="data:img/png;base64,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"
+              />
+            </svg>
+          </div>
+          <div
+            class="c4"
+          >
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Manage your debt 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Make home improvements 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Personal loans & credit cards 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Home equity loans 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Financial resources 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Financial tools & calculators 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Other funding needs 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Investing needs 
+              </div>
+            </a>
+            <a
+              class="c5"
+              href="/"
+            >
+              <div
+                class="c6"
+              >
+                 Saving needs 
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class=""
+    >
+      <div
+        class="c7"
+      >
+        <div
+          class="c8"
+        >
+          <div
+            class="c9"
+          >
+            © 2020 Credello. All Rights Reserved.
+          </div>
+          <a
+            class="c5"
+            href="/privacy"
+          >
+            <div
+              class="c9"
+            >
+              Privacy Policy
+            </div>
+          </a>
+          <a
+            class="c5"
+            href="/terms"
+          >
+            <div
+              class="c9"
+            >
+              Terms of use
+            </div>
+          </a>
+        </div>
+        <div
+          class="c10"
+        >
+          <div
+            class="c11"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z"
+              />
+            </svg>
+          </div>
+          <div
+            class="c11"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,277 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c3 {
+  color: pink;
+}
+
+.c2 {
+  color: grey;
+}
+
+.c1 {
+  width: 50%;
+}
+
+.c1 .bm-item {
+  text-align: center;
+  display: inline-block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin-bottom: 5vh;
+  color: #d1d1d1;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.c1 .bm-item:hover {
+  color: white;
+}
+
+.c1 .bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+}
+
+.c1,
+.c1 .bm-burger-bars {
+  background: #373a47;
+}
+
+.c1 .bm-burger-bars-hover: {
+  background: #a90000;
+}
+
+.c1,
+.c1 .bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+.c1 .bm-cross {
+  background: #fff;
+}
+
+.c1 .bm-menu {
+  background: #fff;
+  padding: 3em 1em;
+  font-size: 1.2em;
+}
+
+.c1 .bm-overlay {
+  background: rgba(0,0,0,0.3);
+}
+
+.c4 {
+  -webkit-transform: translate(30%,0%);
+  -ms-transform: translate(30%,0%);
+  transform: translate(30%,0%);
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.c5 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  -webkit-flex: 0 0 50px font-size:16px;
+  -ms-flex: 0 0 50px font-size:16px;
+  flex: 0 0 50px font-size:16px;
+  margin-right: 8px;
+}
+
+.c5.MuiSvgIcon-root {
+  fill: #02254d;
+}
+
+.c0 {
+  position: fixed;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  -webkit-box-shadow: 0px 3px 4px 0px #d3d3d3;
+  -moz-box-shadow: 0px 3px 4px 0px #d3d3d3;
+  box-shadow: 0px 3px 4px 0px #d3d3d3;
+}
+
+.c6 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+  display: grid;
+  margin-right: 16px;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: center;
+}
+
+@media (min-width:768px) {
+  .c6 {
+    font-size: 16px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c6 {
+    font-size: 16px;
+  }
+}
+
+<nav
+    class="c0"
+  >
+    <div>
+      <div
+        class="bm-overlay"
+        style="position: fixed; z-index: 1000; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); opacity: 0; transform: translate3d(100%, 0, 0); transition: opacity 0.3s, transform 0s 0.3s;"
+      />
+      <div
+        class="bm-menu-wrap c1"
+        id=""
+        style="position: fixed; z-index: 1100; width: 80%; height: 100%; transform: translate3d(-100%, 0, 0); transition: all 0.5s;"
+      >
+        <div
+          class="bm-menu"
+          style="height: 100%; box-sizing: border-box; overflow: auto;"
+        >
+          <nav
+            class="bm-item-list"
+            style="height: 100%;"
+          >
+            <a
+              class="bm-item menu-item"
+              href="/"
+              id="home"
+              style="display: block;"
+              tabindex="-1"
+            >
+              Home
+            </a>
+            <a
+              class="bm-item menu-item"
+              href="/about"
+              id="about"
+              style="display: block;"
+              tabindex="-1"
+            >
+              About
+            </a>
+            <a
+              class="bm-item menu-item"
+              href="/contact"
+              id="contact"
+              style="display: block;"
+              tabindex="-1"
+            >
+              Contact
+            </a>
+            <a
+              class="bm-item menu-item--small"
+              href=""
+              style="display: block;"
+              tabindex="-1"
+            >
+              Settings
+            </a>
+          </nav>
+        </div>
+        <div>
+          <div
+            class="bm-cross-button"
+            style="position: absolute; width: 24px; height: 24px; right: 8px; top: 8px;"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root c2 bm-cross"
+              focusable="false"
+              style="width: 100%; height: 100%;"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+            <button
+              style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
+              tabindex="-1"
+            >
+              Close Menu
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="bm-burger-button"
+          style="z-index: 1000; position: relative; width: 36px; height: 30px; left: 16px; top: 10px;"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root c3 bm-icon"
+            focusable="false"
+            style="width: 100%; height: 100%;"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+          <button
+            style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; margin: 0px; padding: 0px; font-size: 0px; background: transparent; cursor: pointer;"
+          >
+            Open Menu
+          </button>
+        </div>
+      </div>
+    </div>
+    <svg
+      class="c4"
+      height="31"
+      viewBox="0 0 209 31"
+      width="209"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <image
+        height="31"
+        width="209"
+        xlink:href="data:img/png;base64,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"
+      />
+    </svg>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root c5"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+      />
+    </svg>
+    <div
+      class="Typography__TextMedium-sc-12f2dd0-1 c6"
+      color="#02254d"
+    >
+      Sign up
+    </div>
+  </nav>
+</DocumentFragment>
+`;

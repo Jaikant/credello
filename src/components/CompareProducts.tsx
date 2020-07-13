@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { device } from 'libs/device';
 import { TextBold, TextMedium, Text } from 'components/Typography';
 
-interface SvgProps {
-  className?: string;
-}
-
 const CompareProductsGrid = styled.div`
   display: grid;
   grid-gap: 8px;
@@ -40,9 +36,8 @@ const DivText = styled(TextMedium)`
   max-width: 80px;
 `;
 
-const PayOffDebt = styled.div`
-  display: grid;
-  flex-direction: column;
+const BlueButtonBox = styled.div`
+  display: flex;
   justify-content: center;
   align-content: center;
   background-color: #02254d;
@@ -54,6 +49,20 @@ const PayOffDebt = styled.div`
   img {
     width: 30px;
     height: auto;
+  }
+  div {
+    display: grid;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    grid-gap: 8px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    height: 0px;
+    width: 0px;
+    padding-bottom: calc(375 / 1320 * 100%);
   }
   @media ${device.tablet} {
   }
@@ -76,49 +85,54 @@ const CompareProducts = () => {
   return (
     <GridWrapper>
       <div>
-        <TextBold size="24px" mb="8px">
+        <TextBold size="24px" mb="8px" color="#02254d">
           Compare financial products
         </TextBold>
-        <Text mb="16px" color="rgb(108, 127, 135)">
+        <Text mb="16px" color="#6c7f87">
           Estimate your chances of approval
         </Text>
       </div>
       <CompareProductsGrid>
-        <PayOffDebt>
+        <BlueButtonBox>
           <div>
-            <img src={require('../assets/images/personalLoan.png')} />
+            <div>
+              <img src={require('../assets/images/personalLoan.png')} />
+            </div>
+            <DivText size="14px" center>
+              Personal loan
+            </DivText>
           </div>
-          <DivText size="14px" center>
-            Personal loan
-          </DivText>
-        </PayOffDebt>
-        <PayOffDebt>
+        </BlueButtonBox>
+        <BlueButtonBox>
           <div>
-            <img src={require('../assets/images/personalLoan.png')} />
+            <div>
+              <img src={require('../assets/images/personalLoan.png')} />
+            </div>
+            <DivText size="14px" center>
+              Credit Cards
+            </DivText>
           </div>
-
-          <DivText size="14px" center>
-            Credit Cards
-          </DivText>
-        </PayOffDebt>
-        <PayOffDebt>
+        </BlueButtonBox>
+        <BlueButtonBox>
           <div>
-            <img src={require('../assets/images/personalLoan.png')} />
+            <div>
+              <img src={require('../assets/images/personalLoan.png')} />
+            </div>
+            <DivText size="14px" center>
+              Home Equity Loans
+            </DivText>
           </div>
-
-          <DivText size="14px" center>
-            Home Equity Loans
-          </DivText>
-        </PayOffDebt>
-        <PayOffDebt>
+        </BlueButtonBox>
+        <BlueButtonBox>
           <div>
-            <img src={require('../assets/images/personalLoan.png')} />
+            <div>
+              <img src={require('../assets/images/personalLoan.png')} />
+            </div>
+            <DivText size="14px" center>
+              Mortgage Refinance
+            </DivText>
           </div>
-
-          <DivText size="14px" center>
-            Mortgage Refinance
-          </DivText>
-        </PayOffDebt>
+        </BlueButtonBox>
       </CompareProductsGrid>
     </GridWrapper>
   );

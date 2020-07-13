@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home page matches snapshot 1`] = `
-.c2 {
+<DocumentFragment>
+  .c2 {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
@@ -131,38 +132,6 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
   .c1 {
     font-size: 32px;
   }
@@ -183,62 +152,6 @@ exports[`Home page matches snapshot 1`] = `
   .c3 {
     line-height: 1.5;
   }
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
 }
 
 @media (min-width:768px) {
@@ -299,213 +212,76 @@ exports[`Home page matches snapshot 1`] = `
   }
 }
 
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
-@media (min-width:768px) {
-
-}
-
-@media (min-width:1224px) {
-
-}
-
 <div
-  class="c0"
->
-  <div>
-    <div
-      class="c1"
-      color="#02254d"
-    >
-      Make financial decisions simple
+    class="c0"
+  >
+    <div>
+      <div
+        class="c1"
+        color="#02254d"
+      >
+        Make financial decisions simple
+      </div>
+      <div
+        class="c2"
+        color="#6c7f87"
+      >
+        with personalized guidance
+      </div>
     </div>
-    <div
-      class="c2"
-      color="#6c7f87"
-    >
-      with personalized guidance
+    <div>
+      <div
+        class="c3"
+        color="#02254d"
+      >
+        Manage your debt better
+      </div>
+      <div
+        class="c4"
+      >
+        <div
+          class="c5"
+          src="payoff-debt.png"
+        >
+          <div>
+            Ways to pay off debt
+          </div>
+        </div>
+        <div
+          class="c5"
+          src="estimate-debt.png"
+        >
+          <div>
+            Estimate debt free date
+          </div>
+        </div>
+        <div
+          class="c5"
+          src="consolidate.png"
+        >
+          <div>
+            Ways to consolidate
+          </div>
+        </div>
+        <div
+          class="c5"
+          src="estimate-savings.png"
+        >
+          <div>
+            Estimate savings
+          </div>
+        </div>
+      </div>
+      <div
+        class="c6"
+      >
+        <div
+          class="Typography__TextMedium-sc-12f2dd0-1 c7"
+        >
+           Learn more about debt consolidation 
+        </div>
+      </div>
     </div>
   </div>
-  <div>
-    <div
-      class="c3"
-      color="#02254d"
-    >
-      Manage your debt better
-    </div>
-    <div
-      class="c4"
-    >
-      <div
-        class="c5"
-        src="payoff-debt.png"
-      >
-        <div>
-          Ways to pay off debt
-        </div>
-      </div>
-      <div
-        class="c5"
-        src="estimate-debt.png"
-      >
-        <div>
-          Estimate debt free date
-        </div>
-      </div>
-      <div
-        class="c5"
-        src="consolidate.png"
-      >
-        <div>
-          Ways to consolidate
-        </div>
-      </div>
-      <div
-        class="c5"
-        src="estimate-savings.png"
-      >
-        <div>
-          Estimate savings
-        </div>
-      </div>
-    </div>
-    <div
-      class="c6"
-    >
-      <div
-        class="c7"
-      >
-         
-        Learn more about debt consolidation
-         
-      </div>
-    </div>
-  </div>
-</div>
+</DocumentFragment>
 `;

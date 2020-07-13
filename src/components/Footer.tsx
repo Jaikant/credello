@@ -1,14 +1,12 @@
 import React from 'react';
-import { Text } from 'components/Typography';
+import { Text, CaptionText } from 'components/Typography';
 import styled from 'styled-components';
 import { device } from 'libs/device';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Logo from '../assets/svgs/logo.svg';
 
-export const TestContainer = () => <div> hi </div>;
-
-export const MainContainer = styled.div`
+const MainContainer = styled.div`
   display: grid;
   background: rgb(243, 244, 253);
   min-height: 300px;
@@ -24,9 +22,9 @@ export const MainContainer = styled.div`
   }
 `;
 
-export const Container = styled.div``;
+const Container = styled.div``;
 
-export const GridBox = styled.div`
+const GridBox = styled.div`
   display: grid;
   grid-template-rows: auto;
   font-size: 10px;
@@ -67,7 +65,7 @@ const MediaIconBox = styled.div`
   margin-right: 32px;
 `;
 
-export const PrivacyPolicyBox = styled.div`
+const PrivacyPolicyBox = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 400px;
@@ -80,7 +78,7 @@ export const PrivacyPolicyBox = styled.div`
   }
 `;
 
-export const Link = styled.a`
+const Link = styled.a`
   color: inherit;
   text-decoration: none;
   &:hover {
@@ -96,26 +94,21 @@ const LogoSvg: React.FunctionComponent<SvgProps> = (props: any) => {
   return <Logo {...props} />;
 };
 
-export const CredelloLogo = styled(LogoSvg)`
+const CredelloLogo = styled(LogoSvg)`
   align-self: center;
   margin: 0 auto;
   width: 150px;
 `;
 
-export const CaptionText = styled(Text)`
-  line-height: 1.66;
-  letter-spacing: 0.03333em;
-`;
-
 export const CompanyInfo = () => (
   <PrivacyPolicyBox>
-    <CaptionText size="12px">© 2020 Credello. All Rights Reserved.</CaptionText>
-    {/* <Link href={`/privacy`}>
-      <CaptionText size="12px">Privacy Policy</CaptionText>
+    <CaptionText size="10px">© 2020 Credello. All Rights Reserved.</CaptionText>
+    <Link href={`/privacy`}>
+      <CaptionText size="10px">Privacy Policy</CaptionText>
     </Link>
     <Link href={`/terms`}>
-      <CaptionText size="12px">Terms of use</CaptionText>
-    </Link> */}
+      <CaptionText size="10px">Terms of use</CaptionText>
+    </Link>
   </PrivacyPolicyBox>
 );
 
@@ -137,7 +130,7 @@ const LinkGrid = styled.div`
   grid-gap: 4px;
 `;
 
-export const FooterLinks = (props) => {
+const FooterLinks = (props) => {
   const { links } = props;
   return (
     <LinkGrid>

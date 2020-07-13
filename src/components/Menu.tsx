@@ -6,7 +6,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useMediaQuery } from 'react-responsive';
 
 const MenuOpenIcon = styled(MenuIcon)`
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const MenuCloseIcon = styled(CloseIcon)`
@@ -93,7 +93,7 @@ export default () => {
 
   return (
     <StyledBurger
-      customBurgerIcon={<MenuOpenIcon />}
+      customBurgerIcon={<MenuOpenIcon style={{ color: 'red' }} />}
       customCrossIcon={<MenuCloseIcon />}
       width={width}
       isOpen={menuOpen}

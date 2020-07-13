@@ -10,6 +10,9 @@ const ManageDebtGrid = styled.div`
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   @media ${device.tablet} {
+    grid-gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
   }
   @media ${device.laptop} {
     grid-gap: 32px;
@@ -18,70 +21,61 @@ const ManageDebtGrid = styled.div`
   }
 `;
 
-const Consolidate = styled.div`
-    background-color: #5cdb95;
-    background-image: url('${require('../assets/images/consolidate.png')}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-transform: uppercase;
-    padding: 24px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0px;
+interface HeroButtonProps {
+  readonly src: string;
+}
+
+const HeroButton = styled.div<HeroButtonProps>`
+  display: flex;
+  justify-content: center;
+  background-color: #5cdb95;
+  background-image: ${({ src }) =>
+    `url('${require(`../assets/images/${src}`)}')`};
+  background-size: 100% 100%, cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  div {
+    display: grid;
     text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 16px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    height: 0px;
+    width: 0px;
+    background: red;
+    padding-bottom: calc(188 / 328 * 100%);
+  }
 `;
 
-const EstimateDebt = styled.div`
-    background-color: #5cdb95;
-    background-image: url('${require('../assets/images/estimate-debt.png')}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-transform: uppercase;
-    padding: 24px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-align: center;
-`;
-
-const EstimateSaving = styled.div`
-    background-color: #5cdb95;
-    background-image: url('${require('../assets/images/estimate-savings.png')}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-transform: uppercase;
-    padding: 24px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-align: center;
-`;
-
-const PayOffDebt = styled.div`
-    background-color: #5cdb95;
-    background-image: url('${require('../assets/images/payoff-debt.png')}');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-transform: uppercase;
-    padding: 24px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 700;
-    letter-spacing: 0px;
-    text-align: center;
-`;
-
-const UnderLineText = styled(TextMedium)`
+const UnderLine = styled(TextMedium)`
   text-decoration: underline;
 `;
+
+type Props = {
+  // tag?: keyof JSX.IntrinsicElements;
+  size?: string;
+  tabletSize?: string;
+  laptopSize?: string;
+  mb?: string;
+  mt?: string;
+  center?: boolean;
+  color?: string;
+} & React.HTMLAttributes<HTMLOrSVGElement>;
+
+const UnderLineText = React.forwardRef(({ children, ...props }: Props, ref) => {
+  return <UnderLine> {children} </UnderLine>;
+});
 
 const LinkWrapper = styled.div`
   margin: 8px;
@@ -96,15 +90,25 @@ const LinkWrapper = styled.div`
 const ManageDebt = () => {
   return (
     <div>
-      <TextBold mb="8px">Manage your debt better</TextBold>
+      <TextBold mb="8px" color="#02254d">
+        Manage your debt better
+      </TextBold>
       <ManageDebtGrid>
-        <PayOffDebt>Ways to pay off debt</PayOffDebt>
-        <EstimateDebt>Estimate debt-free date</EstimateDebt>
-        <Consolidate>Ways to consolidate</Consolidate>
-        <EstimateSaving>Estimate savings</EstimateSaving>
+        <HeroButton src="payoff-debt.png">
+          <div>Ways to pay off debt</div>
+        </HeroButton>
+        <HeroButton src="estimate-debt.png">
+          <div>Estimate debt free date</div>
+        </HeroButton>
+        <HeroButton src="consolidate.png">
+          <div>Ways to consolidate</div>
+        </HeroButton>
+        <HeroButton src="estimate-savings.png">
+          <div>Estimate savings</div>
+        </HeroButton>
       </ManageDebtGrid>
       <LinkWrapper>
-        <Link href="/LearnAboutDebt">
+        <Link href="/LearnAboutDebt" passHref>
           <UnderLineText size="12px" mt="8px" color="#5cdb95" center>
             Learn more about debt consolidation
           </UnderLineText>

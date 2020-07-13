@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c0 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+}
+
+.c1 {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #5cdb95;
+  background-image: url('test-file-stub');
+  background-size: 100% 100%,cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.2;
+  -webkit-letter-spacing: 0px;
+  -moz-letter-spacing: 0px;
+  -ms-letter-spacing: 0px;
+  letter-spacing: 0px;
+}
+
+.c2 div {
+  display: grid;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 16px;
+}
+
+.c2:before {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 0px;
+  background: red;
+  padding-bottom: calc(188 / 328 * 100%);
+}
+
+.c4 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c3 {
+  margin: 8px;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    line-height: 1.5;
+  }
+}
+
+@media (min-width:768px) {
+  .c1 {
+    grid-gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (min-width:1224px) {
+  .c1 {
+    grid-gap: 32px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c3 {
+    margin: 16px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c3 {
+    margin: 32px;
+  }
+}
+
+<div>
+    <div
+      class="c0"
+      color="#02254d"
+    >
+      Manage your debt better
+    </div>
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+        src="payoff-debt.png"
+      >
+        <div>
+          Ways to pay off debt
+        </div>
+      </div>
+      <div
+        class="c2"
+        src="estimate-debt.png"
+      >
+        <div>
+          Estimate debt free date
+        </div>
+      </div>
+      <div
+        class="c2"
+        src="consolidate.png"
+      >
+        <div>
+          Ways to consolidate
+        </div>
+      </div>
+      <div
+        class="c2"
+        src="estimate-savings.png"
+      >
+        <div>
+          Estimate savings
+        </div>
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        class="Typography__TextMedium-sc-12f2dd0-1 c4"
+      >
+         Learn more about debt consolidation 
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -38,10 +38,10 @@ const Header = ({ title, subtitle }: Props) => {
   return (
     <HeroWrapper>
       <div>
-        <TextBold tag="h1" size="32px" mb="8px">
+        <TextBold tag="h1" size="32px" mb="8px" color="#02254d">
           {title}
         </TextBold>
-        <Text laptopSize="16px" mb="32px">
+        <Text laptopSize="16px" mb="32px" color="#6c7f87">
           {subtitle}
         </Text>
       </div>

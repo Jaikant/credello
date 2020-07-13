@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+}
+
+.c7 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+  margin-right: 8px;
+  color: rgb(92,219,149);
+}
+
+.c6 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: inherit;
+  text-align: initial;
+  color: #808080;
+}
+
+.c8 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #808080;
+  text-align: initial;
+  line-height: 1.43;
+  -webkit-letter-spacing: 0.01071em;
+  -moz-letter-spacing: 0.01071em;
+  -ms-letter-spacing: 0.01071em;
+  letter-spacing: 0.01071em;
+}
+
+.c2 {
+  max-width: 500px;
+}
+
+.c2.MuiPaper-root {
+  box-shadow: none;
+}
+
+.c3 {
+  height: 140px;
+}
+
+.c0 {
+  display: grid;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c1 {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}
+
+@media (min-width:768px) {
+  .c7 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c7 {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c5 {
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+
+@media (min-width:768px) {
+  .c6 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c6 {
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+
+@media (min-width:768px) {
+  .c8 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c8 {
+    font-size: 14px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+      color="#02254d"
+    >
+      Featured articles
+    </div>
+    <div
+      class="MuiPaper-root MuiCard-root c2 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <button
+        class="MuiButtonBase-root MuiCardActionArea-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="MuiCardMedia-root c3"
+          style="background-image: url(test-file-stub);"
+          title="Whats a Normal Amount of Debt... and What's Too Much?"
+        />
+        <div
+          class="MuiCardContent-root"
+        >
+          <div
+            class="c4"
+          >
+            <div
+              class="c5"
+            >
+              DEBT 101
+            </div>
+            <div
+              class="c6"
+            >
+               | Mar 19, 2020
+            </div>
+          </div>
+          <div
+            class="c7"
+          >
+            Whats a Normal Amount of Debt... and What's Too Much?
+          </div>
+          <div
+            class="Typography__TextMedium-sc-12f2dd0-1 c8"
+            color="#808080"
+          >
+            If you're not comfortable about your debt, you're not alone. 45% of adults admint debt makes them
+  feel anxious. Read on to see what debt looks like for an...
+          </div>
+        </div>
+        <span
+          class="MuiCardActionArea-focusHighlight"
+        />
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

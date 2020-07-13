@@ -16,5 +16,9 @@ module.exports = {
   },
   moduleDirectories: ['node_modules', 'src'],
   collectCoverage: true,
-  collectCoverageFrom: ['pages/**/*.{tsx}', 'src/**/*.{js,tsx}'],
+  collectCoverageFrom: [
+    'pages/*.{tsx}',
+    'pages/**/*.{tsx}',
+    'src/**/*.{js,tsx}',
+  ],
 };

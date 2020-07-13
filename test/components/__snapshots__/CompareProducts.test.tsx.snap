@@ -1,0 +1,273 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c2 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  webkit-font-smoothing: antialiased;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 0;
+  color: #6c7f87;
+  text-align: initial;
+}
+
+.c1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+}
+
+.c3 {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 10px repeat(4,calc(50% - 40px)) 10px;
+  grid-template-rows: minmax(120px,1fr);
+  overflow: scroll;
+  -webkit-scroll-snap-type: x proximity;
+  -moz-scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+}
+
+.c3:before {
+  content: '';
+  width: 10px;
+}
+
+.c3:after {
+  content: '';
+  width: 10px;
+}
+
+.c5 {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: inherit;
+  text-align: center;
+  max-width: 80px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  background-color: #02254d;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-letter-spacing: 0px;
+  -moz-letter-spacing: 0px;
+  -ms-letter-spacing: 0px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.c4 img {
+  width: 30px;
+  height: auto;
+}
+
+.c4 div {
+  display: grid;
+  text-align: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-gap: 8px;
+}
+
+.c4:before {
+  content: '';
+  display: block;
+  height: 0px;
+  width: 0px;
+  padding-bottom: calc(375 / 1320 * 100%);
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c1 {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    grid-gap: 32px;
+    grid-template-columns: 10px repeat(4,calc(20%)) 10px;
+    grid-template-rows: minmax(120px,1fr);
+  }
+}
+
+@media (min-width:1224px) {
+  .c3 {
+    margin: 0px -64px;
+    grid-gap: 64px;
+    grid-template-columns: 0px repeat(4,calc(20% - 40px)) 0px;
+    grid-template-rows: minmax(120px,1fr);
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c5 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: grid;
+    grid-gap: 32px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    display: grid;
+    grid-gap: 64px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div>
+      <div
+        class="c1"
+        color="#02254d"
+      >
+        Compare financial products
+      </div>
+      <div
+        class="c2"
+        color="#6c7f87"
+      >
+        Estimate your chances of approval
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <div
+        class="c4"
+      >
+        <div>
+          <div>
+            <img
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          >
+            Personal loan
+          </div>
+        </div>
+      </div>
+      <div
+        class="c4"
+      >
+        <div>
+          <div>
+            <img
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          >
+            Credit Cards
+          </div>
+        </div>
+      </div>
+      <div
+        class="c4"
+      >
+        <div>
+          <div>
+            <img
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          >
+            Home Equity Loans
+          </div>
+        </div>
+      </div>
+      <div
+        class="c4"
+      >
+        <div>
+          <div>
+            <img
+              src="test-file-stub"
+            />
+          </div>
+          <div
+            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          >
+            Mortgage Refinance
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

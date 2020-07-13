@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
 import Button from '@material-ui/core/Button';
-import { TextBold, Text } from 'components/Typography';
+import { TextBold, TextMedium } from 'components/Typography';
 
 const SectionWrapper = styled.div`
   display: grid;
@@ -40,16 +40,13 @@ const StyledButton = styled(Button)`
   }
 `;
 
-// type Props = {
-// };
-
 const SectionWithButton = () => {
   return (
     <SectionWrapper>
       <TextBold size="24px">Take control of your finances</TextBold>
-      <Text>
+      <TextMedium>
         We analyze all of your options, so you can act with confidence
-      </Text>
+      </TextMedium>
       <StyledButton variant="contained" disableElevation>
         <TextBold size="14px">Manage Debt</TextBold>
       </StyledButton>

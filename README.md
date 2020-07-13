@@ -9,11 +9,21 @@
 Install it and run:
 
 ```bash
-npm install
-npm run dev
-# or
 yarn
-yarn dev
+yarn next build
+yarn start
+
+// To run tests
+yarn test -u
+yarn test
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Other third party libraries
+
+styled-components - For everything styling.
+material-ui - For specific components and icons.
+next-optimised-images - For image optimisation in nextjs.
+sharp - For optimising images
+imagemin-svgo - For optimising svgs
+responsive-loader - For conditional rendering components (this should be avoided as much
+as possible, instead responsiveness should be in media queries)

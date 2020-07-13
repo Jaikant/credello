@@ -28,6 +28,7 @@ const ListItemStyled = styled(ListItem)`
 `;
 
 const StyledListItemText = styled(ListItemText)`
+  color: #6c7f87;
   span {
     line-height: 1;
   }
@@ -55,22 +56,33 @@ function NestedList() {
         <StyledListIcon>
           <img width="24px" src={require('../assets/images/calculator.png')} />
         </StyledListIcon>
-        <ListItemText primary={<TextBold size="18px"> Debt </TextBold>} />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText
+          primary={
+            <TextBold size="18px" color="#6c7f87">
+              {' '}
+              Debt{' '}
+            </TextBold>
+          }
+        />
+        {open ? (
+          <ExpandLess style={{ color: '#6c7f87' }} />
+        ) : (
+          <ExpandMore style={{ color: '#6c7f87' }} />
+        )}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
           <ListItemStyled button>
             <StyledListItemText primary="Debt consolidation calculator" />
-            <NavigateNextIcon fontSize="small" />
+            <NavigateNextIcon fontSize="small" style={{ color: '#6c7f87' }} />
           </ListItemStyled>
           <ListItemStyled button>
             <StyledListItemText primary="Debt pay-off calculator" />
-            <NavigateNextIcon fontSize="small" />
+            <NavigateNextIcon fontSize="small" style={{ color: '#6c7f87' }} />
           </ListItemStyled>
           <ListItemStyled button>
             <StyledListItemText primary="Debt free-date calculator" />
-            <NavigateNextIcon fontSize="small" />
+            <NavigateNextIcon fontSize="small" style={{ color: '#6c7f87' }} />
           </ListItemStyled>
         </List>
       </Collapse>
@@ -79,8 +91,19 @@ function NestedList() {
         <StyledListIcon>
           <img width="24px" src={require('../assets/images/more.png')} />
         </StyledListIcon>
-        <ListItemText primary={<TextBold size="18px"> More </TextBold>} />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText
+          primary={
+            <TextBold size="18px" color="#6c7f87">
+              {' '}
+              More{' '}
+            </TextBold>
+          }
+        />
+        {open ? (
+          <ExpandLess style={{ color: '#6c7f87' }} />
+        ) : (
+          <ExpandMore style={{ color: '#6c7f87' }} />
+        )}
       </ListItem>
       {/* <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
@@ -122,7 +145,7 @@ const StyledWrapper = styled.div`
 const PopularCalculators = () => {
   return (
     <StyledWrapper>
-      <TextBold size="24px" mb="8px">
+      <TextBold size="24px" mb="8px" color="#02254d">
         Popular calculators
       </TextBold>
       <PopularCalculatorDiv>

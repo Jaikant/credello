@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c5 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  webkit-font-smoothing: antialiased;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #6c7f87;
+  text-align: initial;
+}
+
+.c0 {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 10px repeat(4,calc(50% - 40px)) 10px;
+  grid-template-rows: minmax(120px,1fr);
+  overflow: scroll;
+  background: rgb(243,244,253);
+  margin: 0px -16px;
+  padding: 16px 16px;
+  -webkit-scroll-snap-type: x proximity;
+  -moz-scroll-snap-type: x proximity;
+  -ms-scroll-snap-type: x proximity;
+  scroll-snap-type: x proximity;
+}
+
+.c0:before {
+  content: '';
+  width: 10px;
+}
+
+.c0:after {
+  content: '';
+  width: 10px;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1.MuiPaper-root {
+  background: inherit;
+  box-shadow: none;
+}
+
+.c2 {
+  height: 80px;
+}
+
+.c3 {
+  height: 110px;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
+}
+
+@media (min-width:768px) {
+  .c0 {
+    grid-gap: 32px;
+    grid-template-columns: 10px repeat(4,calc(20%)) 10px;
+    grid-template-rows: minmax(120px,1fr);
+    padding: 24px 24px;
+    margin: 0px -24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    grid-gap: 64px;
+    grid-template-columns: 10px repeat(4,calc(20% - 40px)) 10px;
+    grid-template-rows: minmax(120px,1fr);
+    padding: 32px 128px;
+    margin: 0px -128px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="MuiPaper-root MuiCard-root c1 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <button
+        class="MuiButtonBase-root MuiCardActionArea-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="MuiCardMedia-root c2"
+          style="background-image: url(test-file-stub);"
+          title="How to get a personal loan with a credit card?"
+        />
+        <div
+          class="MuiCardContent-root c3"
+        >
+          <div
+            class="c4"
+          />
+          <div
+            class="c5"
+            color="#6c7f87"
+          >
+            How to get a personal loan with a credit card?
+          </div>
+        </div>
+        <span
+          class="MuiCardActionArea-focusHighlight"
+        />
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiPaper-root MuiCard-root c1 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <button
+        class="MuiButtonBase-root MuiCardActionArea-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="MuiCardMedia-root c2"
+          style="background-image: url(test-file-stub);"
+          title="Should I refinance during the Covid-19 outbreak?"
+        />
+        <div
+          class="MuiCardContent-root c3"
+        >
+          <div
+            class="c4"
+          />
+          <div
+            class="c5"
+            color="#6c7f87"
+          >
+            Should I refinance during the Covid-19 outbreak?
+          </div>
+        </div>
+        <span
+          class="MuiCardActionArea-focusHighlight"
+        />
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiPaper-root MuiCard-root c1 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <button
+        class="MuiButtonBase-root MuiCardActionArea-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="MuiCardMedia-root c2"
+          style="background-image: url(test-file-stub);"
+          title="How to get out of credit card debt fast?"
+        />
+        <div
+          class="MuiCardContent-root c3"
+        >
+          <div
+            class="c4"
+          />
+          <div
+            class="c5"
+            color="#6c7f87"
+          >
+            How to get out of credit card debt fast?
+          </div>
+        </div>
+        <span
+          class="MuiCardActionArea-focusHighlight"
+        />
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiPaper-root MuiCard-root c1 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <button
+        class="MuiButtonBase-root MuiCardActionArea-root"
+        tabindex="0"
+        type="button"
+      >
+        <div
+          class="MuiCardMedia-root c2"
+          style="background-image: url(test-file-stub);"
+          title="Whats a Normal Amount of Debt... and What's Too Much?"
+        />
+        <div
+          class="MuiCardContent-root c3"
+        >
+          <div
+            class="c4"
+          />
+          <div
+            class="c5"
+            color="#6c7f87"
+          >
+            Whats a Normal Amount of Debt... and What's Too Much?
+          </div>
+        </div>
+        <span
+          class="MuiCardActionArea-focusHighlight"
+        />
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -25,7 +25,9 @@ const IconSearch = styled(IconSearchMui)`
   flex: 0 0 50px
   font-size: 16px;
   margin-right: 8px;
-  fill: grey;
+  &.MuiSvgIcon-root {
+    fill: #02254d;
+  }
 `;
 
 const CommonNav = styled.nav`
@@ -53,7 +55,7 @@ const Navbar: React.FC = () => {
       <Menu />
       <CredelloLogo />
       <IconSearch />
-      <FlexText size="14px" tabletSize="16px">
+      <FlexText size="14px" tabletSize="16px" color="#02254d">
         Sign up
       </FlexText>
     </CommonNav>

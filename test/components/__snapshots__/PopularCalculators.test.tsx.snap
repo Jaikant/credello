@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page matches snapshot 1`] = `
+<DocumentFragment>
+  .c1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+}
+
+.c5 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #6c7f87;
+  text-align: initial;
+}
+
+.c3 {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  top: -48px;
+  max-width: 360;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
+  -moz-box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
+  box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
+}
+
+.c6 {
+  line-height: 1;
+}
+
+.c7 {
+  color: #6c7f87;
+}
+
+.c7 span {
+  line-height: 1;
+}
+
+.c7.MuiListItemText-root {
+  -webkit-flex: inherit;
+  -ms-flex: inherit;
+  flex: inherit;
+}
+
+.c4.MuiListItemIcon-root {
+  min-width: 36px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px;
+  background-color: #02254d;
+  margin: 16px -16px;
+}
+
+.c0 {
+  display: grid;
+  grid-gap: 32px;
+}
+
+@media (min-width:768px) {
+  .c1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c1 {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}
+
+@media (min-width:768px) {
+  .c5 {
+    font-size: 18px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c5 {
+    line-height: 1.5;
+    font-size: 18px;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
+    margin: 16px -24px;
+    padding: 16px 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c2 {
+    margin: 16px -128px;
+    padding: 16px 128px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    display: grid;
+    grid-gap: 32px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    display: grid;
+    grid-gap: 64px;
+  }
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+      color="#02254d"
+    >
+      Popular calculators
+    </div>
+    <div
+      class="c2"
+    >
+      <ul
+        aria-labelledby="popular calculators"
+        class="MuiList-root c3 MuiList-padding"
+      >
+        <div
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemIcon-root c4"
+          >
+            <img
+              src="test-file-stub"
+              width="24px"
+            />
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              <div
+                class="c5"
+                color="#6c7f87"
+              >
+                 Debt 
+              </div>
+            </span>
+          </div>
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            style="color: rgb(108, 127, 135);"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+        <div
+          class="MuiCollapse-container MuiCollapse-entered"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner"
+            >
+              <div
+                class="MuiList-root"
+              >
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root c6 MuiListItem-gutters MuiListItem-button"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root c7"
+                  >
+                    <span
+                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                    >
+                      Debt consolidation calculator
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: rgb(108, 127, 135);"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root c6 MuiListItem-gutters MuiListItem-button"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root c7"
+                  >
+                    <span
+                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                    >
+                      Debt pay-off calculator
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: rgb(108, 127, 135);"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+                <div
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiListItem-root c6 MuiListItem-gutters MuiListItem-button"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="MuiListItemText-root c7"
+                  >
+                    <span
+                      class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+                    >
+                      Debt free-date calculator
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+                    focusable="false"
+                    style="color: rgb(108, 127, 135);"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                    />
+                  </svg>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemIcon-root c4"
+          >
+            <img
+              src="test-file-stub"
+              width="24px"
+            />
+          </div>
+          <div
+            class="MuiListItemText-root"
+          >
+            <span
+              class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
+            >
+              <div
+                class="c5"
+                color="#6c7f87"
+              >
+                 More 
+              </div>
+            </span>
+          </div>
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            style="color: rgb(108, 127, 135);"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </div>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;

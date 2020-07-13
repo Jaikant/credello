@@ -82,7 +82,7 @@ const MobileCenterWrapper = styled.div`
 const Block = () => {
   return (
     <MobileCenterWrapper>
-      <TextBold size="24px" mb="16px">
+      <TextBold size="24px" mb="16px" color="#02254d">
         Featured articles
       </TextBold>
       <MediaCard />
