@@ -20,10 +20,10 @@ yarn test
 
 ## Other third party libraries
 
-styled-components - For everything styling.
-material-ui - For specific components and icons.
-next-optimised-images - For image optimisation in nextjs.
-sharp - For optimising images
-imagemin-svgo - For optimising svgs
-responsive-loader - For conditional rendering components (this should be avoided as much
+- styled-components - For everything styling.
+- material-ui - For specific components and icons.
+- next-optimised-images - For image optimisation in nextjs.
+- sharp - For optimising images
+- imagemin-svgo - For optimising svgs
+- responsive-loader - For conditional rendering components (this should be avoided as much
 as possible, instead responsiveness should be in media queries)
