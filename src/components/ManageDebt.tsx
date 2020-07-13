@@ -73,7 +73,10 @@ type Props = {
   color?: string;
 } & React.HTMLAttributes<HTMLOrSVGElement>;
 
-const UnderLineText = React.forwardRef(({ children, ...props }: Props) => {
+const UnderLineText = React.forwardRef(({ children, ...props }: Props, ref) => {
+  if (ref) {
+    ///Suppress the warning
+  }
   return <UnderLine {...props}> {children} </UnderLine>;
 });
 

@@ -96,13 +96,13 @@ exports[`Home page matches snapshot 1`] = `
 .c7 {
   font-family: Roboto;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.2;
   margin: 0;
   margin-bottom: 0;
-  margin-top: 0;
-  color: inherit;
-  text-align: initial;
+  margin-top: 8px;
+  color: #5cdb95;
+  text-align: center;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -258,11 +258,15 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:768px) {
-
+  .c7 {
+    font-size: 12px;
+  }
 }
 
 @media (min-width:1224px) {
-
+  .c7 {
+    font-size: 12px;
+  }
 }
 
 @media (min-width:768px) {
@@ -500,6 +504,8 @@ exports[`Home page matches snapshot 1`] = `
     >
       <div
         class="c7"
+        color="#5cdb95"
+        href="/LearnAboutDebt"
       >
          
         Learn more about debt consolidation
