@@ -4,11 +4,11 @@ import { useEffect } from 'react';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Roboto', sans-serif;
-      src: url('/static/fonts/Roboto-Regular.ttf');
+    font-family: Roboto;
+      src: url('/static/fonts/Roboto-Medium.ttf');
   }
   p {
-    font-family: 'Roboto';
+    font-family: Roboto;
   }
 `;
 

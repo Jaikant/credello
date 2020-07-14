@@ -102,12 +102,18 @@ const CredelloLogo = styled(LogoSvg)`
 
 export const CompanyInfo = () => (
   <PrivacyPolicyBox>
-    <CaptionText size="10px">© 2020 Credello. All Rights Reserved.</CaptionText>
+    <CaptionText size="10px" color="#02254d">
+      © 2020 Credello. All Rights Reserved.
+    </CaptionText>
     <Link href={`/privacy`}>
-      <CaptionText size="10px">Privacy Policy</CaptionText>
+      <CaptionText size="10px" color="#02254d">
+        Privacy Policy
+      </CaptionText>
     </Link>
     <Link href={`/terms`}>
-      <CaptionText size="10px">Terms of use</CaptionText>
+      <CaptionText size="10px" color="#02254d">
+        Terms of use
+      </CaptionText>
     </Link>
   </PrivacyPolicyBox>
 );
@@ -115,10 +121,10 @@ export const CompanyInfo = () => (
 const SocialMediaIcons = () => (
   <FlexBox>
     <MediaIconBox>
-      <FacebookIcon />
+      <FacebookIcon style={{ color: '#02254d' }} />
     </MediaIconBox>
     <MediaIconBox>
-      <TwitterIcon />
+      <TwitterIcon style={{ color: '#02254d' }} />
     </MediaIconBox>
   </FlexBox>
 );

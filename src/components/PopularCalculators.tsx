@@ -54,7 +54,11 @@ function NestedList() {
     <ListStyled aria-labelledby="popular calculators">
       <ListItem button onClick={handleClick}>
         <StyledListIcon>
-          <img width="24px" src={require('../assets/images/calculator.png')} />
+          <img
+            width="24px"
+            height="28px"
+            src={require('../assets/images/calculator.png')}
+          />
         </StyledListIcon>
         <ListItemText
           primary={
@@ -89,7 +93,11 @@ function NestedList() {
       <hr />
       <ListItem button onClick={handleClick}>
         <StyledListIcon>
-          <img width="24px" src={require('../assets/images/more.png')} />
+          <img
+            width="24px"
+            height="28px"
+            src={require('../assets/images/more.png')}
+          />
         </StyledListIcon>
         <ListItemText
           primary={
