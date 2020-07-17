@@ -28,7 +28,7 @@ interface HeroButtonProps {
 const HeroButton = styled.div<HeroButtonProps>`
   display: flex;
   justify-content: center;
-  background-color: #5cdb95;
+  background-color: #15db95;
   background-image: ${({ src }) =>
     `url('${require(`../assets/images/${src}`)}')`};
   background-size: 100% 100%, cover;
@@ -36,17 +36,12 @@ const HeroButton = styled.div<HeroButtonProps>`
   background-position: center;
   text-transform: uppercase;
   border-radius: 5px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0px;
-  div {
+  ${TextBold} {
     display: grid;
     text-align: center;
     align-content: center;
     justify-content: center;
-    margin: 16px;
+    margin: 24px;
   }
   &:before {
     content: '';
@@ -54,31 +49,13 @@ const HeroButton = styled.div<HeroButtonProps>`
     height: 0px;
     width: 0px;
     background: red;
-    padding-bottom: calc(188 / 328 * 100%);
+    padding-bottom: calc(90 / 164 * 100%);
   }
 `;
 
 const UnderLine = styled(TextMedium)`
   text-decoration: underline;
 `;
-
-type Props = {
-  // tag?: keyof JSX.IntrinsicElements;
-  size?: string;
-  tabletSize?: string;
-  laptopSize?: string;
-  mb?: string;
-  mt?: string;
-  center?: boolean;
-  color?: string;
-} & React.HTMLAttributes<HTMLOrSVGElement>;
-
-const UnderLineText = React.forwardRef(({ children, ...props }: Props, ref) => {
-  if (ref) {
-    ///Suppress the warning
-  }
-  return <UnderLine {...props}> {children} </UnderLine>;
-});
 
 const LinkWrapper = styled.div`
   margin: 8px;
@@ -93,28 +70,36 @@ const LinkWrapper = styled.div`
 const ManageDebt = () => {
   return (
     <div>
-      <TextBold mb="8px" color="#02254d">
+      <TextBold mb="10px" lh="20px" color="#02254d">
         Manage your debt better
       </TextBold>
       <ManageDebtGrid>
         <HeroButton src="payoff-debt.png">
-          <div>Ways to pay off debt</div>
+          <TextBold size="14px" lh="18px" color="#fff">
+            Ways to pay off debt
+          </TextBold>
         </HeroButton>
         <HeroButton src="estimate-debt.png">
-          <div>Estimate debt free date</div>
+          <TextBold size="14px" lh="18px" color="#fff">
+            Estimate debt-free date
+          </TextBold>
         </HeroButton>
         <HeroButton src="consolidate.png">
-          <div>Ways to consolidate</div>
+          <TextBold size="14px" lh="18px" color="#fff">
+            Ways to consolidate
+          </TextBold>
         </HeroButton>
         <HeroButton src="estimate-savings.png">
-          <div>Estimate savings</div>
+          <TextBold size="14px" lh="18px" color="#fff">
+            Estimate savings
+          </TextBold>
         </HeroButton>
       </ManageDebtGrid>
       <LinkWrapper>
         <Link href="/LearnAboutDebt" passHref>
-          <UnderLineText size="12px" mt="8px" color="#5cdb95" center>
+          <UnderLine size="12px" lh="16px" mt="12px" color="#5cdb95" center>
             Learn more about debt consolidation
-          </UnderLineText>
+          </UnderLine>
         </Link>
       </LinkWrapper>
     </div>

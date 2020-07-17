@@ -6,7 +6,7 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: normal;
   webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 0;
@@ -19,12 +19,12 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 400;
   font-size: 10px;
-  line-height: 1.2;
+  line-height: normal;
   webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
-  color: inherit;
+  color: #02254d;
   text-align: initial;
   line-height: 1.66;
   -webkit-letter-spacing: 0.03333em;
@@ -34,11 +34,16 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c0 {
+  margin-right: -22px;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-top: 32px;
+  margin-bottom: -32px;
+  padding-bottom: 32px;
   display: grid;
   background: rgb(243,244,253);
   min-height: 300px;
-  margin: 0px -16px -32px -16px;
-  padding: 32px 16px 0px 16px;
 }
 
 .c1 {
@@ -63,11 +68,11 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c2 {
-  margin-bottom: 32px;
+  margin-bottom: 14px;
 }
 
 .c11 {
-  margin-right: 32px;
+  margin-right: 16px;
 }
 
 .c8 {
@@ -80,7 +85,7 @@ exports[`Home page matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 400px;
-  margin: 8px 0px;
+  margin: 24px 0px 12px 0px;
   color: 02254d;
 }
 
@@ -99,7 +104,7 @@ exports[`Home page matches snapshot 1`] = `
   -ms-flex-item-align: center;
   align-self: center;
   margin: 0 auto;
-  width: 150px;
+  width: 100px;
 }
 
 .c4 {
@@ -135,16 +140,44 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:768px) {
   .c0 {
-    margin: 0px -24px -32px -24px;
-    padding: 32px 24px 0px 24px;
+    margin-right: -24px;
+    margin-left: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 }
 
 @media (min-width:1224px) {
   .c0 {
-    margin: 0px -128px -32px -128px;
-    padding: 32px 128px 0px 128px;
+    margin-right: -128px;
+    margin-left: -128px;
+    padding-right: 128px;
+    padding-left: 128px;
   }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    padding-top: 32px;
+    margin-bottom: -40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    padding-top: 32px;
+    margin-bottom: -40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1224px) {
+
 }
 
 @media (min-width:768px) {
@@ -193,7 +226,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 <div
-    class="c0"
+    class="LayoutComponents__FullWidthWrapper-sc-3dcc8x-1 Footer__ComponentWrapper-sc-4mkrq6-0 c0"
   >
     <div
       class=""
@@ -328,6 +361,7 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div
             class="c9"
+            color="#02254d"
           >
             © 2020 Credello. All Rights Reserved.
           </div>
@@ -337,6 +371,7 @@ exports[`Home page matches snapshot 1`] = `
           >
             <div
               class="c9"
+              color="#02254d"
             >
               Privacy Policy
             </div>
@@ -347,6 +382,7 @@ exports[`Home page matches snapshot 1`] = `
           >
             <div
               class="c9"
+              color="#02254d"
             >
               Terms of use
             </div>
@@ -362,6 +398,7 @@ exports[`Home page matches snapshot 1`] = `
               aria-hidden="true"
               class="MuiSvgIcon-root"
               focusable="false"
+              style="color: rgb(2, 37, 77);"
               viewBox="0 0 24 24"
             >
               <path
@@ -376,6 +413,7 @@ exports[`Home page matches snapshot 1`] = `
               aria-hidden="true"
               class="MuiSvgIcon-root"
               focusable="false"
+              style="color: rgb(2, 37, 77);"
               viewBox="0 0 24 24"
             >
               <path

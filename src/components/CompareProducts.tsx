@@ -1,32 +1,47 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold, TextMedium, Text } from 'components/Typography';
+import { TextH3, TextBold, TextMedium, Text } from 'components/Typography';
+import { FullWidthWrapper } from 'components/LayoutComponents';
 
-const CompareProductsGrid = styled.div`
+const ComponentMargin = styled.div`
+  margin-top: 52px;
+  margin-bottom: 48px;
+`;
+
+const GridWrapper = styled(ComponentMargin)`
+  @media ${device.tablet} {
+    display: grid;
+    grid-gap: 32px;
+  }
+  @media ${device.laptop} {
+    display: grid;
+    grid-gap: 64px;
+  }
+`;
+
+const CompareProductsGrid = styled(FullWidthWrapper)`
   display: grid;
   grid-gap: 8px;
-  grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
-  grid-template-rows: minmax(120px, 1fr);
+  grid-template-columns: repeat(4, calc(50% - 10px));
+  grid-template-rows: minmax(112px, 1fr);
   overflow: scroll;
   scroll-snap-type: x proximity;
-  &:before {
-    content: '';
-    width: 10px;
+  &::-webkit-scrollbar {
+    display: none;
   }
-  &:after {
-    content: '';
-    width: 10px;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   @media ${device.tablet} {
     grid-gap: 32px;
-    grid-template-columns: 10px repeat(4, calc(20%)) 10px;
+    grid-template-columns: repeat(4, calc(20%));
     grid-template-rows: minmax(120px, 1fr);
   }
   @media ${device.laptop} {
-    margin: 0px -64px;
+    margin-right: -64px;
+    margin-left: -64px;
     grid-gap: 64px;
-    grid-template-columns: 0px repeat(4, calc(20% - 40px)) 0px;
+    grid-template-columns: repeat(4, calc(20% - 40px));
     grid-template-rows: minmax(120px, 1fr);
   }
 `;
@@ -62,22 +77,11 @@ const BlueButtonBox = styled.div`
     display: block;
     height: 0px;
     width: 0px;
-    padding-bottom: calc(375 / 1320 * 100%);
+    padding-bottom: calc(112 / 167 * 100%);
   }
   @media ${device.tablet} {
   }
   @media ${device.laptop} {
-  }
-`;
-
-const GridWrapper = styled.div`
-  @media ${device.tablet} {
-    display: grid;
-    grid-gap: 32px;
-  }
-  @media ${device.laptop} {
-    display: grid;
-    grid-gap: 64px;
   }
 `;
 
@@ -85,10 +89,10 @@ const CompareProducts = () => {
   return (
     <GridWrapper>
       <div>
-        <TextBold size="24px" mb="8px" color="#02254d">
+        <TextH3 mb="8px" color="#02254d">
           Compare financial products
-        </TextBold>
-        <Text mb="16px" color="#6c7f87">
+        </TextH3>
+        <Text mb="16px" lh="20px" color="#6c7f87">
           Estimate your chances of approval
         </Text>
       </div>

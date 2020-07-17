@@ -1,23 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import NavBar from './Navbar';
-import { device } from 'libs/device';
+import NavBar from 'components/Navbar';
+import { BodyDiv } from 'components/LayoutComponents';
 
-const BodyDiv = styled.div`
-  display: grid;
-  grid-gap: 32px;
-  padding: 32px 16px;
-  background: #fff;
-  justify-content: center;
-  @media ${device.tablet} {
-    padding: 32px 24px;
-    justify-content: left;
-  }
-  @media ${device.laptop} {
-    grid-gap: 128px;
-    padding: 32px 128px;
-  }
-`;
 // To compensate for the position fixed of Navbar
 const EmptyDiv = styled.div`
   width: 100%;

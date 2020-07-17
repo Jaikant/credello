@@ -2,26 +2,38 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .c0 {
+  .c1 {
   font-family: Roboto;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 20px;
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   margin-top: 0;
   color: #02254d;
   text-align: initial;
 }
 
-.c1 {
+.c4 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #fff;
+  text-align: initial;
+}
+
+.c2 {
   display: grid;
   grid-gap: 8px;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
-.c2 {
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,24 +42,16 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #5cdb95;
+  background-color: #15db95;
   background-image: url('test-file-stub');
   background-size: 100% 100%,cover;
   background-repeat: no-repeat;
   background-position: center;
   text-transform: uppercase;
   border-radius: 5px;
-  color: #fff;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-  -webkit-letter-spacing: 0px;
-  -moz-letter-spacing: 0px;
-  -ms-letter-spacing: 0px;
-  letter-spacing: 0px;
 }
 
-.c2 div {
+.c3 .c0 {
   display: grid;
   text-align: center;
   -webkit-align-content: center;
@@ -57,33 +61,33 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 16px;
+  margin: 24px;
 }
 
-.c2:before {
+.c3:before {
   content: '';
   display: block;
   height: 0px;
   width: 0px;
   background: red;
-  padding-bottom: calc(188 / 328 * 100%);
+  padding-bottom: calc(90 / 164 * 100%);
 }
 
-.c4 {
+.c6 {
   font-family: Roboto;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 16px;
   margin: 0;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 12px;
   color: #5cdb95;
   text-align: center;
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c3 {
+.c5 {
   margin: 8px;
 }
 
@@ -92,13 +96,26 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:1224px) {
-  .c0 {
+  .c1 {
     line-height: 1.5;
   }
 }
 
 @media (min-width:768px) {
-  .c1 {
+  .c4 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c4 {
+    line-height: 1.5;
+    font-size: 14px;
+  }
+}
+
+@media (min-width:768px) {
+  .c2 {
     grid-gap: 32px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -106,7 +123,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:1224px) {
-  .c1 {
+  .c2 {
     grid-gap: 32px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -114,81 +131,93 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:768px) {
-  .c4 {
+  .c6 {
     font-size: 12px;
   }
 }
 
 @media (min-width:1224px) {
-  .c4 {
+  .c6 {
     font-size: 12px;
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c5 {
     margin: 16px;
   }
 }
 
 @media (min-width:1224px) {
-  .c3 {
+  .c5 {
     margin: 32px;
   }
 }
 
 <div>
-    <div
-      class="c0"
+    <h3
+      class="c0 c1"
       color="#02254d"
     >
       Manage your debt better
-    </div>
+    </h3>
     <div
-      class="c1"
+      class="c2"
     >
       <div
-        class="c2"
+        class="c3"
         src="payoff-debt.png"
       >
-        <div>
+        <h3
+          class="c0 c4"
+          color="#fff"
+        >
           Ways to pay off debt
-        </div>
+        </h3>
       </div>
       <div
-        class="c2"
+        class="c3"
         src="estimate-debt.png"
       >
-        <div>
-          Estimate debt free date
-        </div>
+        <h3
+          class="c0 c4"
+          color="#fff"
+        >
+          Estimate debt-free date
+        </h3>
       </div>
       <div
-        class="c2"
+        class="c3"
         src="consolidate.png"
       >
-        <div>
+        <h3
+          class="c0 c4"
+          color="#fff"
+        >
           Ways to consolidate
-        </div>
+        </h3>
       </div>
       <div
-        class="c2"
+        class="c3"
         src="estimate-savings.png"
       >
-        <div>
+        <h3
+          class="c0 c4"
+          color="#fff"
+        >
           Estimate savings
-        </div>
+        </h3>
       </div>
     </div>
     <div
-      class="c3"
+      class="c5"
     >
       <div
-        class="Typography__TextMedium-sc-12f2dd0-1 c4"
+        class="Typography__TextMedium-sc-12f2dd0-1 c6"
         color="#5cdb95"
         href="/LearnAboutDebt"
       >
-         Learn more about debt consolidation 
+        Learn more about debt consolidation
       </div>
     </div>
   </div>

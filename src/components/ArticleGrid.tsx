@@ -6,35 +6,37 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import { FullWidthWrapper } from 'components/LayoutComponents';
 
-const WrapperArticleGrid = styled.div`
+const ComponentYPadding = styled(FullWidthWrapper)`
+  padding-left: 10px;
+  padding-top: ${({ theme }) => theme.spacing.padding13};
+  padding-bottom: ${({ theme }) => theme.spacing.padding22};
+`;
+
+const WrapperArticleGrid = styled(ComponentYPadding)`
   display: grid;
-  grid-gap: 8px;
-  grid-template-columns: 10px repeat(4, calc(50% - 40px)) 10px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, calc(50% - 30px));
   grid-template-rows: minmax(120px, 1fr);
   overflow: scroll;
   background: rgb(243, 244, 253);
-  margin: 0px -16px;
-  padding: 16px 16px;
   scroll-snap-type: x proximity;
-  &:before {
-    content: '';
-    width: 10px;
+  &::-webkit-scrollbar {
+    display: none;
   }
-  &:after {
-    content: '';
-    width: 10px;
-  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   @media ${device.tablet} {
     grid-gap: 32px;
-    grid-template-columns: 10px repeat(4, calc(20%)) 10px;
+    grid-template-columns: repeat(4, calc(20%));
     grid-template-rows: minmax(120px, 1fr);
     padding: 24px 24px;
     margin: 0px -24px;
   }
   @media ${device.laptop} {
     grid-gap: 64px;
-    grid-template-columns: 10px repeat(4, calc(20% - 40px)) 10px;
+    grid-template-columns: repeat(4, calc(20% - 40px));
     grid-template-rows: minmax(120px, 1fr);
     padding: 32px 128px;
     margin: 0px -128px;
@@ -62,11 +64,15 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 80px;
+  height: 71px;
 `;
 
 const StyledCardContent = styled(CardContent)`
-  height: 110px;
+  &.MuiCardContent-root {
+    overflow: visible;
+    padding: 0;
+    padding-top: 14px;
+  }
 `;
 
 function MediaCard(props) {
@@ -79,19 +85,7 @@ function MediaCard(props) {
           title={title}
         />
         <StyledCardContent>
-          <InlineDiv>
-            {small && (
-              <Category size="12px" mb="8px">
-                {category}
-              </Category>
-            )}
-            {small && (
-              <UpdatedOn size="12px" mb="8px">
-                {updated}
-              </UpdatedOn>
-            )}
-          </InlineDiv>
-          <Text mb="8px" color="#6c7f87">
+          <Text mb="8px" lh="20px" color="#6c7f87">
             {title}
           </Text>
         </StyledCardContent>

@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c2 {
-  color: pink;
+  color: #02254d;
 }
 
 .c1 {

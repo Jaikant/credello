@@ -5,20 +5,31 @@ import { device } from 'libs/device';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import Logo from '../assets/svgs/logo.svg';
+import { FullWidthWrapper } from 'components/LayoutComponents';
 
-const MainContainer = styled.div`
+export const ComponentWrapper = styled(FullWidthWrapper)`
+  padding-top: ${({ theme }) => `${theme.spacing.padding32}`};
+  margin-bottom: ${({ theme }) => `-${theme.spacing.paddingBottomY}`};
+  padding-bottom: ${({ theme }) => `${theme.spacing.paddingBottomY}`};
+  @media ${device.tablet} {
+    padding-top: ${({ theme }) => `${theme.spacing.padding32}`};
+    margin-bottom: ${({ theme }) => `-${theme.spacing.tabletPaddingY}`};
+    padding-bottom: ${({ theme }) => `${theme.spacing.tabletPaddingY}`};
+  }
+  @media ${device.laptop} {
+    padding-top: ${({ theme }) => `${theme.spacing.padding32}`};
+    margin-bottom: ${({ theme }) => `-${theme.spacing.laptopPaddingY}`};
+    padding-bottom: ${({ theme }) => `${theme.spacing.laptopPaddingY}`};
+  }
+`;
+
+const MainContainer = styled(ComponentWrapper)`
   display: grid;
   background: rgb(243, 244, 253);
   min-height: 300px;
-  margin: 0px -16px -32px -16px;
-  padding: 32px 16px 0px 16px;
   @media ${device.tablet} {
-    margin: 0px -24px -32px -24px;
-    padding: 32px 24px 0px 24px;
   }
   @media ${device.laptop} {
-    margin: 0px -128px -32px -128px;
-    padding: 32px 128px 0px 128px;
   }
 `;
 
@@ -58,18 +69,18 @@ const FlexBox = styled.div`
 `;
 
 const LogoBox = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 14px;
 `;
 
 const MediaIconBox = styled.div`
-  margin-right: 32px;
+  margin-right: 16px;
 `;
 
 const PrivacyPolicyBox = styled.div`
   display: flex;
   justify-content: space-between;
   max-width: 400px;
-  margin: 8px 0px;
+  margin: 24px 0px 12px 0px;
   color: 02254d;
   @media ${device.tablet} {
     justify-content: space-between;
@@ -97,7 +108,7 @@ const LogoSvg: React.FunctionComponent<SvgProps> = (props: any) => {
 const CredelloLogo = styled(LogoSvg)`
   align-self: center;
   margin: 0 auto;
-  width: 150px;
+  width: 100px;
 `;
 
 export const CompanyInfo = () => (

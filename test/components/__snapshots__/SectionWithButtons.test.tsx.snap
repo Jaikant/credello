@@ -6,11 +6,11 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 20px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
-  color: inherit;
+  color: #fff;
   text-align: initial;
 }
 
@@ -18,11 +18,11 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 34px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
-  color: inherit;
+  color: #fff;
   text-align: initial;
 }
 
@@ -30,21 +30,24 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: normal;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
-  color: inherit;
+  color: #5cdb95;
   text-align: initial;
 }
 
 .c0 {
+  margin-right: -22px;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-top: 28px;
+  padding-bottom: 30px;
   display: grid;
-  grid-gap: 16px;
-  padding: 32px 16px;
-  color: #fff;
+  grid-gap: 12px;
   background-color: #5cdb95;
-  margin: 0px -16px;
 }
 
 .c3 {
@@ -52,9 +55,13 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c3.MuiButton-contained {
-  color: #5cdb95;
-  padding: 16px;
+  padding: 18px;
   background: #fff;
+  text-transform: none;
+  -webkit-letter-spacing: 0.14px;
+  -moz-letter-spacing: 0.14px;
+  -ms-letter-spacing: 0.14px;
+  letter-spacing: 0.14px;
 }
 
 @media (min-width:768px) {
@@ -93,9 +100,25 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:768px) {
   .c0 {
+    margin-right: -24px;
+    margin-left: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    margin-right: -128px;
+    margin-left: -128px;
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
     grid-gap: 32px;
-    margin: 0px -24px;
-    padding: 32px 24px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -106,8 +129,6 @@ exports[`Home page matches snapshot 1`] = `
 @media (min-width:1224px) {
   .c0 {
     grid-gap: 32px;
-    margin: 0px -128px;
-    padding: 32px 128px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -128,15 +149,17 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 <div
-    class="c0"
+    class="LayoutComponents__FullWidthWrapper-sc-3dcc8x-1 SectionWithButton__ComponentYPadding-sc-1dmiupz-0 c0"
   >
-    <div
+    <h3
       class="c1"
+      color="#fff"
     >
       Take control of your finances
-    </div>
+    </h3>
     <div
       class="c2"
+      color="#fff"
     >
       We analyze all of your options, so you can act with confidence
     </div>
@@ -148,11 +171,12 @@ exports[`Home page matches snapshot 1`] = `
       <span
         class="MuiButton-label"
       >
-        <div
+        <h3
           class="c4"
+          color="#5cdb95"
         >
           Manage Debt
-        </div>
+        </h3>
       </span>
       <span
         class="MuiTouchRipple-root"

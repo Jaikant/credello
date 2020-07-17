@@ -1,12 +1,23 @@
-import DynamicComponent from 'components/DynamicComponent';
 import { device } from 'libs/device';
 import styled from 'styled-components';
 
-export const Text = styled(DynamicComponent)`
+type Props = {
+  tag?: keyof JSX.IntrinsicElements;
+  size?: string;
+  tabletSize?: string;
+  laptopSize?: string;
+  mb?: string;
+  mt?: string;
+  lh?: string;
+  center?: boolean;
+  color?: string;
+} & React.HTMLAttributes<HTMLOrSVGElement>;
+
+export const Text = styled.div<Props>`
   font-family: Roboto;
   font-weight: 400;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
-  line-height: 1.2;
+  line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
   webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
@@ -22,11 +33,11 @@ export const Text = styled(DynamicComponent)`
   }
 `;
 
-export const TextMedium = styled(DynamicComponent)`
+export const TextMedium = styled.div<Props>`
   font-family: Roboto;
   font-weight: 500;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
-  line-height: 1.2;
+  line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
@@ -41,11 +52,11 @@ export const TextMedium = styled(DynamicComponent)`
   }
 `;
 
-export const TextBold = styled(DynamicComponent)`
+export const TextBold = styled.h3<Props>`
   font-family: Roboto;
   font-weight: 700;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
-  line-height: 1.2;
+  line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
@@ -60,6 +71,36 @@ export const TextBold = styled(DynamicComponent)`
       laptopSize ? laptopSize : tabletSize ? tabletSize : size};
   }
 `;
+
+export const TextH1 = styled(TextBold).attrs(() => ({
+  as: 'h1',
+  size: '30px',
+  lh: '1.13',
+}))<Props>``;
+
+export const TextH3 = styled(TextBold).attrs(() => ({
+  as: 'h3',
+  size: '24px',
+  lh: '28px',
+}))<Props>``;
+
+export const TextH4 = styled(TextBold).attrs(() => ({
+  as: 'h4',
+  size: '18px',
+  lh: '24px',
+}))<Props>``;
+
+export const TextH5 = styled(TextBold).attrs(() => ({
+  as: 'h5',
+  size: '16px',
+  lh: '22px',
+}))<Props>``;
+
+export const TextH6 = styled(TextBold).attrs(() => ({
+  as: 'h6',
+  size: '14px',
+  lh: '18px',
+}))<Props>``;
 
 export const CaptionText = styled(Text)`
   line-height: 1.66;

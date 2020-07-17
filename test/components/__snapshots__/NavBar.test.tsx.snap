@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c3 {
-  color: pink;
+  color: #02254d;
 }
 
 .c2 {
@@ -109,7 +109,7 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: normal;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;

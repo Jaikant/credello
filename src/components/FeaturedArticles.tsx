@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { device } from 'libs/device';
 import { TextBold, TextMedium } from 'components/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -20,7 +21,6 @@ const UpdatedOn = styled(TextBold)`
 `;
 
 const TextBody = styled(TextMedium)`
-  line-height: 1.43;
   letter-spacing: 0.01071em;
 `;
 
@@ -32,7 +32,23 @@ const StyledCard = styled(Card)`
 `;
 
 const StyledCardMedia = styled(CardMedia)`
-  height: 140px;
+  height: 160px;
+`;
+
+const StyledContent = styled(CardContent)`
+  &.MuiCardContent-root {
+    padding-right: 0;
+    padding-left: 0;
+  }
+`;
+
+const TitleBox = styled.div`
+  max-width: 278px;
+  @media ${device.tablet} {
+    max-width: auto;
+  }
+  @media ${device.laptop} {
+  }
 `;
 
 function MediaCard(props) {
@@ -43,22 +59,24 @@ function MediaCard(props) {
           image={require(`../assets/images/${props.image}`)}
           title={props.title}
         />
-        <CardContent>
+        <StyledContent>
           <InlineDiv>
-            <Category size="12px" mb="8px">
+            <Category size="12px" lh="16px" mb="8px">
               {props.category}
             </Category>
-            <UpdatedOn size="12px" mb="8px">
+            <UpdatedOn size="12px" lh="16px" mb="8px">
               {props.updated}
             </UpdatedOn>
           </InlineDiv>
-          <TextBold size="18px" mb="8px">
-            {props.title}
-          </TextBold>
-          <TextBody size="14px" color="#808080">
+          <TitleBox>
+            <TextBold size="18px" lh="24px" mb="8px">
+              {props.title}
+            </TextBold>
+          </TitleBox>
+          <TextBody size="16px" lh="20px" color="#6c7f87">
             {props.content}
           </TextBody>
-        </CardContent>
+        </StyledContent>
       </CardActionArea>
     </StyledCard>
   );
@@ -71,12 +89,14 @@ MediaCard.defaultProps = {
   updated: ' | Mar 19, 2020',
   title: `Whats a Normal Amount of Debt... and What's Too Much?`,
   content: `If you're not comfortable about your debt, you're not alone. 45% of adults admint debt makes them
-  feel anxious. Read on to see what debt looks like for an...`,
+  feel anxious on a monthly basis`,
 };
 
 const MobileCenterWrapper = styled.div`
   display: grid;
   justify-content: center;
+  margin-top: 34px;
+  padding-bottom: 40px;
 `;
 
 const Block = () => {

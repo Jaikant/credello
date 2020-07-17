@@ -12,17 +12,15 @@ import Footer from 'components/Footer';
 const StyledWrapper = styled.div``;
 
 export const Home: CredelloFC = () => (
-  <>
+  <div>
     <Header />
     <CompareProducts />
     <PopularCalculators />
     <FeaturedArticles />
-    <StyledWrapper>
-      <ArticleGrid />
-      <SectionWithButton />
-      <Footer />
-    </StyledWrapper>
-  </>
+    <ArticleGrid />
+    <SectionWithButton />
+    <Footer />
+  </div>
 );
 
 Home.layout = Layout;

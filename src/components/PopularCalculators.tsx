@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold } from 'components/Typography';
+import { TextH3, TextBold } from 'components/Typography';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -15,12 +15,15 @@ const ListStyled = styled(List)`
   position: absolute;
   border-radius: 5px;
   width: 100%;
-  top: -48px;
+  top: -40px;
   max-width: 360;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
-  -moz-box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
-  box-shadow: 0px 0px 5px 3px rgba(150, 150, 150, 1);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
+  box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
+  &.MuiList-root {
+    padding-left: 10px;
+  }
 `;
 
 const ListItemStyled = styled(ListItem)`
@@ -31,6 +34,7 @@ const StyledListItemText = styled(ListItemText)`
   color: #6c7f87;
   span {
     line-height: 1;
+    color: #6c7f87;
   }
   &.MuiListItemText-root {
     flex: inherit;
@@ -39,8 +43,16 @@ const StyledListItemText = styled(ListItemText)`
 
 const StyledListIcon = styled(ListItemIcon)`
   &.MuiListItemIcon-root {
-    min-width: 36px;
+    min-width: 40px;
   }
+`;
+
+const StyledHr = styled.hr`
+  color: #cfcfcf;
+  background-color: #cfcfcf;
+  margin-left: -10px;
+  height: 2px;
+  border: 0;
 `;
 
 function NestedList() {
@@ -55,14 +67,14 @@ function NestedList() {
       <ListItem button onClick={handleClick}>
         <StyledListIcon>
           <img
-            width="24px"
-            height="28px"
+            width="27px"
+            height="31px"
             src={require('../assets/images/calculator.png')}
           />
         </StyledListIcon>
         <ListItemText
           primary={
-            <TextBold size="18px" color="#6c7f87">
+            <TextBold size="18px" lh="30px" color="#6c7f87">
               {' '}
               Debt{' '}
             </TextBold>
@@ -90,18 +102,18 @@ function NestedList() {
           </ListItemStyled>
         </List>
       </Collapse>
-      <hr />
+      <StyledHr />
       <ListItem button onClick={handleClick}>
         <StyledListIcon>
           <img
-            width="24px"
-            height="28px"
+            width="30px"
+            height="23px"
             src={require('../assets/images/more.png')}
           />
         </StyledListIcon>
         <ListItemText
           primary={
-            <TextBold size="18px" color="#6c7f87">
+            <TextBold size="18px" lh="30px" color="#6c7f87">
               {' '}
               More{' '}
             </TextBold>
@@ -124,16 +136,16 @@ function NestedList() {
 
 const PopularCalculatorDiv = styled.div`
   position: relative;
-  padding: 16px;
   background-color: #02254d;
-  margin: 16px -16px;
+  margin: ${({ theme }) => `16px -${theme.spacing.paddingX}`};
+  padding: ${({ theme }) => `0px ${theme.spacing.paddingX}`};
   @media ${device.tablet} {
-    margin: 16px -24px;
-    padding: 16px 24px;
+    margin: ${({ theme }) => `16px -${theme.spacing.tabletPaddingX}`};
+    padding: ${({ theme }) => `0px ${theme.spacing.tabletPaddingX}`};
   }
   @media ${device.laptop} {
-    margin: 16px -128px;
-    padding: 16px 128px;
+    margin: ${({ theme }) => `16px -${theme.spacing.laptopPaddingX}`};
+    padding: ${({ theme }) => `0px ${theme.spacing.laptopPaddingX}`};
   }
 `;
 
@@ -153,9 +165,9 @@ const StyledWrapper = styled.div`
 const PopularCalculators = () => {
   return (
     <StyledWrapper>
-      <TextBold size="24px" mb="8px" color="#02254d">
+      <TextH3 mb="20px" color="#02254d">
         Popular calculators
-      </TextBold>
+      </TextH3>
       <PopularCalculatorDiv>
         <NestedList />
       </PopularCalculatorDiv>

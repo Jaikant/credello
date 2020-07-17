@@ -2,11 +2,11 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .c5 {
+  .c4 {
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 20px;
   webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 8px;
@@ -16,35 +16,32 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c0 {
+  margin-right: -22px;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
+  padding-left: 10px;
+  padding-top: 13px;
+  padding-bottom: 22px;
   display: grid;
-  grid-gap: 8px;
-  grid-template-columns: 10px repeat(4,calc(50% - 40px)) 10px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4,calc(50% - 30px));
   grid-template-rows: minmax(120px,1fr);
   overflow: scroll;
   background: rgb(243,244,253);
-  margin: 0px -16px;
-  padding: 16px 16px;
   -webkit-scroll-snap-type: x proximity;
   -moz-scroll-snap-type: x proximity;
   -ms-scroll-snap-type: x proximity;
   scroll-snap-type: x proximity;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.c0:before {
-  content: '';
-  width: 10px;
-}
-
-.c0:after {
-  content: '';
-  width: 10px;
-}
-
-.c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.c0::-webkit-scrollbar {
+  display: none;
 }
 
 .c1.MuiPaper-root {
@@ -53,11 +50,13 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c2 {
-  height: 80px;
+  height: 71px;
 }
 
-.c3 {
-  height: 110px;
+.c3.MuiCardContent-root {
+  overflow: visible;
+  padding: 0;
+  padding-top: 14px;
 }
 
 @media (min-width:768px) {
@@ -70,8 +69,26 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:768px) {
   .c0 {
+    margin-right: -24px;
+    margin-left: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    margin-right: -128px;
+    margin-left: -128px;
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
     grid-gap: 32px;
-    grid-template-columns: 10px repeat(4,calc(20%)) 10px;
+    grid-template-columns: repeat(4,calc(20%));
     grid-template-rows: minmax(120px,1fr);
     padding: 24px 24px;
     margin: 0px -24px;
@@ -81,7 +98,7 @@ exports[`Home page matches snapshot 1`] = `
 @media (min-width:1224px) {
   .c0 {
     grid-gap: 64px;
-    grid-template-columns: 10px repeat(4,calc(20% - 40px)) 10px;
+    grid-template-columns: repeat(4,calc(20% - 40px));
     grid-template-rows: minmax(120px,1fr);
     padding: 32px 128px;
     margin: 0px -128px;
@@ -89,7 +106,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 <div
-    class="c0"
+    class="LayoutComponents__FullWidthWrapper-sc-3dcc8x-1 ArticleGrid__ComponentYPadding-v8krbb-0 c0"
   >
     <div
       class="MuiPaper-root MuiCard-root c1 MuiPaper-elevation1 MuiPaper-rounded"
@@ -109,9 +126,6 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div
             class="c4"
-          />
-          <div
-            class="c5"
             color="#6c7f87"
           >
             How to get a personal loan with a credit card?
@@ -143,9 +157,6 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div
             class="c4"
-          />
-          <div
-            class="c5"
             color="#6c7f87"
           >
             Should I refinance during the Covid-19 outbreak?
@@ -177,9 +188,6 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div
             class="c4"
-          />
-          <div
-            class="c5"
             color="#6c7f87"
           >
             How to get out of credit card debt fast?
@@ -211,9 +219,6 @@ exports[`Home page matches snapshot 1`] = `
         >
           <div
             class="c4"
-          />
-          <div
-            class="c5"
             color="#6c7f87"
           >
             Whats a Normal Amount of Debt... and What's Too Much?

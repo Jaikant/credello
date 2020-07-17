@@ -6,7 +6,7 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 20px;
   webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 16px;
@@ -19,7 +19,7 @@ exports[`Home page matches snapshot 1`] = `
   font-family: Roboto;
   font-weight: 700;
   font-size: 24px;
-  line-height: 1.2;
+  line-height: 28px;
   margin: 0;
   margin-bottom: 8px;
   margin-top: 0;
@@ -27,33 +27,41 @@ exports[`Home page matches snapshot 1`] = `
   text-align: initial;
 }
 
+.c0 {
+  margin-top: 52px;
+  margin-bottom: 48px;
+}
+
 .c3 {
+  margin-right: -22px;
+  margin-left: -22px;
+  padding-right: 22px;
+  padding-left: 22px;
   display: grid;
   grid-gap: 8px;
-  grid-template-columns: 10px repeat(4,calc(50% - 40px)) 10px;
-  grid-template-rows: minmax(120px,1fr);
+  grid-template-columns: repeat(4,calc(50% - 10px));
+  grid-template-rows: minmax(112px,1fr);
   overflow: scroll;
   -webkit-scroll-snap-type: x proximity;
   -moz-scroll-snap-type: x proximity;
   -ms-scroll-snap-type: x proximity;
   scroll-snap-type: x proximity;
+  -webkit-scrollbar-width: none;
+  -moz-scrollbar-width: none;
+  -ms-scrollbar-width: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.c3:before {
-  content: '';
-  width: 10px;
-}
-
-.c3:after {
-  content: '';
-  width: 10px;
+.c3::-webkit-scrollbar {
+  display: none;
 }
 
 .c5 {
   font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: normal;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -108,7 +116,7 @@ exports[`Home page matches snapshot 1`] = `
   display: block;
   height: 0px;
   width: 0px;
-  padding-bottom: calc(375 / 1320 * 100%);
+  padding-bottom: calc(112 / 167 * 100%);
 }
 
 @media (min-width:768px) {
@@ -133,18 +141,51 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:768px) {
+  .c0 {
+    display: grid;
+    grid-gap: 32px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c0 {
+    display: grid;
+    grid-gap: 64px;
+  }
+}
+
+@media (min-width:768px) {
+  .c3 {
+    margin-right: -24px;
+    margin-left: -24px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width:1224px) {
+  .c3 {
+    margin-right: -128px;
+    margin-left: -128px;
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+}
+
+@media (min-width:768px) {
   .c3 {
     grid-gap: 32px;
-    grid-template-columns: 10px repeat(4,calc(20%)) 10px;
+    grid-template-columns: repeat(4,calc(20%));
     grid-template-rows: minmax(120px,1fr);
   }
 }
 
 @media (min-width:1224px) {
   .c3 {
-    margin: 0px -64px;
+    margin-right: -64px;
+    margin-left: -64px;
     grid-gap: 64px;
-    grid-template-columns: 0px repeat(4,calc(20% - 40px)) 0px;
+    grid-template-columns: repeat(4,calc(20% - 40px));
     grid-template-rows: minmax(120px,1fr);
   }
 }
@@ -167,32 +208,18 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:1224px) {
 
-}
-
-@media (min-width:768px) {
-  .c0 {
-    display: grid;
-    grid-gap: 32px;
-  }
-}
-
-@media (min-width:1224px) {
-  .c0 {
-    display: grid;
-    grid-gap: 64px;
-  }
 }
 
 <div
-    class="c0"
+    class="CompareProducts__ComponentMargin-sc-10d3uoj-0 c0"
   >
     <div>
-      <div
-        class="c1"
+      <h3
+        class="Typography__TextBold-sc-12f2dd0-2 c1"
         color="#02254d"
       >
         Compare financial products
-      </div>
+      </h3>
       <div
         class="c2"
         color="#6c7f87"
@@ -201,7 +228,7 @@ exports[`Home page matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c3"
+      class="LayoutComponents__FullWidthWrapper-sc-3dcc8x-1 c3"
     >
       <div
         class="c4"

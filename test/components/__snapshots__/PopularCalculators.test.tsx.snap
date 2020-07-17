@@ -2,23 +2,11 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  .c1 {
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  margin: 0;
-  margin-bottom: 8px;
-  margin-top: 0;
-  color: #02254d;
-  text-align: initial;
-}
-
-.c5 {
+  .c5 {
   font-family: Roboto;
   font-weight: 700;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 30px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -26,16 +14,32 @@ exports[`Home page matches snapshot 1`] = `
   text-align: initial;
 }
 
+.c1 {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: #02254d;
+  text-align: initial;
+}
+
 .c3 {
   position: absolute;
   border-radius: 5px;
   width: 100%;
-  top: -48px;
+  top: -40px;
   max-width: 360;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
-  -moz-box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
-  box-shadow: 0px 0px 5px 3px rgba(150,150,150,1);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
+  box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
+}
+
+.c3.MuiList-root {
+  padding-left: 10px;
 }
 
 .c6 {
@@ -48,6 +52,7 @@ exports[`Home page matches snapshot 1`] = `
 
 .c7 span {
   line-height: 1;
+  color: #6c7f87;
 }
 
 .c7.MuiListItemText-root {
@@ -57,14 +62,22 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c4.MuiListItemIcon-root {
-  min-width: 36px;
+  min-width: 40px;
+}
+
+.c8 {
+  color: #cfcfcf;
+  background-color: #cfcfcf;
+  margin-left: -10px;
+  height: 2px;
+  border: 0;
 }
 
 .c2 {
   position: relative;
-  padding: 16px;
   background-color: #02254d;
-  margin: 16px -16px;
+  margin: 16px -22px;
+  padding: 0px 22px;
 }
 
 .c0 {
@@ -73,42 +86,42 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 @media (min-width:768px) {
-  .c1 {
-    font-size: 24px;
+  .c5 {
+    font-size: 18px;
   }
 }
 
 @media (min-width:1224px) {
-  .c1 {
+  .c5 {
     line-height: 1.5;
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
 @media (min-width:768px) {
-  .c5 {
-    font-size: 18px;
+  .c1 {
+    font-size: 24px;
   }
 }
 
 @media (min-width:1224px) {
-  .c5 {
+  .c1 {
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
 @media (min-width:768px) {
   .c2 {
     margin: 16px -24px;
-    padding: 16px 24px;
+    padding: 0px 24px;
   }
 }
 
 @media (min-width:1224px) {
   .c2 {
     margin: 16px -128px;
-    padding: 16px 128px;
+    padding: 0px 128px;
   }
 }
 
@@ -129,12 +142,12 @@ exports[`Home page matches snapshot 1`] = `
 <div
     class="c0"
   >
-    <div
+    <h3
       class="c1"
       color="#02254d"
     >
       Popular calculators
-    </div>
+    </h3>
     <div
       class="c2"
     >
@@ -152,8 +165,9 @@ exports[`Home page matches snapshot 1`] = `
             class="MuiListItemIcon-root c4"
           >
             <img
+              height="31px"
               src="test-file-stub"
-              width="24px"
+              width="27px"
             />
           </div>
           <div
@@ -162,12 +176,12 @@ exports[`Home page matches snapshot 1`] = `
             <span
               class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
             >
-              <div
+              <h3
                 class="c5"
                 color="#6c7f87"
               >
                  Debt 
-              </div>
+              </h3>
             </span>
           </div>
           <svg
@@ -292,7 +306,9 @@ exports[`Home page matches snapshot 1`] = `
             </div>
           </div>
         </div>
-        <hr />
+        <hr
+          class="c8"
+        />
         <div
           aria-disabled="false"
           class="MuiButtonBase-root MuiListItem-root MuiListItem-gutters MuiListItem-button"
@@ -303,8 +319,9 @@ exports[`Home page matches snapshot 1`] = `
             class="MuiListItemIcon-root c4"
           >
             <img
+              height="23px"
               src="test-file-stub"
-              width="24px"
+              width="30px"
             />
           </div>
           <div
@@ -313,12 +330,12 @@ exports[`Home page matches snapshot 1`] = `
             <span
               class="MuiTypography-root MuiListItemText-primary MuiTypography-body1 MuiTypography-displayBlock"
             >
-              <div
+              <h3
                 class="c5"
                 color="#6c7f87"
               >
                  More 
-              </div>
+              </h3>
             </span>
           </div>
           <svg
