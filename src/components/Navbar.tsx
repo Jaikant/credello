@@ -14,9 +14,8 @@ const LogoSvg: React.FunctionComponent<SvgProps> = (props: any) => {
 };
 
 const CredelloLogo = styled(LogoSvg)`
-  transform: translate(30%, 0%);
   align-self: center;
-  margin: 0 auto;
+  margin: 0 auto 0 28%;
   width: 100px;
 `;
 
