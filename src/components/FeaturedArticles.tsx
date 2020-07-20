@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold, TextMedium } from 'components/Typography';
+import { TextBold, Text, TextMedium } from 'components/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -16,11 +16,11 @@ const Category = styled(TextBold)`
   color: rgb(92, 219, 149);
 `;
 
-const UpdatedOn = styled(TextBold)`
+const UpdatedOn = styled(Text)`
   color: #808080;
 `;
 
-const TextBody = styled(TextMedium)`
+const TextBody = styled(Text)`
   letter-spacing: 0.01071em;
 `;
 

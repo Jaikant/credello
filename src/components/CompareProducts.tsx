@@ -47,7 +47,7 @@ const CompareProductsGrid = styled(FullWidthWrapper)`
 `;
 //https://uxdesign.cc/creating-horizontal-scrolling-containers-the-right-way-css-grid-c256f64fc585
 
-const DivText = styled(TextMedium)`
+const DivText = styled(TextBold)`
   max-width: 80px;
 `;
 
@@ -102,7 +102,7 @@ const CompareProducts = () => {
             <div>
               <img src={require('../assets/images/personalLoan.png')} />
             </div>
-            <DivText size="14px" center>
+            <DivText size="13px" center>
               Personal loan
             </DivText>
           </div>
@@ -112,7 +112,7 @@ const CompareProducts = () => {
             <div>
               <img src={require('../assets/images/personalLoan.png')} />
             </div>
-            <DivText size="14px" center>
+            <DivText size="13px" center>
               Credit Cards
             </DivText>
           </div>
@@ -122,7 +122,7 @@ const CompareProducts = () => {
             <div>
               <img src={require('../assets/images/personalLoan.png')} />
             </div>
-            <DivText size="14px" center>
+            <DivText size="13px" center>
               Home Equity Loans
             </DivText>
           </div>
@@ -132,7 +132,7 @@ const CompareProducts = () => {
             <div>
               <img src={require('../assets/images/personalLoan.png')} />
             </div>
-            <DivText size="14px" center>
+            <DivText size="13px" center>
               Mortgage Refinance
             </DivText>
           </div>

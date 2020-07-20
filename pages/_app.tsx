@@ -9,7 +9,10 @@ import { useEffect } from 'react';
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: Roboto;
-      src: url('/static/fonts/Roboto-Medium.ttf');
+      src: url('/static/fonts/Roboto-Regular.ttf'),
+      src: url('/static/fonts/Roboto-Medium.ttf'),
+      src: url('/static/fonts/Roboto-Bold.ttf'),
+      src: url('/static/fonts/Roboto-Black.ttf'),
   }
   * {
     font-family: Roboto;

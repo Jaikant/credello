@@ -44,7 +44,25 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
+            href="/static/fonts/Roboto-Regular.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
             href="/static/fonts/Roboto-Medium.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/Roboto-Bold.ttf"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/Roboto-Black.ttf"
             as="font"
             crossOrigin=""
           />

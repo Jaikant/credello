@@ -75,22 +75,22 @@ const ManageDebt = () => {
       </TextBold>
       <ManageDebtGrid>
         <HeroButton src="payoff-debt.png">
-          <TextBold size="14px" lh="18px" color="#fff">
+          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
             Ways to pay off debt
           </TextBold>
         </HeroButton>
         <HeroButton src="estimate-debt.png">
-          <TextBold size="14px" lh="18px" color="#fff">
+          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
             Estimate debt-free date
           </TextBold>
         </HeroButton>
         <HeroButton src="consolidate.png">
-          <TextBold size="14px" lh="18px" color="#fff">
+          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
             Ways to consolidate
           </TextBold>
         </HeroButton>
         <HeroButton src="estimate-savings.png">
-          <TextBold size="14px" lh="18px" color="#fff">
+          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
             Estimate savings
           </TextBold>
         </HeroButton>
