@@ -33,6 +33,7 @@ const StyledCard = styled(Card)`
 
 const StyledCardMedia = styled(CardMedia)`
   height: 160px;
+  border-radius: 4px;
 `;
 
 const StyledContent = styled(CardContent)`

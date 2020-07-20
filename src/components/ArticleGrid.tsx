@@ -60,11 +60,13 @@ const StyledCard = styled(Card)`
   &.MuiPaper-root {
     background: inherit;
     box-shadow: none;
+    border-radius: 0px;
   }
 `;
 
 const StyledCardMedia = styled(CardMedia)`
   height: 71px;
+  border-radius: 4px;
 `;
 
 const StyledCardContent = styled(CardContent)`

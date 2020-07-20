@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c4 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -47,10 +47,12 @@ exports[`Home page matches snapshot 1`] = `
 .c1.MuiPaper-root {
   background: inherit;
   box-shadow: none;
+  border-radius: 0px;
 }
 
 .c2 {
   height: 71px;
+  border-radius: 4px;
 }
 
 .c3.MuiCardContent-root {

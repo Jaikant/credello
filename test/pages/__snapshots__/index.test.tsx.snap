@@ -2,7 +2,7 @@
 
 exports[`Home page matches snapshot 1`] = `
 .c3 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -15,7 +15,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c12 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -28,7 +28,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c40 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -41,7 +41,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c52 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 12px;
   line-height: normal;
@@ -54,7 +54,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c43 {
-  font-family: Roboto;
+  font-family: Roboto-Medium;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -66,7 +66,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c4 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -78,7 +78,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c7 {
-  font-family: Roboto;
+  font-family: Roboto-Black;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -90,7 +90,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c21 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -102,7 +102,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c26 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: normal;
@@ -114,7 +114,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c34 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -126,7 +126,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c42 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: 34px;
@@ -138,7 +138,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c45 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 14px;
   line-height: normal;
@@ -150,7 +150,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c2 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 30px;
   line-height: 1.13;
@@ -162,7 +162,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c11 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -174,7 +174,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c17 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -186,7 +186,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c55 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 10px;
   line-height: normal;
@@ -251,7 +251,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c9 {
-  font-family: Roboto;
+  font-family: Roboto-Medium;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -312,9 +312,9 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c15 {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 14px;
+  font-family: Roboto-Bold;
+  font-weight: 700;
+  font-size: 13px;
   line-height: normal;
   margin: 0;
   margin-bottom: 0;
@@ -380,9 +380,9 @@ exports[`Home page matches snapshot 1`] = `
   top: -40px;
   max-width: 360;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
-  -moz-box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
-  box-shadow: 0px 0px 3px 3px rgba(200,200,200,0.5);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(220,220,220,0.4);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(220,220,220,0.4);
+  box-shadow: 0px 0px 3px 3px rgba(220,220,220,0.4);
 }
 
 .c19.MuiList-root {
@@ -440,7 +440,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c31 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -454,10 +454,11 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c32 {
-  font-family: Roboto;
-  font-weight: 700;
+  font-family: Roboto-Regular;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 8px;
   margin-top: 0;
@@ -467,10 +468,11 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c35 {
-  font-family: Roboto;
-  font-weight: 500;
+  font-family: Roboto-Regular;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -492,6 +494,7 @@ exports[`Home page matches snapshot 1`] = `
 
 .c28 {
   height: 160px;
+  border-radius: 4px;
 }
 
 .c29.MuiCardContent-root {
@@ -545,10 +548,12 @@ exports[`Home page matches snapshot 1`] = `
 .c37.MuiPaper-root {
   background: inherit;
   box-shadow: none;
+  border-radius: 0px;
 }
 
 .c38 {
   height: 71px;
+  border-radius: 4px;
 }
 
 .c39.MuiCardContent-root {
@@ -991,13 +996,14 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:768px) {
   .c15 {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @media (min-width:1224px) {
   .c15 {
-    font-size: 14px;
+    line-height: 1.5;
+    font-size: 13px;
   }
 }
 
@@ -1058,7 +1064,6 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:1224px) {
   .c32 {
-    line-height: 1.5;
     font-size: 12px;
   }
 }
@@ -1375,11 +1380,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="c15"
+          <h3
+            class="c1 c15"
           >
             Personal loan
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -1391,11 +1396,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="c15"
+          <h3
+            class="c1 c15"
           >
             Credit Cards
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -1407,11 +1412,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="c15"
+          <h3
+            class="c1 c15"
           >
             Home Equity Loans
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -1423,11 +1428,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="c15"
+          <h3
+            class="c1 c15"
           >
             Mortgage Refinance
-          </div>
+          </h3>
         </div>
       </div>
     </div>
@@ -1686,11 +1691,11 @@ exports[`Home page matches snapshot 1`] = `
             >
               DEBT 101
             </h3>
-            <h3
-              class="c1 c32"
+            <div
+              class="c32"
             >
                | Mar 19, 2020
-            </h3>
+            </div>
           </div>
           <div
             class="c33"

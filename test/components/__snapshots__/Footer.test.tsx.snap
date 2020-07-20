@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c6 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 12px;
   line-height: normal;
@@ -16,7 +16,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c9 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 10px;
   line-height: normal;

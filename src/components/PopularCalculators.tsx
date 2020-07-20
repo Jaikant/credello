@@ -18,9 +18,9 @@ const ListStyled = styled(List)`
   top: -40px;
   max-width: 360;
   background-color: #fff;
-  -webkit-box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
-  -moz-box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
-  box-shadow: 0px 0px 3px 3px rgba(200, 200, 200, 0.5);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
+  box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
   &.MuiList-root {
     padding-left: 10px;
   }

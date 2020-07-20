@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c2 {
-  font-family: Roboto;
+  font-family: Roboto-Regular;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -16,7 +16,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c1 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -58,9 +58,9 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c5 {
-  font-family: Roboto;
-  font-weight: 500;
-  font-size: 14px;
+  font-family: Roboto-Bold;
+  font-weight: 700;
+  font-size: 13px;
   line-height: normal;
   margin: 0;
   margin-bottom: 0;
@@ -192,13 +192,14 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:768px) {
   .c5 {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 @media (min-width:1224px) {
   .c5 {
-    font-size: 14px;
+    line-height: 1.5;
+    font-size: 13px;
   }
 }
 
@@ -239,11 +240,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          <h3
+            class="Typography__TextBold-sc-12f2dd0-2 c5"
           >
             Personal loan
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -255,11 +256,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          <h3
+            class="Typography__TextBold-sc-12f2dd0-2 c5"
           >
             Credit Cards
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -271,11 +272,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          <h3
+            class="Typography__TextBold-sc-12f2dd0-2 c5"
           >
             Home Equity Loans
-          </div>
+          </h3>
         </div>
       </div>
       <div
@@ -287,11 +288,11 @@ exports[`Home page matches snapshot 1`] = `
               src="test-file-stub"
             />
           </div>
-          <div
-            class="Typography__TextMedium-sc-12f2dd0-1 c5"
+          <h3
+            class="Typography__TextBold-sc-12f2dd0-2 c5"
           >
             Mortgage Refinance
-          </div>
+          </h3>
         </div>
       </div>
     </div>

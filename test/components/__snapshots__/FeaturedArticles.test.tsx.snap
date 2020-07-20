@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c1 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 24px;
   line-height: normal;
@@ -15,7 +15,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c9 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -34,7 +34,7 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: Roboto;
+  font-family: Roboto-Bold;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
@@ -48,10 +48,11 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c7 {
-  font-family: Roboto;
-  font-weight: 700;
+  font-family: Roboto-Regular;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 8px;
   margin-top: 0;
@@ -61,10 +62,11 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c10 {
-  font-family: Roboto;
-  font-weight: 500;
+  font-family: Roboto-Regular;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  webkit-font-smoothing: antialiased;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -86,6 +88,7 @@ exports[`Home page matches snapshot 1`] = `
 
 .c3 {
   height: 160px;
+  border-radius: 4px;
 }
 
 .c4.MuiCardContent-root {
@@ -154,7 +157,6 @@ exports[`Home page matches snapshot 1`] = `
 
 @media (min-width:1224px) {
   .c7 {
-    line-height: 1.5;
     font-size: 12px;
   }
 }
@@ -214,11 +216,11 @@ exports[`Home page matches snapshot 1`] = `
             >
               DEBT 101
             </h3>
-            <h3
-              class="c7"
+            <div
+              class="Typography__Text-sc-12f2dd0-0 c7"
             >
                | Mar 19, 2020
-            </h3>
+            </div>
           </div>
           <div
             class="c8"
@@ -230,7 +232,7 @@ exports[`Home page matches snapshot 1`] = `
             </h3>
           </div>
           <div
-            class="Typography__TextMedium-sc-12f2dd0-1 c10"
+            class="Typography__Text-sc-12f2dd0-0 c10"
             color="#6c7f87"
           >
             If you're not comfortable about your debt, you're not alone. 45% of adults admint debt makes them
