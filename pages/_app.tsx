@@ -8,20 +8,20 @@ import { useEffect } from 'react';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: "Roboto-Regular";
-      src: url('/static/fonts/Roboto-Regular.ttf') format("truetype"),
+    font-family: Roboto-Regular;
+      src: url('/static/fonts/Roboto-Regular.ttf') format('truetype'),
   }
   @font-face {
-    font-family: "Roboto-Medium";
-      src: url('/static/fonts/Roboto-Medium.ttf') format("truetype"),
+    font-family: Roboto-Medium;
+      src: url('/static/fonts/Roboto-Medium.ttf') format('truetype'),
   }
   @font-face {
-    font-family: "Roboto-Bold";
-      src: url('/static/fonts/Roboto-Bold.ttf') format("truetype"),
+    font-family: Roboto-Bold;
+      src: url('/static/fonts/Roboto-Bold.ttf') format('truetype'),
   }
   @font-face {
-    font-family: "Roboto-Black";
-      src: url('/static/fonts/Roboto-Black.ttf') format("truetype"),
+    font-family: Roboto-Black;
+      src: url('/static/fonts/Roboto-Black.ttf') format('truetype'),
   }
 
   body {
