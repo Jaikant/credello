@@ -46,30 +46,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet"
           />
-          {/* <link
-            rel="preload"
-            href="/static/fonts/Roboto-Regular.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/Roboto-Medium.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/Roboto-Bold.ttf"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/Roboto-Black.ttf"
-            as="font"
-            crossOrigin=""
-          /> */}
         </Head>
         <body>
           <Main />

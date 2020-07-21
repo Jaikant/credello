@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 type Props = {
   tag?: keyof JSX.IntrinsicElements;
-  family?: string;
   size?: string;
   tabletSize?: string;
   laptopSize?: string;
@@ -15,7 +14,6 @@ type Props = {
 } & React.HTMLAttributes<HTMLOrSVGElement>;
 
 export const Text = styled.div<Props>`
-  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Regular')};
   font-family: 'Roboto';
   font-weight: 400;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
@@ -36,7 +34,6 @@ export const Text = styled.div<Props>`
 `;
 
 export const TextMedium = styled.div<Props>`
-  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Medium')};
   font-family: 'Roboto';
   font-weight: 500;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
@@ -56,7 +53,6 @@ export const TextMedium = styled.div<Props>`
 `;
 
 export const TextBold = styled.h3<Props>`
-  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Bold')};
   font-family: 'Roboto';
   font-weight: 700;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
@@ -74,6 +70,10 @@ export const TextBold = styled.h3<Props>`
     font-size: ${({ laptopSize, tabletSize, size }) =>
       laptopSize ? laptopSize : tabletSize ? tabletSize : size};
   }
+`;
+
+export const TextBlack = styled(TextBold).attrs(() => ({}))<Props>`
+  font-weight: 900;
 `;
 
 export const TextH1 = styled(TextBold).attrs(() => ({

@@ -2,7 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold, TextMedium } from 'components/Typography';
+import { TextBlack, TextBold, TextMedium } from 'components/Typography';
 
 const ManageDebtGrid = styled.div`
   display: grid;
@@ -75,24 +75,24 @@ const ManageDebt = () => {
       </TextBold>
       <ManageDebtGrid>
         <HeroButton src="payoff-debt.png">
-          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
+          <TextBlack size="14px" lh="18px" color="#fff">
             Ways to pay off debt
-          </TextBold>
+          </TextBlack>
         </HeroButton>
         <HeroButton src="estimate-debt.png">
-          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
+          <TextBlack size="14px" lh="18px" color="#fff">
             Estimate debt-free date
-          </TextBold>
+          </TextBlack>
         </HeroButton>
         <HeroButton src="consolidate.png">
-          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
+          <TextBlack size="14px" lh="18px" color="#fff">
             Ways to consolidate
-          </TextBold>
+          </TextBlack>
         </HeroButton>
         <HeroButton src="estimate-savings.png">
-          <TextBold family="Roboto-Black" size="14px" lh="18px" color="#fff">
+          <TextBlack size="14px" lh="18px" color="#fff">
             Estimate savings
-          </TextBold>
+          </TextBlack>
         </HeroButton>
       </ManageDebtGrid>
       <LinkWrapper>

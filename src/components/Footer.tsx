@@ -39,7 +39,6 @@ const GridBox = styled.div`
   display: grid;
   grid-template-rows: auto;
   font-size: 10px;
-  font-family: Roboto;
   color: #6c7f87;
   @media ${device.tablet} {
     grid-template-columns: 8fr 1fr 2fr;

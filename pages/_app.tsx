@@ -7,29 +7,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { useEffect } from 'react';
 
 const GlobalStyle = createGlobalStyle`
-  @font-face {
-    font-family: Roboto-Regular;
-      src: url('/static/fonts/Roboto-Regular.ttf') format('truetype'),
-  }
-  @font-face {
-    font-family: Roboto-Medium;
-      src: url('/static/fonts/Roboto-Medium.ttf') format('truetype'),
-  }
-  @font-face {
-    font-family: Roboto-Bold;
-      src: url('/static/fonts/Roboto-Bold.ttf') format('truetype'),
-  }
-  @font-face {
-    font-family: Roboto-Black;
-      src: url('/static/fonts/Roboto-Black.ttf') format('truetype'),
-  }
-
-  body {
-    font-family: Roboto-Regular;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: Roboto-Bold;
-  }
 `;
 
 export const theme: DefaultTheme = {
