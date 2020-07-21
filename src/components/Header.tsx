@@ -30,16 +30,10 @@ const HeroWrapper = styled(ComponentWrapper)`
     }  
 `;
 
-const Test = styled.div`
-  font-family: Roboto-Bold;
-  font-size: 20px;
-`;
-
 const Header = ({ title, subtitle }: Props) => {
   return (
     <HeroWrapper>
       <div>
-        <Test> hi </Test>
         <TextH1 mb="12px" color="#02254d">
           {title}
         </TextH1>

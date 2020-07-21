@@ -15,7 +15,8 @@ type Props = {
 } & React.HTMLAttributes<HTMLOrSVGElement>;
 
 export const Text = styled.div<Props>`
-  font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Regular')};
+  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Regular')};
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
   line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
@@ -35,7 +36,8 @@ export const Text = styled.div<Props>`
 `;
 
 export const TextMedium = styled.div<Props>`
-  font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Medium')};
+  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Medium')};
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
   line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
@@ -54,7 +56,8 @@ export const TextMedium = styled.div<Props>`
 `;
 
 export const TextBold = styled.h3<Props>`
-  font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Bold')};
+  // font-family: ${({ family }) => (family ? `${family}` : 'Roboto-Bold')};
+  font-family: 'Roboto';
   font-weight: 700;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
   line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
