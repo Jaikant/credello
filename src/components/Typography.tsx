@@ -53,7 +53,7 @@ export const TextMedium = styled.div<Props>`
 `;
 
 export const TextBold = styled.h3<Props>`
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: ${({ size }) => (size ? `${size}` : '16px')};
   line-height: ${({ lh }) => (lh ? `${lh}` : `normal`)};
