@@ -8,7 +8,7 @@ declare module 'styled-components' {
     }
     spacing: {
       paddingX: string
-      paddingTopY: string
+      paddingTopHeroY: string
       paddingBottomY: string
   
       //top level paddings

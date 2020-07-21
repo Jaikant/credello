@@ -60,7 +60,7 @@ const GridBoxLower = styled.div`
 
 const FlexBox = styled.div`
   display: flex;
-  margin: 16px 0px;
+  margin: 16px 0px 0px 0px;
   @media ${device.tablet} {
     justify-content: flex-end;
   }

@@ -28,7 +28,7 @@ export const theme: DefaultTheme = {
     //top level paddings
     //Mobile
     paddingX: '22px',
-    paddingTopY: '40px',
+    paddingTopHeroY: '40px',
     paddingBottomY: '32px',
 
     //top level paddings

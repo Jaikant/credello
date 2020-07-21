@@ -5,7 +5,7 @@ export const BodyDiv = styled.div`
   display: grid;
   grid-gap: 32px;
   padding: ${({ theme }) =>
-    `${theme.spacing.paddingTopY} ${theme.spacing.paddingX} ${theme.spacing.paddingBottomY} ${theme.spacing.paddingX}`};
+    `${theme.spacing.paddingTopHeroY} ${theme.spacing.paddingX} ${theme.spacing.paddingBottomY} ${theme.spacing.paddingX}`};
   background: #fff;
   justify-content: center;
   @media ${device.tablet} {
@@ -41,8 +41,8 @@ export const FullWidthWrapper = styled.div`
 `;
 
 export const ComponentWrapper = styled(FullWidthWrapper)`
-  margin-top: ${({ theme }) => `-${theme.spacing.paddingTopY}`};
-  padding-top: ${({ theme }) => `${theme.spacing.paddingTopY}`};
+  margin-top: ${({ theme }) => `-${theme.spacing.paddingTopHeroY}`};
+  padding-top: ${({ theme }) => `${theme.spacing.paddingTopHeroY}`};
   @media ${device.tablet} {
     margin-top: ${({ theme }) => `-${theme.spacing.tabletPaddingY}`};
     padding-top: ${({ theme }) => `${theme.spacing.tabletPaddingY}`};
