@@ -8,9 +8,11 @@ type Props = {
   laptopSize?: string;
   mb?: string;
   mt?: string;
+  ml?: string;
   lh?: string;
   center?: boolean;
   color?: string;
+  underline?: boolean;
 } & React.HTMLAttributes<HTMLOrSVGElement>;
 
 export const Text = styled.div<Props>`
@@ -22,8 +24,10 @@ export const Text = styled.div<Props>`
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
+  margin-left: ${({ ml }) => (ml ? `${ml}` : '0')};
   color: ${({ color }) => (color ? `${color}` : 'inherit')};
   text-align: ${({ center }) => (center ? `center` : 'initial')};
+  text-decoration: ${({ underline }) => (underline ? `underline` : `none`)};
   @media ${device.tablet} {
     font-size: ${({ tabletSize, size }) => (tabletSize ? tabletSize : size)};
   }
@@ -41,6 +45,7 @@ export const TextMedium = styled.div<Props>`
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
+  margin-left: ${({ ml }) => (ml ? `${ml}` : '0')};
   color: ${({ color }) => (color ? `${color}` : 'inherit')};
   text-align: ${({ center }) => (center ? `center` : 'initial')};
   @media ${device.tablet} {
@@ -60,6 +65,7 @@ export const TextBold = styled.h3<Props>`
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
+  margin-left: ${({ ml }) => (ml ? `${ml}` : '0')};
   color: ${({ color }) => (color ? `${color}` : 'inherit')};
   text-align: ${({ center }) => (center ? `center` : 'initial')};
   @media ${device.tablet} {

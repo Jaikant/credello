@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c4 {
-  font-family: Roboto-Regular;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -11,8 +11,11 @@ exports[`Home page matches snapshot 1`] = `
   margin: 0;
   margin-bottom: 8px;
   margin-top: 0;
+  margin-left: 0;
   color: #6c7f87;
   text-align: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 {

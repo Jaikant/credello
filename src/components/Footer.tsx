@@ -23,9 +23,14 @@ export const ComponentWrapper = styled(FullWidthWrapper)`
   }
 `;
 
-const MainContainer = styled(ComponentWrapper)`
+type FooterProps = {
+  background?: string;
+};
+
+const MainContainer = styled(ComponentWrapper)<FooterProps>`
   display: grid;
-  background: rgb(243, 244, 253);
+  background: ${({ background }) =>
+    background ? background : `rgb(243, 244, 253)`};
   min-height: 300px;
   @media ${device.tablet} {
   }
@@ -173,9 +178,9 @@ FooterLinks.defaultProps = {
   ],
 };
 
-const Footer = () => {
+const Footer = (props: FooterProps) => {
   return (
-    <MainContainer>
+    <MainContainer {...props}>
       <Container>
         <GridBox>
           <div>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextBold, Text, TextMedium } from 'components/Typography';
+import { TextBold, Text } from 'components/Typography';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';

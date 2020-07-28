@@ -3,27 +3,30 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c1 {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
   margin-bottom: 10px;
   margin-top: 0;
+  margin-left: 0;
   color: #02254d;
   text-align: initial;
 }
 
 .c4 {
-  font-family: Roboto-Black;
+  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 0;
   color: #fff;
   text-align: initial;
+  font-weight: 900;
 }
 
 .c2 {
@@ -74,13 +77,14 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: Roboto-Medium;
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 12px;
+  margin-left: 0;
   color: #5cdb95;
   text-align: center;
   -webkit-text-decoration: underline;

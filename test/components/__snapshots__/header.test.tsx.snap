@@ -3,7 +3,7 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   .c3 {
-  font-family: Roboto-Regular;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -11,42 +11,49 @@ exports[`Home page matches snapshot 1`] = `
   margin: 0;
   margin-bottom: 44px;
   margin-top: 0;
+  margin-left: 0;
   color: #6c7f87;
   text-align: initial;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c4 {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   margin: 0;
   margin-bottom: 10px;
   margin-top: 0;
+  margin-left: 0;
   color: #02254d;
   text-align: initial;
 }
 
 .c7 {
-  font-family: Roboto-Black;
+  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 0;
   color: #fff;
   text-align: initial;
+  font-weight: 900;
 }
 
 .c2 {
-  font-family: Roboto-Bold;
+  font-family: 'Roboto',sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 1.13;
   margin: 0;
   margin-bottom: 12px;
   margin-top: 0;
+  margin-left: 0;
   color: #02254d;
   text-align: initial;
 }
@@ -99,13 +106,14 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c9 {
-  font-family: Roboto-Medium;
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   margin: 0;
   margin-bottom: 0;
   margin-top: 12px;
+  margin-left: 0;
   color: #5cdb95;
   text-align: center;
   -webkit-text-decoration: underline;

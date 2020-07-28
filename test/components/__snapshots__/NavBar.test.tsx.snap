@@ -103,13 +103,14 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c6 {
-  font-family: Roboto-Medium;
+  font-family: 'Roboto';
   font-weight: 500;
   font-size: 14px;
   line-height: normal;
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
+  margin-left: 0;
   color: #02254d;
   text-align: initial;
   display: grid;

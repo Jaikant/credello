@@ -2,6 +2,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { device } from 'libs/device';
+import { useRouter } from 'next/router';
 import { TextBlack, TextBold, TextMedium } from 'components/Typography';
 
 const ManageDebtGrid = styled.div`
@@ -68,6 +69,8 @@ const LinkWrapper = styled.div`
 `;
 
 const ManageDebt = () => {
+  const router = useRouter();
+
   return (
     <div>
       <TextBold mb="10px" lh="20px" color="#02254d">
@@ -84,7 +87,10 @@ const ManageDebt = () => {
             Estimate debt-free date
           </TextBlack>
         </HeroButton>
-        <HeroButton src="consolidate.png">
+        <HeroButton
+          src="consolidate.png"
+          onClick={() => router.push('/debt-consolidation')}
+        >
           <TextBlack size="14px" lh="18px" color="#fff">
             Ways to consolidate
           </TextBlack>

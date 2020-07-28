@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import Button from '@material-ui/core/Button';
+import { StyledButton } from 'components/Buttons';
 import { TextBold, TextMedium } from 'components/Typography';
 import { FullWidthWrapper } from 'components/LayoutComponents';
 
@@ -26,22 +26,6 @@ const SectionWrapper = styled(ComponentYPadding)`
   }
 `;
 
-const StyledButton = styled(Button)`
-  background: #fff;
-  &.MuiButton-contained {
-    padding: 18px;
-    background: #fff;
-    text-transform: none;
-    letter-spacing: 0.14px;
-  }
-  @media ${device.tablet} {
-    max-width: 400px;
-  }
-  @media ${device.laptop} {
-    max-width: 400px;
-  }
-`;
-
 const SectionWithButton = () => {
   return (
     <SectionWrapper>
@@ -53,7 +37,7 @@ const SectionWithButton = () => {
       </TextMedium>
       <StyledButton variant="contained" disableElevation>
         <TextBold size="14px" color="#5cdb95">
-          Manage Debt
+          Next Step
         </TextBold>
       </StyledButton>
     </SectionWrapper>

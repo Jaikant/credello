@@ -43,19 +43,6 @@ const WrapperArticleGrid = styled(ComponentYPadding)`
   }
 `;
 
-const InlineDiv = styled.div`
-  display: flex;
-`;
-
-const Category = styled(TextBold)`
-  margin-right: 8px;
-  color: rgb(92, 219, 149);
-`;
-
-const UpdatedOn = styled(TextBold)`
-  color: #808080;
-`;
-
 const StyledCard = styled(Card)`
   &.MuiPaper-root {
     background: inherit;
@@ -78,7 +65,7 @@ const StyledCardContent = styled(CardContent)`
 `;
 
 function MediaCard(props) {
-  const { image, category, updated, title, small = false } = props;
+  const { image, title } = props;
   return (
     <StyledCard>
       <CardActionArea>

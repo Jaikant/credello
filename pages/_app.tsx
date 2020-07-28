@@ -4,7 +4,8 @@ import {
   DefaultTheme,
 } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
+import { MainContext, reducer, initialState } from '../src/libs/context';
 
 const GlobalStyle = createGlobalStyle`
 `;
@@ -19,6 +20,7 @@ export const theme: DefaultTheme = {
     //Mobile
     paddingX: '22px',
     paddingTopHeroY: '40px',
+    paddingTopY: '28px',
     paddingBottomY: '32px',
 
     //top level paddings
@@ -49,6 +51,8 @@ function DefaultLayout({ children }) {
 }
 
 function Credello({ Component, pageProps }) {
+  const [appState, dispatch] = useReducer(reducer, initialState);
+
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
     if (jssStyles && jssStyles.parentNode)
@@ -60,9 +64,16 @@ function Credello({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <GlobalStyle />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <MainContext.Provider
+        value={{
+          appState,
+          dispatch,
+        }}
+      >
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </MainContext.Provider>
     </ThemeProvider>
   );
 }

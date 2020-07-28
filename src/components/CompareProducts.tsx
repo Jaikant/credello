@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
-import { TextH3, TextBold, TextMedium, Text } from 'components/Typography';
+import { TextH3, TextBold, Text } from 'components/Typography';
 import { FullWidthWrapper } from 'components/LayoutComponents';
 
 const ComponentMargin = styled.div`

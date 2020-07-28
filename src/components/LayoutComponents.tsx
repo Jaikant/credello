@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { device } from 'libs/device';
 
-export const BodyDiv = styled.div`
-  display: grid;
-  grid-gap: 32px;
-  padding: ${({ theme }) =>
-    `${theme.spacing.paddingTopHeroY} ${theme.spacing.paddingX} ${theme.spacing.paddingBottomY} ${theme.spacing.paddingX}`};
+type PropsBody = {
+  pathname: string;
+};
+
+export const BodyDiv = styled.div<PropsBody>`
+  height: 100%;
   background: #fff;
-  justify-content: center;
+  padding: ${({ theme, pathname }) =>
+    pathname === '/'
+      ? `${theme.spacing.paddingTopHeroY} ${theme.spacing.paddingX} ${theme.spacing.paddingBottomY} ${theme.spacing.paddingX}`
+      : `${theme.spacing.paddingTopY} ${theme.spacing.paddingX} ${theme.spacing.paddingBottomY} ${theme.spacing.paddingX}`};
+  // justify-content: center;
   @media ${device.tablet} {
     padding: ${({ theme }) =>
       `${theme.spacing.tabletPaddingY} ${theme.spacing.tabletPaddingX}`};
@@ -16,7 +21,6 @@ export const BodyDiv = styled.div`
   @media ${device.laptop} {
     padding: ${({ theme }) =>
       `${theme.spacing.laptopPaddingY} ${theme.spacing.laptopPaddingX}`};
-    grid-gap: 128px;
     padding: 32px 128px;
   }
 `;
