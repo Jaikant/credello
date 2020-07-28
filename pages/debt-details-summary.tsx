@@ -6,6 +6,7 @@ import BreadCrumbs from 'components/BreadCrumbs';
 import Stepper from 'components/Stepper';
 import DebtSummary from 'components/DebtSummary';
 import BottomBar from 'components/BottomBar';
+import { StyledFormBgWrapper } from 'components/LayoutComponents';
 
 const PageMargin = styled.div`
   margin-bottom: 70px;
@@ -18,7 +19,9 @@ export const DebtAccounts: CredelloFC = () => (
     <TextBold size="16px" lh="22px" color="#02254d" mb="48px">
       All about your current debt
     </TextBold>
-    <DebtSummary />
+    <StyledFormBgWrapper btm="-45px">
+      <DebtSummary />
+    </StyledFormBgWrapper>
     <PageMargin />
     <BottomBar left="/debt-details" right="/debt-consolidation-preferences" />
   </div>

@@ -3,6 +3,7 @@ import { MainContext } from 'libs/context';
 import DebtInputCard from 'components/DebtInputCard';
 import { useForm } from 'react-hook-form';
 import { Text } from 'components/Typography';
+import { StyledFormBgWrapper } from '../components/LayoutComponents';
 
 type Props = {
   submitRef?: MutableRefObject<any>;
@@ -20,7 +21,7 @@ const DebtAccountTypes = React.memo((props: Props) => {
       onSubmit={handleSubmit(props.onSubmit)}
       ref={(form) => (props.submitRef.current = form)}
     >
-      <div>
+      <StyledFormBgWrapper>
         {appState &&
           appState.userDebts &&
           appState.userDebts.map((c, index) => {
@@ -41,7 +42,7 @@ const DebtAccountTypes = React.memo((props: Props) => {
             Please fill missing fields above
           </Text>
         )}
-      </div>
+      </StyledFormBgWrapper>
     </form>
   );
 });

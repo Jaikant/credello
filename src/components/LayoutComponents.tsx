@@ -4,6 +4,9 @@ import { device } from 'libs/device';
 type PropsBody = {
   pathname: string;
 };
+type PropsFormbgWrapper = {
+  btm: string;
+};
 
 export const BodyDiv = styled.div<PropsBody>`
   height: 100%;
@@ -54,5 +57,27 @@ export const ComponentWrapper = styled(FullWidthWrapper)`
   @media ${device.laptop} {
     margin-top: ${({ theme }) => `-${theme.spacing.laptopPaddingY}`};
     padding-top: ${({ theme }) => `-${theme.spacing.laptopPaddingY}`};
+  }
+`;
+
+export const StyledFormBgWrapper = styled.div<PropsFormbgWrapper>`
+  position: relative;
+  &::before {
+    content: ' ';
+    position: absolute;
+    background: #f3f4fd;
+    top: 38px;
+    bottom: ${({ btm }) => `${btm ? btm : '0px'}`};
+    z-index: 0;
+    left: ${({ theme }) => `-${theme.spacing.paddingX}`};
+    right: ${({ theme }) => `-${theme.spacing.paddingX}`};
+    @media ${device.tablet} {
+      left: ${({ theme }) => `-${theme.spacing.tabletPaddingX}`};
+      right: ${({ theme }) => `-${theme.spacing.tabletPaddingX}`};
+    }
+    @media ${device.laptop} {
+      left: ${({ theme }) => `-${theme.spacing.laptopPaddingX}`};
+      right: ${({ theme }) => `-${theme.spacing.laptopPaddingX}`};
+    }
   }
 `;
