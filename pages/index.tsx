@@ -1,5 +1,4 @@
 import Layout from 'components/Layout';
-import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
 import Header from 'components/Header';
 import CompareProducts from 'components/CompareProducts';

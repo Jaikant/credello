@@ -175,11 +175,11 @@ const InputAdornment = styled(InputAdornmentMui)<Props>`
 `;
 
 type DebtInputCardProps = {
-  setError?: (any) => {};
   register?: (any) => any;
   errors?: any;
   card?: string;
   index?: number;
+  values?: any;
 };
 
 const DebtInputCard = ({
@@ -187,28 +187,30 @@ const DebtInputCard = ({
   card,
   register,
   errors,
-  setError,
+  values,
 }: DebtInputCardProps) => {
   const [state, setState] = React.useState({
-    card,
+    debtType: card,
+    balance: values && values.balance,
+    cardName: values && values.cardName,
+    interestRate: values && values.interestRate,
+    minMonthlyPayment: values && values.minMonthlyPayment,
   });
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-      setError(false);
-    } else {
-      setError(true);
-    }
-    if (state.card != card) {
+    if (state.debtType != card) {
       setState({
-        card,
+        ...state,
+        debtType: card,
       });
     }
   }, [errors, card]);
 
   const handleChange = (event) => {
+    const property = event.target.name.split('.')[1];
     setState({
-      card: event.target.value,
+      ...state,
+      [property]: event.target.value,
     });
   };
   return (
@@ -222,10 +224,11 @@ const DebtInputCard = ({
           <FormControl>
             <NativeSelect
               id="select"
-              value={state.card}
+              value={state.debtType}
               onChange={handleChange}
+              inputRef={register}
               IconComponent={ExpandMoreIcon}
-              name="debtType"
+              name={`${index}.debtType`}
               inputProps={{ 'aria-label': 'debtType' }}
             >
               <option value={'creditCard'}>Credit Card</option>
@@ -240,37 +243,39 @@ const DebtInputCard = ({
       </DebtHeader>
       <DebtCardContent>
         <CardInput
-          name={`${state.card}[${index}].cardName`}
+          name={`${index}.cardName`}
+          value={state.cardName}
+          onChange={handleChange}
           label={
-            state.card === 'creditCard'
+            state.debtType === 'creditCard'
               ? 'Credit card name, example- Citi DoubleCash'
               : 'Lender name, example- Sofi'
           }
           margin="dense"
           inputRef={register}
           placeholder={
-            errors && errors[`${state.card}[${index}].cardName`]
+            errors && errors[`${index}`] && errors[`${index}`].cardName
               ? 'Required field'
               : ''
           }
           InputLabelProps={{ shrink: true }}
           fullWidth
-          error={errors && errors[`${state.card}[${index}].cardName`]}
+          error={errors && errors[`${index}`] && errors[`${index}`].cardName}
         />
         <MarginBottom20Px />
         <Flex>
           <CardInput
             label="Balance"
-            name={`${state.card}[${index}].balance`}
+            name={`${index}.balance`}
+            value={state.balance}
+            onChange={handleChange}
             margin="dense"
             inputRef={register({
               required: true,
               pattern: /^(0|[1-9][0-9]*)$/,
             })}
             placeholder={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance
+              errors && errors[`${index}`] && errors[`${index}`].balance
                 ? 'Required field'
                 : ''
             }
@@ -280,68 +285,58 @@ const DebtInputCard = ({
                 <InputAdornment position="start">$</InputAdornment>
               ),
             }}
-            error={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance
-            }
+            error={errors && errors[`${index}`] && errors[`${index}`].balance}
           />
           <MarginRight8Px />
 
           <CardInput
             label="Interest rate (APR)"
-            name={`${state.card}[${index}].interestRate`}
+            name={`${index}.interestRate`}
+            value={state.interestRate}
+            onChange={handleChange}
             margin="dense"
             inputRef={register({
               required: true,
               pattern: /^(0|[1-9][0-9]*)$/,
             })}
             placeholder={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate
+              errors && errors[`${index}`] && errors[`${index}`].interestRate
                 ? 'Required field'
                 : ''
             }
             InputLabelProps={{ shrink: true }}
             error={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate
+              errors && errors[`${index}`] && errors[`${index}`].interestRate
             }
           />
         </Flex>
         <MarginBottom20Px />
         <Flex>
           <div>
-            {errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance && (
-                <Text size="10px" color="#941616">
-                  Only numbers
-                </Text>
-              )}
+            {errors && errors[`${index}`] && errors[`${index}`].balance && (
+              <Text size="10px" color="#941616">
+                Only numbers
+              </Text>
+            )}
           </div>
           <div>
-            {errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate && (
-                <Text size="10px" color="#941616">
-                  Only numbers
-                </Text>
-              )}
+            {errors && errors[`${index}`] && errors[`${index}`].interestRate && (
+              <Text size="10px" color="#941616">
+                Only numbers
+              </Text>
+            )}
           </div>
         </Flex>
 
         <CardInput
           label="Minimum monthly payment"
-          name={`${state.card}[${index}].minMonthlyPayment`}
+          name={`${index}.minMonthlyPayment`}
+          value={state.minMonthlyPayment}
+          onChange={handleChange}
           margin="dense"
           inputRef={register({ required: true })}
           placeholder={
-            errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment
+            errors && errors[`${index}`] && errors[`${index}`].minMonthlyPayment
               ? 'Required field'
               : ''
           }
@@ -350,16 +345,14 @@ const DebtInputCard = ({
             startAdornment: <InputAdornment position="start">$</InputAdornment>,
           }}
           error={
-            errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment
+            errors && errors[`${index}`] && errors[`${index}`].minMonthlyPayment
           }
           fullWidth
         />
         <div>
           {errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment && (
+            errors[`${index}`] &&
+            errors[`${index}`].minMonthlyPayment && (
               <Text size="10px" color="#941616">
                 Only numbers
               </Text>

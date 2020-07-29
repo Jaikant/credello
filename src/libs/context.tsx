@@ -32,7 +32,7 @@ export const MainContext = React.createContext<Partial<ContextType>>({});
 export const initialState = {
   userDebts: [],
   noCreditCards: 0,
-  debtDetails: { creditCard: [] },
+  debtDetails: null,
   preferences: null,
   creditScore: null,
   monthlyIncome: null,
@@ -67,12 +67,9 @@ const nper = ({ rate, per, pmt, pv, fv }: NperProp) => {
   //   alert('Why do you want to test me with zeros?');
   //   return 0;
   // }
-
   rate = rate / (per * 100);
-
   if (rate == 0) {
     // Interest rate is 0
-
     nperValue = -(fv + pv) / pmt;
   } else {
     nperValue =
@@ -80,6 +77,14 @@ const nper = ({ rate, per, pmt, pv, fv }: NperProp) => {
   }
 
   return nperValue;
+};
+
+const syncUserDebt = (state) => {
+  if (state.debtDetails && state.debtDetails.length > 0) {
+    const userDebts = state.debtDetails.map((dt) => dt.debtType);
+    return userDebts.filter((dt, index) => userDebts.indexOf(dt) === index);
+  }
+  return state.userDebts;
 };
 
 export const reducer = (state, action) => {
@@ -91,10 +96,6 @@ export const reducer = (state, action) => {
 
     if (state.debtDetails) {
       for (const debtKind in state.debtDetails) {
-        // if (Object.prototype.hasOwnProperty.call(object, key)) {
-        //   const element = object[key];
-
-        // }
         const debt = state.debtDetails[debtKind];
         if (debt && debt.length > 0) {
           debt.forEach((element) => {
@@ -104,10 +105,8 @@ export const reducer = (state, action) => {
               parseInt(element.interestRate) * parseInt(element.balance);
             combinedInterest =
               numerator / (debtAmount + parseInt(element.balance));
-
             //debtAmount
             debtAmount = debtAmount + parseInt(element.balance);
-
             // monthly payment
             monthylyPayment =
               monthylyPayment + parseInt(element.minMonthlyPayment);
@@ -137,19 +136,46 @@ export const reducer = (state, action) => {
   };
 
   switch (action.type) {
-    case 'userDebts':
-      return { ...state, userDebts: action.value };
+    case 'userDebts': {
+      let debtDetails = [];
+      if (state.debtDetails) {
+        debtDetails = [...state.debtDetails];
+        action.value.map((dt, index) => {
+          const found = state.debtDetails.findIndex((el) => dt === el.debtType);
+          if (found == -1) {
+            debtDetails.push({
+              debtType: dt,
+            });
+            return null;
+          } else {
+            // Already exists ignore
+            return null;
+          }
+        });
+      } else {
+        debtDetails = action.value.map((dt, index) => ({
+          debtType: dt,
+        }));
+      }
+
+      return { ...state, userDebts: action.value, debtDetails };
+    }
     case 'addCard':
-      state.userDebts.splice(action.value.index, 0, action.value.card);
+      state.debtDetails.splice(action.value.index, 0, {
+        debtType: action.value.card,
+      });
       return { ...state };
     case 'removeCard':
-      state.userDebts.splice(action.value, 1);
+      state.debtDetails.splice(action.value, 1);
       return { ...state };
-    case 'debtDetails':
-      return { ...state, debtDetails: action.value };
+    case 'debtDetails': {
+      const debtDetails = Object.keys(action.value).map((c) => action.value[c]);
+      return { ...state, debtDetails };
+    }
     case 'debtSummary': {
       const debtSummary = calculateDebtSummary();
-      return { ...state, debtSummary };
+      const userDebts = syncUserDebt(state);
+      return { ...state, debtSummary, userDebts };
     }
     default:
       throw new Error();
