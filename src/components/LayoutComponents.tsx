@@ -5,7 +5,7 @@ type PropsBody = {
   pathname: string;
 };
 type PropsFormbgWrapper = {
-  btm: string;
+  btm?: string;
 };
 
 export const BodyDiv = styled.div<PropsBody>`

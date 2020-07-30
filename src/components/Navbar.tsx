@@ -33,7 +33,7 @@ const IconSearch = styled(IconSearchMui)`
   }
 `;
 
-const CommonNav = styled.nav<PropsNoboxShadow>`
+const CommonNav = styled.nav`
   position: fixed;
   z-index: 1000;
   display: flex;
@@ -43,8 +43,7 @@ const CommonNav = styled.nav<PropsNoboxShadow>`
   height: 50px;
   -webkit-box-shadow: 0px 3px 4px 0px #d3d3d3;
   -moz-box-shadow: 0px 3px 4px 0px #d3d3d3;
-  box-shadow: ${({ noBxShadow }) =>
-    `${noBxShadow ? noBxShadow : ' 0px 3px 4px 0px #d3d3d3;'}`};
+  box-shadow: 0px 3px 4px 0px #d3d3d3;
 `;
 
 const FlexText = styled(TextMedium)`
