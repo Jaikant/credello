@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { TextBold, Text } from 'components/Typography';
-import Clearall from 'components/clearall';
+import { Clearall } from 'components/LayoutComponents';
 import { StyledButton } from 'components/Buttons';
 import ComTileContainer from 'components/CommonTileContainer';
-
+import Link from 'next/link';
 const StyledTileContainer = styled.div`
   min-height: 200px;
   position: relative;
@@ -15,6 +15,7 @@ const StyledTileContainer = styled.div`
 const StyledTitleText = styled(Text)`
   float: left;
 `;
+
 const StyledCenterText = styled(TextBold)`
   display: flex;
   align-items: center;
@@ -113,9 +114,14 @@ const RecTileContainer: React.FC = () => {
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
           1-8% origination fee may apply.
         </Text>
-        <Text size="14px" lh="16px" color="#03264e" as="a" underline>
+        {/* <Text size="14px" lh="16px" color="#03264e" as="a" underline>
           More
-        </Text>
+        </Text> */}
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            More
+          </Text>
+        </Link>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
@@ -181,9 +187,11 @@ const RecTileContainer: React.FC = () => {
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
           1-8% origination fee may apply.
         </Text>
-        <Text size="14px" lh="16px" color="#03264e" as="a" underline>
-          More
-        </Text>
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            More
+          </Text>
+        </Link>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
@@ -249,9 +257,11 @@ const RecTileContainer: React.FC = () => {
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
           1-8% origination fee may apply.
         </Text>
-        <Text size="14px" lh="16px" color="#03264e" as="a" underline>
-          More
-        </Text>
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            More
+          </Text>
+        </Link>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">

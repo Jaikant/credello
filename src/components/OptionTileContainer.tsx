@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ComTileContainer from 'components/CommonTileContainer';
 import { TextBold, Text } from 'components/Typography';
 const StyledOptTileContainer = styled.div``;
+import Link from 'next/link';
 
 const OptTileContainer: React.FC = () => {
   return (
@@ -14,9 +15,11 @@ const OptTileContainer: React.FC = () => {
         <Text as="span" size="14px" color="#6c7f87" lh="20px">
           Terms are negotiated by a debt counselling agency on your behalf.
         </Text>
-        <Text as="a" size="14px" color="#03264e" underline>
-          Learn More
-        </Text>
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            Learn More
+          </Text>
+        </Link>
       </ComTileContainer>
       <ComTileContainer pt="30px" pb="34px">
         <TextBold mb="17px" color="#02254d" size="20px">
@@ -26,9 +29,11 @@ const OptTileContainer: React.FC = () => {
           Eligibility and rates will depend upon your savings bank and deposit
           amount.
         </Text>
-        <Text as="a" size="14px" color="#03264e" underline>
-          Learn More
-        </Text>
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            Learn More
+          </Text>
+        </Link>
       </ComTileContainer>
       <ComTileContainer pt="30px" pb="34px">
         <TextBold mb="17px" color="#02254d" size="20px">
@@ -38,9 +43,11 @@ const OptTileContainer: React.FC = () => {
           Eligibility and rates will depend upon your employer and vested
           balance.
         </Text>
-        <Text as="a" size="14px" color="#03264e" underline>
-          Learn More
-        </Text>
+        <Link href="/">
+          <Text as="span" size="14px" lh="16px" color="#03264e" underline>
+            Learn More
+          </Text>
+        </Link>
       </ComTileContainer>
     </StyledOptTileContainer>
   );

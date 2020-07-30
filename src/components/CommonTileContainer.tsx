@@ -6,7 +6,7 @@ type Props = {
   pt?: string;
 };
 
-const StyledCommonTileContianer = styled.div<Props>`
+const StyledCommonTileContainer = styled.div<Props>`
   background: white;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
@@ -24,9 +24,9 @@ const StyledCommonTileContianer = styled.div<Props>`
 
 const ComTileContainer: React.FC<Props> = ({ children, pb, pt }) => {
   return (
-    <StyledCommonTileContianer pb={pb} pt={pt}>
+    <StyledCommonTileContainer pb={pb} pt={pt}>
       {children}
-    </StyledCommonTileContianer>
+    </StyledCommonTileContainer>
   );
 };
 

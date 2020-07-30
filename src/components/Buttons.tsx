@@ -12,8 +12,8 @@ export const StyledButton = styled(Button)<Props>`
   &.MuiButton-contained {
     padding: 18px;
     background: ${({ bg }) => (bg ? bg : '#fff')};
-    width: ${({ width }) => (width ? width : ' ')};
-    margin-top: ${({ mt }) => (mt ? mt : ' ')};
+    width: ${({ width }) => (width ? width : 'auto')};
+    margin-top: ${({ mt }) => (mt ? mt : 'auto')};
     text-transform: none;
     letter-spacing: 0.14px;
     &.Mui-disabled {

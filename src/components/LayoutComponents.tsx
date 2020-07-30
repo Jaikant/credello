@@ -91,3 +91,7 @@ export const StyledBlueHeroBgContainer = styled.div`
   position: relative;
   padding: 28px 20px 0 20px;
 `;
+
+export const Clearall = styled.div`
+  clear: both;
+`;

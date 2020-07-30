@@ -16,6 +16,11 @@ const Flex = styled(FullWidthWrapper)`
   justify-content: space-between;
 `;
 
+export const BlueBtmBar = styled(FullWidthWrapper)`
+  background: #02254d;
+  height: 51px;
+`;
+
 const BottomBar = (props) => {
   const router = useRouter();
   return (
@@ -39,6 +44,8 @@ const BottomBar = (props) => {
           <NavRight width="37px" />
         </IconButton>
       </Flex>
+
+      <BlueBtmBar />
     </div>
   );
 };

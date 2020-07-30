@@ -7,7 +7,7 @@ import { StyledBlueHeroBgContainer } from 'components/LayoutComponents';
 import RecTileContainer from 'components/RecommendationTileContainer';
 import OptTileContainer from 'components/OptionTileContainer';
 import { TextBold, Text } from 'components/Typography';
-import BlueBtmBar from 'components/BlueBottomBar';
+import { BlueBtmBar } from 'components/BottomBar';
 
 const StyledTextArrowBg = styled(Text)`
     background-image: url('${require('../src/assets/images/down-arrow.svg')}'); 
@@ -15,7 +15,7 @@ const StyledTextArrowBg = styled(Text)`
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 17px;
-    float: left;
+    display: inline-block;
     border-bottom: 1px solid #fff;
 `;
 
