@@ -81,3 +81,13 @@ export const StyledFormBgWrapper = styled.div<PropsFormbgWrapper>`
     }
   }
 `;
+
+export const StyledBlueHeroBgContainer = styled.div`
+  background: #02254d;
+  height: 266px;
+  margin-left: ${({ theme }) => `-${theme.spacing.paddingX}`};
+  margin-right: ${({ theme }) => `-${theme.spacing.paddingX}`};
+  margin-top: -26px;
+  position: relative;
+  padding: 28px 20px 0 20px;
+`;

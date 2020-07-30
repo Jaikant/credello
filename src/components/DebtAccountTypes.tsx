@@ -3,7 +3,7 @@ import { MainContext } from 'libs/context';
 import DebtInputCard from 'components/DebtInputCard';
 import { useForm } from 'react-hook-form';
 import { Text } from 'components/Typography';
-import { StyledFormBgWrapper } from '../components/LayoutComponents';
+import { StyledFormBgWrapper } from 'components/LayoutComponents';
 
 type Props = {
   submitRef?: MutableRefObject<any>;

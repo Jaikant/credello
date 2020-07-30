@@ -4,12 +4,16 @@ import { device } from 'libs/device';
 
 type Props = {
   bg?: string;
+  width?: string;
+  mt?: string;
 };
 
 export const StyledButton = styled(Button)<Props>`
   &.MuiButton-contained {
     padding: 18px;
     background: ${({ bg }) => (bg ? bg : '#fff')};
+    width: ${({ width }) => (width ? width : ' ')};
+    margin-top: ${({ mt }) => (mt ? mt : ' ')};
     text-transform: none;
     letter-spacing: 0.14px;
     &.Mui-disabled {
