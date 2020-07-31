@@ -5,6 +5,7 @@ import { Clearall } from 'components/LayoutComponents';
 import { StyledButton } from 'components/Buttons';
 import ComTileContainer from 'components/CommonTileContainer';
 import Link from 'next/link';
+import TileNotifictionPopover from 'components/TileNotification';
 const StyledTileContainer = styled.div`
   min-height: 200px;
   position: relative;
@@ -52,30 +53,36 @@ const StyledTag = styled.div`
   border-radius: 5px;
   height: 32px;
 `;
-
-const StyleMatchScorePopOver = styled.div`
-  position: absolute;
-  top: 42px;
-  background: #f3f4fd;
-  border: 1px solid #d9dcdf;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  height: 81px;
-  left: 0px;
-  right: 0px;
-  padding-right: 30px;
+const StyleTickIcon = styled.i`
+   background: url('${require('../assets/svgs/tick-tile.svg')}');
+   background-repeat: no-repeat;
+   width: 11px;
+    height: 11px;
+    background-size: 12px;
+    display: inline-block;
+    margin-right: 7px;
 `;
-
-const StyledPopoverCloseIcon = styled.i`
-  background-image: url('${require('../assets/svgs/close.svg')}'); 
-  background-size: 11px;
-    position: absolute;
-    right: 11px;
-    top: 11px;
-    display: block;
+const StyleCrossIcon = styled.i`
+    background: url('${require('../assets/svgs/close-tile.svg')}');
+    background-repeat: no-repeat;
     width: 11px;
     height: 11px;
-    background-repeat: no-repeat;
+    background-size: 10px;
+    display: inline-block;
+    margin-right: 7px;
+`;
+
+const StyledExpandedContainer = styled.div`
+  margin-bottom: 24px;
+`;
+
+const StyledButtonInvert = styled(StyledButton)`
+  border: 1px solid #15db95 !important;
+  background: transparent !important;
+`;
+
+const StyledButtonFontColor = styled(TextBold)`
+  color: #15db95 !important;
 `;
 
 const StyledTagInfoText = styled(Text)``;
@@ -135,10 +142,24 @@ const RecTileContainer: React.FC = () => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
+
+        <StyledExpandedContainer>
+          <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+            <StyleTickIcon />
+            Consolidate any type of debt
+          </Text>
+          <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+            <StyleTickIcon />
+            1-8% origination fee may apply.
+          </Text>
+        </StyledExpandedContainer>
+
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+          <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+          <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
         {/* <Text size="14px" lh="16px" color="#03264e" as="a" underline>
@@ -146,23 +167,27 @@ const RecTileContainer: React.FC = () => {
         </Text> */}
         <Link href="/">
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            More
+            Less
           </Text>
         </Link>
         <Clearall />
+        <StyledButtonInvert
+          variant="contained"
+          bg="#15db95"
+          width="100%"
+          mt="22px"
+        >
+          <StyledButtonFontColor size="14px" color="#fff">
+            Calculate Savings
+          </StyledButtonFontColor>
+        </StyledButtonInvert>
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
-            Next Step
+            Compare Personal Loans
           </TextBold>
         </StyledButton>
 
-        <StyleMatchScorePopOver>
-          <Text size="14px" color="#6c7f87" lh="20px">
-            Your Credello Match Score is a custom value that represents how
-            closely the product matches your goals &amp; requirements
-          </Text>
-          <StyledPopoverCloseIcon />
-        </StyleMatchScorePopOver>
+        <TileNotifictionPopover />
       </ComTileContainer>
 
       <ComTileContainer pt="18px" pb="20px">

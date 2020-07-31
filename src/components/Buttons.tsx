@@ -16,6 +16,7 @@ export const StyledButton = styled(Button)<Props>`
     margin-top: ${({ mt }) => (mt ? mt : 'auto')};
     text-transform: none;
     letter-spacing: 0.14px;
+    box-shadow: none;
     &.Mui-disabled {
       background: #85a3b8;
     }
