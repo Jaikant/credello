@@ -8,7 +8,7 @@ import BreadCrumbs from 'components/BreadCrumbs';
 import { Text, TextBold, TextMedium } from 'components/Typography';
 import Stepper from 'components/Stepper';
 import BottomBar from 'components/BottomBar';
-import { FormControl, CardInput, InputAdornment } from 'components/Forms';
+import { CardInput, InputAdornment } from 'components/Forms';
 import { useForm } from 'react-hook-form';
 import { StyledButton } from 'components/Buttons';
 

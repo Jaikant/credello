@@ -18,7 +18,7 @@ export const DebtAccounts: CredelloFC = () => (
       You can change your preferences on results page too to explore changing
       recommendations
     </Text>
-    <DebtConsolidationPref />
+    <DebtConsolidationPref mb="48px" />
     <BottomBar
       left="/debt-details-summary"
       right="/credit-score-details"

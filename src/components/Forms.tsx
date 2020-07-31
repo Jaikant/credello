@@ -19,9 +19,10 @@ export const InputAdornment = styled(InputAdornmentMui)<Props>`
 
 type FormProps = {
   mb?: string;
+  width?: string;
 };
 export const FormControl = styled(FormControlMui)<FormProps>`
-  width: 100%;
+  width: ${({ width }) => (width ? `${width}` : 'auto')};
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
 `;
 

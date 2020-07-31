@@ -5,7 +5,6 @@ import { MainContext } from 'libs/context';
 
 const CredelloSlider = styled(SliderMui)`
   &.MuiSlider-root {
-    color: #52af77;
     border-radius: 5px;
     .MuiSlider-mark {
       display: none;
@@ -24,9 +23,10 @@ const CredelloSlider = styled(SliderMui)`
     }
   }
   .MuiSlider-thumb {
-    height: 48px;
-    width: 48px;
-    border: 1px solid #6c7f87;
+    color: #15db95;
+    height: 46px;
+    width: 46px;
+    // border: 1px solid #6c7f87;
     margin-top: -8px;
     margin-right: -64px;
     margin-left: 0px;
@@ -38,14 +38,11 @@ const CredelloSlider = styled(SliderMui)`
     }
   }
   .MuiSlider-rail {
-    height: 28px;
+    height: 31px;
+    margin: 0px 0px 0px 4px;
     border-radius: 5px;
-    background: linear-gradient(
-      90deg,
-      rgba(2, 0, 36, 1) 0%,
-      rgba(44, 185, 13, 0.6741071428571428) 35%,
-      rgba(0, 212, 255, 1) 100%
-    );
+    opacity: 1;
+    background: linear-gradient(to right, #02254d, rgba(153, 182, 200));
   }
 `;
 

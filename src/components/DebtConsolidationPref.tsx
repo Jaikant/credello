@@ -70,7 +70,7 @@ export default () => {
           </TextBold>
         </StyledButton>
       </Wrapper>
-      <TextMedium size="12px" lh="16px" color="#6c7f87" mb="24px">
+      <TextMedium size="12px" lh="16px" color="#6c7f87" mb="72px">
         You will pay-off your debts faster, but monthly payments may increase
       </TextMedium>
     </div>

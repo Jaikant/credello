@@ -108,9 +108,11 @@ const MortgageDetails = memo((props: Props) => {
           onChange={handleChange}
           label={'Interest rate'}
           margin="dense"
+          type="number"
           inputRef={register({
             required: true,
-            pattern: /^(0|[1-9][0-9]*)$/,
+            min: 0,
+            max: 99,
           })}
           placeholder={
             errors && errors.mortgageInterest ? 'Required field' : ''
@@ -129,7 +131,7 @@ const MortgageDetails = memo((props: Props) => {
         )} */}
 
         <InputMargin>
-          <FormControl>
+          <FormControl width="100%">
             <InputLabel shrink>Mortgage origination year</InputLabel>
             <Select
               name="mortgageYear"
@@ -154,7 +156,7 @@ const MortgageDetails = memo((props: Props) => {
           </FormControl>
         </InputMargin>
         <InputMargin>
-          <FormControl>
+          <FormControl width="100%">
             <InputLabel shrink>Mortgage term</InputLabel>
             <Select
               name="mortgageTerm"
@@ -170,12 +172,12 @@ const MortgageDetails = memo((props: Props) => {
               <MenuItem value={null}>
                 <em>None</em>
               </MenuItem>
-              <MenuItem value={' > 5yrs'}> {` &gt; 5yrs`} </MenuItem>
-              <MenuItem value={' > 10yrs'}> {` &gt; 10yrs`} </MenuItem>
-              <MenuItem value={' > 15yrs'}> {` &gt; 15yrs`} </MenuItem>
-              <MenuItem value={' > 20yrs'}> {` &gt; 20yrs`} </MenuItem>
-              <MenuItem value={' > 25yrs'}> {` &gt; 25yrs`} </MenuItem>
-              <MenuItem value={' > 30yrs'}> {` &gt; 30yrs`} </MenuItem>
+              <MenuItem value={' > 5yrs'}> {` > 5yrs`} </MenuItem>
+              <MenuItem value={' > 10yrs'}> {` > 10yrs`} </MenuItem>
+              <MenuItem value={' > 15yrs'}> {` > 15yrs`} </MenuItem>
+              <MenuItem value={' > 20yrs'}> {` > 20yrs`} </MenuItem>
+              <MenuItem value={' > 25yrs'}> {` > 25yrs`} </MenuItem>
+              <MenuItem value={' > 30yrs'}> {` > 30yrs`} </MenuItem>
             </Select>
           </FormControl>
         </InputMargin>

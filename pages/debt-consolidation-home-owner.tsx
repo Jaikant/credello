@@ -18,11 +18,15 @@ export const HomeOwner: CredelloFC = () => {
     <div>
       <BreadCrumbs mb="18px" />
       <Stepper active={4} mb="30px" />
-      <TextBold color="#02254d" mb="40px" lh="22px">
+      <TextBold color="#02254d" lh="22px">
         If you are a homeowner, you might have the option to consolidate with
         mortgage refinancing or home equity loans- which generally have much
-        lower interest rates. Do you own a home?{' '}
+        lower interest rates.
       </TextBold>
+      <TextBold color="#02254d" mb="40px" lh="22px">
+        Do you own a home?
+      </TextBold>
+
       <YesOrNoButtons
         fn={updateHomeOwner}
         initial={context.appState.homeOwner}

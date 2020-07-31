@@ -7,13 +7,13 @@ type ContextType = {
     debtDetails: { string: [any] };
     preference: string;
     creditScore: number;
-    monthlyIncome: number;
+    monthlyIncome: string;
     payoffAbility: boolean;
     homeOwner: boolean;
     homeValue: string;
     homeZipcode: string;
     outstandingMortgage: string;
-    mortgageInterest: string;
+    mortgageInterest: number;
     mortgageYear: string;
     mortgageTerm: string;
     debtSummary: {
