@@ -1,4 +1,4 @@
-import { memo, useContext, useState, useRef } from 'react';
+import { memo, useContext, useState, useRef, MutableRefObject } from 'react';
 import { useRouter } from 'next/router';
 import { MainContext } from 'libs/context';
 import styled from 'styled-components';
