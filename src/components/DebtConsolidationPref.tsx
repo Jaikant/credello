@@ -8,7 +8,11 @@ const Wrapper = styled.div`
   margin-bottom: 12px;
 `;
 
-export default () => {
+type Props = {
+  mb?: string;
+};
+
+export default (props: Props) => {
   const context = useContext(MainContext);
   const [preference, setPreference] = React.useState(
     context && context.appState && context.appState.preference
