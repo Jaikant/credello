@@ -5,7 +5,6 @@ import BreadCrumbs from 'components/BreadCrumbs';
 import { TextBold } from 'components/Typography';
 import Stepper from 'components/Stepper';
 import BottomBar from 'components/BottomBar';
-import Question from 'components/Question';
 import { MainContext } from 'libs/context';
 import { YesOrNoButtons } from 'components/Buttons';
 
