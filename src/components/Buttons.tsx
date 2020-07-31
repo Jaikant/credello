@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import { device } from 'libs/device';
+import { TextBold } from 'components/Typography';
 
 type Props = {
   bg?: string;
@@ -13,11 +15,13 @@ export const StyledButton = styled(Button)<Props>`
     text-transform: none;
     letter-spacing: 0.14px;
     &.Mui-disabled {
-      background: #85a3b8;
     }
   }
   &.MuiButton-contained:hover {
-    background: #85a3b8;
+    background: #15db95;
+  }
+  &.MuiButton-contained:active {
+    background: #15db95;
   }
   &.MuiButton-contained:hover.Mui-disabled {
     background: #85a3b8;
@@ -29,3 +33,49 @@ export const StyledButton = styled(Button)<Props>`
     max-width: 400px;
   }
 `;
+
+const Wrapper = styled.div`
+  margin-bottom: 16px;
+`;
+
+export const YesOrNoButtons = ({ fn, initial = null }) => {
+  const [yes, setYes] = useState(initial);
+
+  const handleChange = (value) => {
+    setYes(value);
+    fn(value);
+  };
+
+  return (
+    <>
+      <Wrapper>
+        <StyledButton
+          bg={yes === true ? '#15db95' : '#85a3b8'}
+          variant="contained"
+          onClick={(e) => handleChange(true)}
+          disableElevation
+          disabled={false}
+          fullWidth
+        >
+          <TextBold size="14px" color="#fff">
+            Yes
+          </TextBold>
+        </StyledButton>
+      </Wrapper>
+      <Wrapper>
+        <StyledButton
+          bg={yes === false ? '#15db95' : '#85a3b8'}
+          variant="contained"
+          onClick={(e) => handleChange(false)}
+          disableElevation
+          disabled={false}
+          fullWidth
+        >
+          <TextBold size="14px" color="#fff">
+            No
+          </TextBold>
+        </StyledButton>
+      </Wrapper>
+    </>
+  );
+};

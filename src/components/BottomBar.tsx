@@ -7,8 +7,12 @@ import NavRight from '../assets/svgs/nav_right.svg';
 import NavLeft from '../assets/svgs/nav_left.svg';
 import NavSave from '../assets/svgs/nav_save.svg';
 
-const Flex = styled(FullWidthWrapper)`
-  position: absolute;
+type BottomBarProps = {
+  position?: string;
+};
+
+const Flex = styled(FullWidthWrapper)<BottomBarProps>`
+  position: ${({ position }) => (position ? position : 'absolute')};
   width: 100%;
   background: #f3f4fd;
   display: flex;
@@ -20,7 +24,7 @@ const BottomBar = (props) => {
   const router = useRouter();
   return (
     <div>
-      <Flex>
+      <Flex position={props.position}>
         <IconButton onClick={() => router.push(props.left ? props.left : '/')}>
           <NavLeft width="37px" />
         </IconButton>

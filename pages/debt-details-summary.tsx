@@ -20,7 +20,11 @@ export const DebtAccounts: CredelloFC = () => (
     </TextBold>
     <DebtSummary />
     <PageMargin />
-    <BottomBar left="/debt-details" right="/debt-consolidation-preferences" />
+    <BottomBar
+      left="/debt-details"
+      right="/debt-consolidation-preferences"
+      position="fixed"
+    />
   </div>
 );
 

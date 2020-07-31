@@ -5,7 +5,7 @@ type ContextType = {
     userDebts: [string];
     noCreditCards: number;
     debtDetails: { string: [any] };
-    preferences: string;
+    preference: string;
     creditScore: number;
     monthlyIncome: number;
     payoffAbility: boolean;
@@ -33,7 +33,7 @@ export const initialState = {
   userDebts: [],
   noCreditCards: 0,
   debtDetails: null,
-  preferences: null,
+  preference: null,
   creditScore: null,
   monthlyIncome: null,
   payoffAbility: null,
@@ -160,14 +160,18 @@ export const reducer = (state, action) => {
 
       return { ...state, userDebts: action.value, debtDetails };
     }
-    case 'addCard':
+    case 'addCard': {
       state.debtDetails.splice(action.value.index, 0, {
         debtType: action.value.card,
       });
-      return { ...state };
-    case 'removeCard':
+      const userDebts = syncUserDebt(state);
+      return { ...state, userDebts };
+    }
+    case 'removeCard': {
       state.debtDetails.splice(action.value, 1);
-      return { ...state };
+      const userDebts = syncUserDebt(state);
+      return { ...state, userDebts };
+    }
     case 'debtDetails': {
       const debtDetails = Object.keys(action.value).map((c) => action.value[c]);
       return { ...state, debtDetails };
@@ -176,6 +180,21 @@ export const reducer = (state, action) => {
       const debtSummary = calculateDebtSummary();
       const userDebts = syncUserDebt(state);
       return { ...state, debtSummary, userDebts };
+    }
+    case 'creditScore': {
+      return { ...state, creditScore: action.value };
+    }
+    case 'payoffAbility': {
+      return { ...state, payoffAbility: action.value };
+    }
+    case 'homeOwner': {
+      return { ...state, homeOwner: action.value };
+    }
+    case 'preference': {
+      return { ...state, preference: action.value };
+    }
+    case 'homeValue': {
+      return { ...state, homeValue: action.value };
     }
     default:
       throw new Error();
