@@ -19,6 +19,11 @@ const Flex = styled(FullWidthWrapper)`
 export const BlueBtmBar = styled(FullWidthWrapper)`
   background: #02254d;
   height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 51px;
+  position: relative;
 `;
 
 const BottomBar = (props) => {
@@ -44,8 +49,6 @@ const BottomBar = (props) => {
           <NavRight width="37px" />
         </IconButton>
       </Flex>
-
-      <BlueBtmBar />
     </div>
   );
 };
