@@ -3,6 +3,8 @@ import FormControlMui from '@material-ui/core/FormControl';
 import NativeSelectMui from '@material-ui/core/NativeSelect';
 import TextField from '@material-ui/core/TextField';
 import InputAdornmentMui from '@material-ui/core/InputAdornment';
+import SelectMui from '@material-ui/core/Select';
+import InputLabelMui from '@material-ui/core/InputLabel';
 
 type Props = {
   error?: boolean;
@@ -15,8 +17,24 @@ export const InputAdornment = styled(InputAdornmentMui)<Props>`
   }
 `;
 
-export const FormControl = styled(FormControlMui)`
-  minwidth: 120;
+type FormProps = {
+  mb?: string;
+};
+export const FormControl = styled(FormControlMui)<FormProps>`
+  width: 100%;
+  margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
+`;
+
+export const InputLabel = styled(InputLabelMui)`
+  &.MuiFormLabel-root {
+    font-weight: 500;
+    color: #6c7f87;
+    font-size: 16px;
+    line-height: 16px;
+    &.Mui-focused {
+      color: #6c7f87;
+    }
+  }
 `;
 
 export const NativeSelect = styled(NativeSelectMui)`
@@ -127,5 +145,64 @@ export const CardInput = styled(TextField)`
 
   .MuiInputLabel-shrink {
     transform: translate(0, 1.5px) scale(1);
+  }
+`;
+
+export const Select = styled(SelectMui)`
+  width: 100%;
+  .MuiSelect-root {
+    width: 100%;
+  }
+  .MuiInputBase-input {
+    font-family: 'Roboto';
+    color: #02254d;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    &::placeholder {
+      font-size: 12px;
+      color: #02254d;
+      color: ${(props) => (props.error ? '#941616' : 'auto')};
+      opacity: ${(props) => (props.error ? 1 : 'auto')};
+    }
+  }
+  .MuiSelect-input {
+  }
+  &.MuiInput-underline {
+    border-bottom-width: 2px;
+    &:before {
+      border-bottom: 2px solid #6c7f87;
+    }
+    &:after {
+      border-bottom-color: #6c7f87;
+      border-bottom-width: 2px;
+    }
+    &:hover {
+      border-bottom-color: #6c7f87;
+      border-bottom-width: 2px;
+    }
+  }
+  .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom-color: #6c7f87;
+    border-bottom-width: 2px;
+  }
+  .MuiInput-underline.Mui-focused {
+    border-bottom-color: #02254d;
+    border-bottom-width: 3px;
+
+    &:after {
+      border-bottom-color: #02254d;
+      border-bottom-width: 3px;
+    }
+    &:before {
+      border-bottom-color: #02254d;
+      border-bottom-width: 3px;
+    }
+  }
+  .MuiInput-underline.Mui-error {
+    &:after {
+      border-bottom-color: #941616;
+      border-bottom-width: 3px;
+    }
   }
 `;

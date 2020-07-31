@@ -10,12 +10,12 @@ type ContextType = {
     monthlyIncome: number;
     payoffAbility: boolean;
     homeOwner: boolean;
-    homeValue: number;
+    homeValue: string;
     homeZipcode: string;
-    outstandingMortgage: number;
-    mortgageInterest: number;
+    outstandingMortgage: string;
+    mortgageInterest: string;
     mortgageYear: string;
-    mortgageTerm: number;
+    mortgageTerm: string;
     debtSummary: {
       debtAmount: number;
       combinedInterest: number;
@@ -197,6 +197,7 @@ export const reducer = (state, action) => {
       return { ...state, homeValue: action.value };
     }
     default:
-      throw new Error();
+      return { ...state, [action.type]: action.value };
+    // throw new Error();
   }
 };

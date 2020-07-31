@@ -187,7 +187,7 @@ const DebtInputCard = ({
           />
         </Flex>
         <MarginBottom20Px />
-        <Flex>
+        {/* <Flex>
           <div>
             {errors && errors[`${index}`] && errors[`${index}`].balance && (
               <Text size="10px" color="#941616">
@@ -202,7 +202,7 @@ const DebtInputCard = ({
               </Text>
             )}
           </div>
-        </Flex>
+        </Flex> */}
 
         <CardInput
           label="Minimum monthly payment"
@@ -225,7 +225,7 @@ const DebtInputCard = ({
           }
           fullWidth
         />
-        <div>
+        {/* <div>
           {errors &&
             errors[`${index}`] &&
             errors[`${index}`].minMonthlyPayment && (
@@ -233,7 +233,7 @@ const DebtInputCard = ({
                 Only numbers
               </Text>
             )}
-        </div>
+        </div> */}
       </DebtCardContent>
     </DebtCard>
   );
