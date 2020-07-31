@@ -20,6 +20,7 @@ const StyledCommonTileContainer = styled.div<Props>`
   padding-bottom: ${({ pb }) => (pb ? `${pb}` : '0')};
   padding-top: ${({ pt }) => (pt ? `${pt}` : '0')};
   box-sizing: border-box;
+  position: relative;
 `;
 
 const ComTileContainer: React.FC<Props> = ({ children, pb, pt }) => {

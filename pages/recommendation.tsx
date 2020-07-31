@@ -15,6 +15,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { Popover } from '@material-ui/core';
 
 const StyledTextArrowBg = styled(Text)`
     background-image: url('${require('../src/assets/images/down-arrow.svg')}'); 
@@ -37,9 +38,20 @@ const BlueBtnBarOption = styled.div`
 `;
 
 const DropDown = styled(Select)`
+  width: 150px;
+
+  .MuiPaper-root {
+    background-color: tomato;
+  }
+
+  .MuiMenu-list {
+    background: green;
+  }
+
   .MuiMenuItem-root {
     font-size: 10px;
   }
+
   .MuiSelect-selectMenu {
     color: #fff;
     border-bottom: none;
@@ -145,7 +157,7 @@ export const Recommendation: CredelloFC = () => {
         <TextBold color="#fff" size="14px">
           Change Inputs
         </TextBold>
-        <BlueBtnBarOption></BlueBtnBarOption>
+        <BlueBtnBarOption />
       </BlueBtmBar>
 
       <Footer />
