@@ -1,4 +1,9 @@
-import React, { useContext, useState, MutableRefObject } from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  MutableRefObject,
+} from 'react';
 import { MainContext } from 'libs/context';
 import DebtInputCard from 'components/DebtInputCard';
 import { useForm } from 'react-hook-form';
@@ -16,6 +21,15 @@ const DebtAccountTypes = React.memo((props: Props) => {
   const { register, handleSubmit, errors } = useForm();
 
   const { appState } = context;
+
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && errors.constructor === Object) {
+      setError(false);
+    } else {
+      setError(true);
+    }
+  }, [errors]);
+
   return (
     <form
       onSubmit={handleSubmit(props.onSubmit)}

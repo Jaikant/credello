@@ -35,6 +35,7 @@ export const DebtAccounts: CredelloFC = () => {
             new Event('submit', { cancelable: true })
           );
         }}
+        position="fixed"
       />
     </div>
   );

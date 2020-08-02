@@ -1,15 +1,17 @@
 import React, { useEffect, useContext } from 'react';
 import { MainContext } from 'libs/context';
 import styled from 'styled-components';
-import FormControlMui from '@material-ui/core/FormControl';
 import Button from '@material-ui/core/Button';
-import NativeSelectMui from '@material-ui/core/NativeSelect';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import TextField from '@material-ui/core/TextField';
-import InputAdornmentMui from '@material-ui/core/InputAdornment';
 import RemoveCard from '../assets/svgs/ico_remove.svg';
 import AddCard from '../assets/svgs/ico_add.svg';
 import { TextMedium, Text } from 'components/Typography';
+import {
+  FormControl,
+  NativeSelect,
+  CardInput,
+  InputAdornment,
+} from 'components/Forms';
 
 const DebtCardAndButtons = styled.div`
   display: grid;
@@ -41,121 +43,6 @@ const Flex = styled.div`
   justify-content: space-between;
 `;
 
-const FormControl = styled(FormControlMui)`
-  minwidth: 120;
-`;
-
-const NativeSelect = styled(NativeSelectMui)`
-  color: #fff;
-  .MuiNativeSelect-root {
-    color: #fff;
-    font-family: 'Roboto';
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1;
-  }
-  .MuiNativeSelect-icon {
-    fill: #fff;
-    width: 20px;
-  }
-  .MuiNativeSelect-select.MuiNativeSelect-select {
-    padding-right: 8px;
-  }
-  .MuiInputBase-input {
-    padding: 0;
-  }
-  &.MuiInput-underline {
-    border-bottom: none;
-
-    &:before {
-      border-bottom: none;
-    }
-
-    &:after {
-      border-bottom: none;
-    }
-
-    &:hover:not {
-      border-bottom: none;
-    }
-  }
-`;
-
-const CardInput = styled(TextField)`
-  .MuiInputBase-input {
-    font-family: 'Roboto';
-    color: #02254d;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    &::placeholder {
-      font-size: 12px;
-      color: #02254d;
-      color: ${(props) => (props.error ? '#941616' : 'auto')};
-      opacity: ${(props) => (props.error ? 1 : 'auto')};
-    }
-  }
-  .MuiFormLabel-root {
-    font-weight: 500;
-    color: #6c7f87;
-    font-size: 12px;
-    line-height: 16px;
-  }
-  .MuiFormLabel-root.Mui-focused {
-    color: #02254d;
-  }
-
-  .MuiInput-underline {
-    border-bottom-width: 2px;
-    &:before {
-      border-bottom-color: #6c7f87;
-      border-bottom-width: 2px;
-    }
-    &:after {
-      border-bottom-color: #6c7f87;
-      border-bottom-width: 2px;
-    }
-    &:hover {
-      border-bottom-color: #6c7f87;
-      border-bottom-width: 2px;
-    }
-  }
-
-  .MuiInput-underline:hover:not(.Mui-disabled):before {
-    border-bottom-color: #6c7f87;
-    border-bottom-width: 2px;
-  }
-
-  .MuiInput-underline.Mui-focused {
-    border-bottom-color: #02254d;
-    border-bottom-width: 3px;
-
-    &:after {
-      border-bottom-color: #02254d;
-      border-bottom-width: 3px;
-    }
-    &:before {
-      border-bottom-color: #02254d;
-      border-bottom-width: 3px;
-    }
-  }
-
-  .MuiFormLabel-root.Mui-error {
-    color: #6c7f87;
-  }
-
-  .MuiInput-underline.Mui-error {
-    &:after {
-      border-bottom-color: #941616;
-      border-bottom-width: 3px;
-    }
-  }
-
-  .MuiInputLabel-shrink {
-    transform: translate(0, 1.5px) scale(1);
-  }
-`;
-
 const MarginRight8Px = styled.div`
   margin-right: 8px;
 `;
@@ -164,23 +51,12 @@ const MarginBottom20Px = styled.div`
   margin-bottom: 0px;
 `;
 
-type Props = {
-  error?: boolean;
-  card?: string;
-};
-
-const InputAdornment = styled(InputAdornmentMui)<Props>`
-  p {
-    color: ${(props) => (props.error ? '#941616' : 'auto')};
-  }
-`;
-
 type DebtInputCardProps = {
-  setError?: (any) => {};
   register?: (any) => any;
   errors?: any;
   card?: string;
   index?: number;
+  values?: any;
 };
 
 const DebtInputCard = ({
@@ -188,28 +64,30 @@ const DebtInputCard = ({
   card,
   register,
   errors,
-  setError,
+  values,
 }: DebtInputCardProps) => {
   const [state, setState] = React.useState({
-    card,
+    debtType: card,
+    balance: values && values.balance,
+    cardName: values && values.cardName,
+    interestRate: values && values.interestRate,
+    minMonthlyPayment: values && values.minMonthlyPayment,
   });
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && errors.constructor === Object) {
-      setError(false);
-    } else {
-      setError(true);
-    }
-    if (state.card != card) {
+    if (state.debtType != card) {
       setState({
-        card,
+        ...state,
+        debtType: card,
       });
     }
   }, [errors, card]);
 
   const handleChange = (event) => {
+    const property = event.target.name.split('.')[1];
     setState({
-      card: event.target.value,
+      ...state,
+      [property]: event.target.value,
     });
   };
   return (
@@ -223,10 +101,11 @@ const DebtInputCard = ({
           <FormControl>
             <NativeSelect
               id="select"
-              value={state.card}
+              value={state.debtType}
               onChange={handleChange}
+              inputRef={register}
               IconComponent={ExpandMoreIcon}
-              name="debtType"
+              name={`${index}.debtType`}
               inputProps={{ 'aria-label': 'debtType' }}
             >
               <option value={'creditCard'}>Credit Card</option>
@@ -241,37 +120,39 @@ const DebtInputCard = ({
       </DebtHeader>
       <DebtCardContent>
         <CardInput
-          name={`${state.card}[${index}].cardName`}
+          name={`${index}.cardName`}
+          value={state.cardName}
+          onChange={handleChange}
           label={
-            state.card === 'creditCard'
+            state.debtType === 'creditCard'
               ? 'Credit card name, example- Citi DoubleCash'
               : 'Lender name, example- Sofi'
           }
           margin="dense"
           inputRef={register}
           placeholder={
-            errors && errors[`${state.card}[${index}].cardName`]
+            errors && errors[`${index}`] && errors[`${index}`].cardName
               ? 'Required field'
               : ''
           }
           InputLabelProps={{ shrink: true }}
           fullWidth
-          error={errors && errors[`${state.card}[${index}].cardName`]}
+          error={errors && errors[`${index}`] && errors[`${index}`].cardName}
         />
         <MarginBottom20Px />
         <Flex>
           <CardInput
             label="Balance"
-            name={`${state.card}[${index}].balance`}
+            name={`${index}.balance`}
+            value={state.balance}
+            onChange={handleChange}
             margin="dense"
             inputRef={register({
               required: true,
               pattern: /^(0|[1-9][0-9]*)$/,
             })}
             placeholder={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance
+              errors && errors[`${index}`] && errors[`${index}`].balance
                 ? 'Required field'
                 : ''
             }
@@ -281,68 +162,58 @@ const DebtInputCard = ({
                 <InputAdornment position="start">$</InputAdornment>
               ),
             }}
-            error={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance
-            }
+            error={errors && errors[`${index}`] && errors[`${index}`].balance}
           />
           <MarginRight8Px />
 
           <CardInput
             label="Interest rate (APR)"
-            name={`${state.card}[${index}].interestRate`}
+            name={`${index}.interestRate`}
+            value={state.interestRate}
+            onChange={handleChange}
             margin="dense"
             inputRef={register({
               required: true,
               pattern: /^(0|[1-9][0-9]*)$/,
             })}
             placeholder={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate
+              errors && errors[`${index}`] && errors[`${index}`].interestRate
                 ? 'Required field'
                 : ''
             }
             InputLabelProps={{ shrink: true }}
             error={
-              errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate
+              errors && errors[`${index}`] && errors[`${index}`].interestRate
             }
           />
         </Flex>
         <MarginBottom20Px />
-        <Flex>
+        {/* <Flex>
           <div>
-            {errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].balance && (
-                <Text size="10px" color="#941616">
-                  Only numbers
-                </Text>
-              )}
+            {errors && errors[`${index}`] && errors[`${index}`].balance && (
+              <Text size="10px" color="#941616">
+                Only numbers
+              </Text>
+            )}
           </div>
           <div>
-            {errors &&
-              errors[`${state.card}`] &&
-              errors[`${state.card}`][`${index}`].interestRate && (
-                <Text size="10px" color="#941616">
-                  Only numbers
-                </Text>
-              )}
+            {errors && errors[`${index}`] && errors[`${index}`].interestRate && (
+              <Text size="10px" color="#941616">
+                Only numbers
+              </Text>
+            )}
           </div>
-        </Flex>
+        </Flex> */}
 
         <CardInput
           label="Minimum monthly payment"
-          name={`${state.card}[${index}].minMonthlyPayment`}
+          name={`${index}.minMonthlyPayment`}
+          value={state.minMonthlyPayment}
+          onChange={handleChange}
           margin="dense"
           inputRef={register({ required: true })}
           placeholder={
-            errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment
+            errors && errors[`${index}`] && errors[`${index}`].minMonthlyPayment
               ? 'Required field'
               : ''
           }
@@ -351,21 +222,19 @@ const DebtInputCard = ({
             startAdornment: <InputAdornment position="start">$</InputAdornment>,
           }}
           error={
-            errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment
+            errors && errors[`${index}`] && errors[`${index}`].minMonthlyPayment
           }
           fullWidth
         />
-        <div>
+        {/* <div>
           {errors &&
-            errors[`${state.card}`] &&
-            errors[`${state.card}`][`${index}`].minMonthlyPayment && (
+            errors[`${index}`] &&
+            errors[`${index}`].minMonthlyPayment && (
               <Text size="10px" color="#941616">
                 Only numbers
               </Text>
             )}
-        </div>
+        </div> */}
       </DebtCardContent>
     </DebtCard>
   );

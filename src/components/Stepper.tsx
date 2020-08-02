@@ -30,7 +30,7 @@ type Props = {
 };
 
 const LabelSteps = styled.div<Props>`
-  padding-left: ${({ padMultiple }) => `calc(25% * ${padMultiple})`};
+  padding-left: ${({ padMultiple }) => `calc(24% * ${padMultiple})`};
   letter-spacing: 0em;
 `;
 
