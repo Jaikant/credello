@@ -17,6 +17,7 @@ const DebtCardAndButtons = styled.div`
   display: grid;
   grid-gap: 16px;
   padding-bottom: 46px;
+  position: relative;
 `;
 
 const DebtCard = styled.div`

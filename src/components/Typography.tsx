@@ -10,6 +10,7 @@ type Props = {
   mt?: string;
   ml?: string;
   lh?: string;
+  style?: string;
   center?: boolean;
   color?: string;
   underline?: boolean;
@@ -24,10 +25,12 @@ export const Text = styled.div<Props>`
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
+  font-style: ${({ style }) => (style ? `italic` : `normal`)};
   margin-left: ${({ ml }) => (ml ? `${ml}` : '0')};
   color: ${({ color }) => (color ? `${color}` : 'inherit')};
   text-align: ${({ center }) => (center ? `center` : 'initial')};
   text-decoration: ${({ underline }) => (underline ? `underline` : `none`)};
+
   @media ${device.tablet} {
     font-size: ${({ tabletSize, size }) => (tabletSize ? tabletSize : size)};
   }

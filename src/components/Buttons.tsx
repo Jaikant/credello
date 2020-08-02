@@ -6,14 +6,19 @@ import { TextBold } from 'components/Typography';
 
 type Props = {
   bg?: string;
+  width?: string;
+  mt?: string;
 };
 
 export const StyledButton = styled(Button)<Props>`
   &.MuiButton-contained {
     padding: 18px;
     background: ${({ bg }) => (bg ? bg : '#fff')};
+    width: ${({ width }) => (width ? width : 'auto')};
+    margin-top: ${({ mt }) => (mt ? mt : 'auto')};
     text-transform: none;
     letter-spacing: 0.14px;
+    box-shadow: none;
     &.Mui-disabled {
     }
   }
