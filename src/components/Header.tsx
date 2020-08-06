@@ -11,7 +11,7 @@ type Props = {
 };
 
 const HeroWrapper = styled(ComponentWrapper)`
-    background-image: url('${require('../assets/images/Hero.png')}');
+    background-image: url('${require('../assets/images/Hero.jpg')}');
     background-size: 50% auto, contain;
     background-repeat: no-repeat;
     background-position: top right;
@@ -19,13 +19,13 @@ const HeroWrapper = styled(ComponentWrapper)`
     @media ${device.tablet} { 
       display: grid;
       grid-gap: 32px;  
-      background-image: url('${require('../assets/images/HeroDesktop.png')}');
+      background-image: url('${require('../assets/images/HeroDesktop.jpg')}');
       background-size: 50% 100%, contain;
     };
     @media ${device.laptop} { 
       display: grid;
       grid-gap: 64px;
-      background-image: url('${require('../assets/images/HeroDesktop.png')}');
+      background-image: url('${require('../assets/images/HeroDesktop.jpg')}');
       background-size: 50% auto, contain;
     }  
 `;

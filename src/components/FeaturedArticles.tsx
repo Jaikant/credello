@@ -85,7 +85,7 @@ function MediaCard(props) {
 
 //https://github.com/cyrilwanner/next-optimized-images/issues/141#issuecomment-623556804
 MediaCard.defaultProps = {
-  image: 'featured.png',
+  image: 'featured.jpg',
   category: 'DEBT 101',
   updated: ' | Mar 19, 2020',
   title: `Whats a Normal Amount of Debt... and What's Too Much?`,

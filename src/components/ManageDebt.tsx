@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import { device } from 'libs/device';
 import { useRouter } from 'next/router';
+import Button from '@material-ui/core/Button';
 import { TextBlack, TextBold, TextMedium } from 'components/Typography';
 
 const ManageDebtGrid = styled.div`
@@ -77,7 +78,7 @@ const ManageDebt = () => {
         Manage your debt better
       </TextBold>
       <ManageDebtGrid>
-        <HeroButton src="payoff-debt.png">
+        <HeroButton src="payoff-debt.jpg">
           <TextBlack size="14px" lh="18px" color="#fff">
             Ways to pay off debt
           </TextBlack>

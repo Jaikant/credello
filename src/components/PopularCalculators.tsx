@@ -69,7 +69,7 @@ function NestedList() {
           <img
             width="27px"
             height="31px"
-            src={require('../assets/images/calculator.png')}
+            src={require('../assets/svgs/calculator01.svg')}
           />
         </StyledListIcon>
         <ListItemText
@@ -108,7 +108,7 @@ function NestedList() {
           <img
             width="30px"
             height="23px"
-            src={require('../assets/images/more.png')}
+            src={require('../assets/svgs/calculator02.svg')}
           />
         </StyledListIcon>
         <ListItemText

@@ -23,32 +23,36 @@ const GridWrapper = styled(ComponentMargin)`
 const CompareProductsGrid = styled(FullWidthWrapper)`
   display: grid;
   grid-gap: 8px;
-  grid-template-columns: repeat(4, calc(50% - 10px));
+  grid-template-columns: repeat(5, calc(50% - 10px)) 10px;
   grid-template-rows: minmax(112px, 1fr);
   overflow: scroll;
   scroll-snap-type: x proximity;
   &::-webkit-scrollbar {
     display: none;
   }
+  &:after {
+    content: '';
+    width: 10px;
+  }
   scrollbar-width: none;
   -ms-overflow-style: none;
   @media ${device.tablet} {
     grid-gap: 32px;
-    grid-template-columns: repeat(4, calc(20%));
+    grid-template-columns: repeat(5, minmax(167px, 1fr));
     grid-template-rows: minmax(120px, 1fr);
   }
   @media ${device.laptop} {
     margin-right: -64px;
     margin-left: -64px;
     grid-gap: 64px;
-    grid-template-columns: repeat(4, calc(20% - 40px));
+    grid-template-columns: repeat(5, calc(20% - 40px));
     grid-template-rows: minmax(120px, 1fr);
   }
 `;
 //https://uxdesign.cc/creating-horizontal-scrolling-containers-the-right-way-css-grid-c256f64fc585
 
 const DivText = styled(TextBold)`
-  max-width: 80px;
+  max-width: 99px;
 `;
 
 const BlueButtonBox = styled.div`
@@ -100,7 +104,7 @@ const CompareProducts = () => {
         <BlueButtonBox>
           <div>
             <div>
-              <img src={require('../assets/images/personalLoan.png')} />
+              <img src={require('../assets/svgs/home02.svg')} />
             </div>
             <DivText size="13px" center>
               Personal loan
@@ -110,7 +114,7 @@ const CompareProducts = () => {
         <BlueButtonBox>
           <div>
             <div>
-              <img src={require('../assets/images/personalLoan.png')} />
+              <img src={require('../assets/svgs/home04.svg')} />
             </div>
             <DivText size="13px" center>
               Credit Cards
@@ -120,7 +124,7 @@ const CompareProducts = () => {
         <BlueButtonBox>
           <div>
             <div>
-              <img src={require('../assets/images/personalLoan.png')} />
+              <img src={require('../assets/svgs/home05.svg')} />
             </div>
             <DivText size="13px" center>
               Home Equity Loans
@@ -130,10 +134,20 @@ const CompareProducts = () => {
         <BlueButtonBox>
           <div>
             <div>
-              <img src={require('../assets/images/personalLoan.png')} />
+              <img src={require('../assets/svgs/home01.svg')} />
             </div>
             <DivText size="13px" center>
               Mortgage Refinance
+            </DivText>
+          </div>
+        </BlueButtonBox>
+        <BlueButtonBox>
+          <div>
+            <div>
+              <img src={require('../assets/svgs/home03.svg')} />
+            </div>
+            <DivText size="13px" center>
+              Balance transfer credit cards
             </DivText>
           </div>
         </BlueButtonBox>

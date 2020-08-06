@@ -84,7 +84,7 @@ function MediaCard(props) {
 }
 
 MediaCard.defaultProps = {
-  image: 'featured.png',
+  image: 'featured.jpg',
   category: 'DEBT 101',
   updated: ' | Mar 19, 2020',
   title: `Whats a Normal Amount of Debt... and What's Too Much?`,
@@ -105,7 +105,7 @@ const ArticleGrid = ({ cards }) => {
 ArticleGrid.defaultProps = {
   cards: [
     {
-      image: 'loanCredit.png',
+      image: 'loanCredit.jpg',
       category: 'DEBT 101',
       updated: ' | Mar 19, 2020',
       title: `How to get a personal loan with a credit card?`,
@@ -113,7 +113,7 @@ ArticleGrid.defaultProps = {
       feel anxious. Read on to see what debt looks like for an...`,
     },
     {
-      image: 'refinance.png',
+      image: 'refinance.jpg',
       category: 'DEBT 101',
       updated: ' | Mar 19, 2020',
       title: `Should I refinance during the Covid-19 outbreak?`,
@@ -121,7 +121,7 @@ ArticleGrid.defaultProps = {
       feel anxious. Read on to see what debt looks like for an...`,
     },
     {
-      image: 'creditDebt.png',
+      image: 'creditDebt.jpg',
       category: 'DEBT 101',
       updated: ' | Mar 19, 2020',
       title: `How to get out of credit card debt fast?`,
@@ -129,7 +129,7 @@ ArticleGrid.defaultProps = {
       feel anxious. Read on to see what debt looks like for an...`,
     },
     {
-      image: 'featured.png',
+      image: 'featured.jpg',
       category: 'DEBT 101',
       updated: ' | Mar 19, 2020',
       title: `Whats a Normal Amount of Debt... and What's Too Much?`,

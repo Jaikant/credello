@@ -93,7 +93,7 @@ export const HomeOwner: CredelloFC = () => {
         </TextBold>
       </StyledButton>
 
-      <div style={{ bottom: 0 }}>
+      <div>
         {errors && errors.homeValue && (
           <Text size="14px" lh="16px" color="#941616" mt="8px">
             Please fill missing fields above
