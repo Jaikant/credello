@@ -78,7 +78,7 @@ const ManageDebt = () => {
         Manage your debt better
       </TextBold>
       <ManageDebtGrid>
-        <HeroButton src="payoff-debt.jpg">
+        <HeroButton src="payoff-debt.png">
           <TextBlack size="14px" lh="18px" color="#fff">
             Ways to pay off debt
           </TextBlack>
