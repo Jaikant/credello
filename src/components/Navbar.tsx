@@ -20,8 +20,8 @@ const CredelloLogo = styled(LogoSvg)`
 `;
 
 const IconSearch = styled(IconSearchMui)`
-  align-self: center; 
-  flex: 0 0 50px
+  align-self: center;
+  flex: 0 0 50px;
   font-size: 16px;
   margin-right: 8px;
   &.MuiSvgIcon-root {

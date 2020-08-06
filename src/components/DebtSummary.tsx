@@ -9,6 +9,8 @@ const DebtSummaryCard = styled.div`
   -webkit-box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
   -moz-box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
   box-shadow: 0px 0px 3px 3px rgba(220, 220, 220, 0.4);
+  background: #fff;
+  position: relative;
 `;
 
 const Wrapper = styled.div`

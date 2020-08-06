@@ -8,6 +8,7 @@ import { MainContext } from 'libs/context';
 import DebtInputCard from 'components/DebtInputCard';
 import { useForm } from 'react-hook-form';
 import { Text } from 'components/Typography';
+import { StyledFormBgWrapper } from 'components/LayoutComponents';
 
 type Props = {
   submitRef?: MutableRefObject<any>;
@@ -34,25 +35,28 @@ const DebtAccountTypes = React.memo((props: Props) => {
       onSubmit={handleSubmit(props.onSubmit)}
       ref={(form) => (props.submitRef.current = form)}
     >
-      {appState.debtDetails &&
-        Object.keys(appState.debtDetails).map((c, index) => (
-          <DebtInputCard
-            key={index}
-            index={index}
-            card={appState.debtDetails[c].debtType}
-            values={appState.debtDetails[c]}
-            register={register}
-            errors={errors}
-            {...props}
-          />
-        ))}
-      <div style={{ marginBottom: '72px' }}>
+      <StyledFormBgWrapper>
+        {appState &&
+          appState.userDebts &&
+          appState.userDebts.map((c, index) => {
+            return (
+              <DebtInputCard
+                key={index}
+                index={index}
+                card={c}
+                setError={setError}
+                register={register}
+                errors={errors}
+                {...props}
+              />
+            );
+          })}
         {error && (
           <Text size="14px" lh="16px" color="#941616">
             Please fill missing fields above
           </Text>
         )}
-      </div>
+      </StyledFormBgWrapper>
     </form>
   );
 });
