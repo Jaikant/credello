@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { device } from 'libs/device';
+import Link from 'next/link';
 import { TextH3, TextBold, Text } from 'components/Typography';
 import { FullWidthWrapper } from 'components/LayoutComponents';
 
@@ -102,14 +103,16 @@ const CompareProducts = () => {
       </div>
       <CompareProductsGrid>
         <BlueButtonBox>
-          <div>
+          <Link href="/personnal-loan">
             <div>
-              <img src={require('../assets/svgs/home02.svg')} />
+              <div>
+                <img src={require('../assets/svgs/home02.svg')} />
+              </div>
+              <DivText size="13px" center>
+                Personal loan
+              </DivText>
             </div>
-            <DivText size="13px" center>
-              Personal loan
-            </DivText>
-          </div>
+          </Link>
         </BlueButtonBox>
         <BlueButtonBox>
           <div>

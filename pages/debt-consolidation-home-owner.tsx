@@ -47,7 +47,7 @@ export const HomeOwner: CredelloFC = () => {
         right={
           context.appState && context.appState.homeOwner
             ? '/home-owner'
-            : '/404'
+            : '/recommendation'
         }
         position="fixed"
       />

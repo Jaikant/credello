@@ -23,6 +23,7 @@ type ContextType = {
       debtFreeDate: string;
       totalInterest: number;
     };
+    userPersonnalLoan: [string];
   };
   dispatch: ({ type: string, value: any }) => void;
 };
@@ -30,6 +31,7 @@ type ContextType = {
 export const MainContext = React.createContext<Partial<ContextType>>({});
 
 export const initialState = {
+  userPersonnalLoan: [],
   userDebts: [],
   noCreditCards: 0,
   debtDetails: null,
