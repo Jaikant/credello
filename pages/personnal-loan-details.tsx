@@ -20,7 +20,7 @@ import Radio from '@material-ui/core/Radio';
 
 export const PersonnalLoanDetails: CredelloFC = () => {
   const router = useRouter();
-  const formRef = useRef<HTMLDivElement | null>();
+  const formRef = useRef<HTMLFormElement | null>();
   const { register, handleSubmit, errors } = useForm();
   const context = useContext(MainContext);
   const { appState } = context;
@@ -57,7 +57,7 @@ export const PersonnalLoanDetails: CredelloFC = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        ref={(form) => (formRef.current = form)}
+        ref={(form) => (formRef.current = form as HTMLFormElement)}
       >
         <FormControl width="100%">
           <TextBold size="16px" lh="22px" color="#02254d" mb="10px">
