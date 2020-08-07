@@ -1,9 +1,7 @@
 import Layout from 'components/Layout';
-import Link from 'next/link';
-import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
 import { CustomSeparatorPl } from 'components/BreadCrumbs';
-import { Text, TextBold, TextMedium } from 'components/Typography';
+import { TextBold } from 'components/Typography';
 import Stepper from 'components/Stepper';
 import BottomBar from 'components/BottomBar';
 import Slider from 'components/Slider';
