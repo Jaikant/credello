@@ -105,6 +105,7 @@ export const Recommendation: CredelloFC = () => {
   const {
     signature: {
       op: { pl, bt },
+      ip: { base_match_score },
     },
   } = dcprData;
   return (
@@ -116,7 +117,7 @@ export const Recommendation: CredelloFC = () => {
           Credello&apos;s best match for you
         </TextBold>
         <Text size="14px" lh="20px" mb="42px" color="#fff">
-          We found 2 options with Match Score more than 4
+          {`We found ${base_match_score.hel}options with Match Score more than ${base_match_score.pl}`}
         </Text>
         <StyledTextArrowBg
           size="12"
