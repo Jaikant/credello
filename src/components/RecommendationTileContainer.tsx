@@ -92,7 +92,7 @@ type RectProps = {
 
 const StyledTagInfoText = styled(Text)``;
 const StyledHeadingTextContainer = styled.div``;
-const RecTileContainer: React.FC = ({ pl, bt }: RectProps) => {
+const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
   return (
     <StyledTileContainer>
       <ComTileContainer pt="18px" pb="20px">
