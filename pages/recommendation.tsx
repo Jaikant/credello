@@ -2,7 +2,7 @@ import Layout from 'components/Layout';
 import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
 import Footer from 'components/Footer';
-import BreadCrumbs from 'components/BreadCrumbs';
+import { RecommendationBreadCrumbs } from 'components/BreadCrumbs';
 import { StyledBlueHeroBgContainer } from 'components/LayoutComponents';
 import RecTileContainer from 'components/RecommendationTileContainer';
 import OptTileContainer from 'components/OptionTileContainer';
@@ -100,7 +100,11 @@ const DropDown = styled(Select)`
     width: 200px;
   }
 `;
-
+const Wrapper = styled.div`
+  .MuiBreadcrumbs-separator {
+    color: #cccccc;
+  }
+`;
 export const Recommendation: CredelloFC = () => {
   const {
     signature: {
@@ -109,10 +113,9 @@ export const Recommendation: CredelloFC = () => {
     },
   } = dcprData;
   return (
-    <div>
+    <Wrapper>
       <StyledBlueHeroBgContainer>
-        <BreadCrumbs mb="32px" color="#ccc" />
-
+        <RecommendationBreadCrumbs mb="32px" />
         <TextBold size="24px" lh="28px" mb="13px" color="#fff">
           Credello&apos;s best match for you
         </TextBold>
@@ -169,7 +172,7 @@ export const Recommendation: CredelloFC = () => {
       </BlueBtmBar>
 
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 
