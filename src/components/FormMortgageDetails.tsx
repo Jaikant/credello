@@ -20,7 +20,7 @@ const InputMargin = styled.div`
 `;
 
 type Props = {
-  submitRef?: MutableRefObject<any>;
+  submitRefMortage?: MutableRefObject<any>;
 };
 
 const MortgageDetails = memo((props: Props) => {
@@ -52,7 +52,7 @@ const MortgageDetails = memo((props: Props) => {
     } else if (state.mortgageYear === null) {
       setState({ ...state, error: 'Please select mortgage year' });
     } else {
-      router.push('/');
+      router.push('/recommendation');
     }
   };
 
@@ -69,7 +69,7 @@ const MortgageDetails = memo((props: Props) => {
     <div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        ref={(form) => (props.submitRef.current = form)}
+        ref={(form) => (props.submitRefMortage.current = form)}
       >
         <CardInput
           name="outstandingMortgage"

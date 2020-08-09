@@ -11,7 +11,6 @@ import BottomBar from 'components/BottomBar';
 import StateForm from 'components/StateForm';
 
 export const DebtAccounts: CredelloFC = () => {
-  const context = useContext(MainContext);
   const router = useRouter();
   const submitRef = useRef<HTMLDivElement | null>();
   const onSubmit = (data) => {

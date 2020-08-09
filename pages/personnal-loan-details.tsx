@@ -26,19 +26,17 @@ export const PersonnalLoanDetails: CredelloFC = () => {
   const { appState } = context;
   const [value, setValue] = useState('years');
 
-  const [monthlyIncome, setMonthlyIncome] = useState(
-    appState && appState.monthlyIncome
-  );
+  const [monthlyIncome, setMonthlyIncome] = useState(appState && appState);
   const [error, setError] = useState(null);
 
   const updatePayOffAbility = (value) => {
-    context.dispatch({ type: 'payoffAbility', value });
+    // context.dispatch({ type: 'payoffAbility', value });
     setError(null);
   };
 
   const handleChange = (event) => {
     setMonthlyIncome(event.target.value);
-    context.dispatch({ type: 'monthlyIncome', value: event.target.value });
+    // context.dispatch({ type: 'monthlyIncome', value: event.target.value });
   };
   const onSubmit = (data) => {
     //add this data to context and navigate.
@@ -65,12 +63,7 @@ export const PersonnalLoanDetails: CredelloFC = () => {
           </TextBold>
           <CardInput
             name="monthlyIncome"
-            value={
-              monthlyIncome &&
-              Number(monthlyIncome.match(/\d+/g).join('')).toLocaleString(
-                'us-US'
-              )
-            }
+            value={''}
             onChange={handleChange}
             label={''}
             margin="dense"
@@ -78,7 +71,7 @@ export const PersonnalLoanDetails: CredelloFC = () => {
               required: true,
               pattern: /^(\d*\.?\d+|\d{1,3}(,\d{3})*(\.\d+)?)$/,
             })}
-            placeholder={errors && errors.monthlyIncome ? 'Required field' : ''}
+            placeholder={'Required field'}
             InputLabelProps={{ shrink: true }}
             InputProps={{
               startAdornment: (
@@ -86,7 +79,7 @@ export const PersonnalLoanDetails: CredelloFC = () => {
               ),
             }}
             fullWidth
-            error={errors && errors.monthlyIncome}
+            error={false}
           />
 
           <TextBold size="16px" lh="22px" color="#02254d" mb="10px" mt="40px">
@@ -107,13 +100,8 @@ export const PersonnalLoanDetails: CredelloFC = () => {
             />
           </RadioGroup>
           <CardInput
-            name="monthlyIncome"
-            value={
-              monthlyIncome &&
-              Number(monthlyIncome.match(/\d+/g).join('')).toLocaleString(
-                'us-US'
-              )
-            }
+            name=""
+            value={''}
             onChange={handleChange}
             label={''}
             margin="dense"
@@ -121,10 +109,10 @@ export const PersonnalLoanDetails: CredelloFC = () => {
               required: true,
               pattern: /^(\d*\.?\d+|\d{1,3}(,\d{3})*(\.\d+)?)$/,
             })}
-            placeholder={errors && errors.monthlyIncome ? 'Required field' : ''}
+            placeholder={errors && errors ? 'Required field' : ''}
             InputLabelProps={{ shrink: true }}
             fullWidth
-            error={errors && errors.monthlyIncome}
+            error={false}
           />
         </FormControl>
       </form>

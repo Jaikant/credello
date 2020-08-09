@@ -11,8 +11,9 @@ import { YesOrNoButtons } from 'components/Buttons';
 
 export const HomeOwner: CredelloFC = () => {
   const context = useContext(MainContext);
-  const updateHomeOwner = (value) =>
-    context.dispatch({ type: 'homeOwner', value });
+  const updateHomeOwner = (value) => {
+    return context.dispatch({ type: 'homeOwner', value });
+  };
 
   return (
     <div>
@@ -47,7 +48,7 @@ export const HomeOwner: CredelloFC = () => {
         right={
           context.appState && context.appState.homeOwner
             ? '/home-owner'
-            : '/recommendation'
+            : '/404'
         }
         position="fixed"
       />

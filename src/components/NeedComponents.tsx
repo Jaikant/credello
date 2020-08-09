@@ -47,7 +47,7 @@ export const NeedHeader = ({ mb }: ComponentProps) => {
         </Text>
       </InlineDiv>
       <InlineDiv>
-        <Check width="15px" fill="#15db95" />
+        <Check width="16px" fill="#15db95" />
         <Text size="14px" lh="18px" color="#6c7f87" mb="24px">
           Match score based on your unique needs
         </Text>
@@ -297,31 +297,37 @@ export const NeedUserInput = React.memo(() => {
 export const NeedUserInputPersonnalLoan = React.memo(() => {
   const context = useContext(MainContext);
   const router = useRouter();
-  const [debtType, setDebtType] = React.useState(
-    context && context.appState && context.appState.userDebts
-  );
+  const [personalLoan, setpersonalLoan] = React.useState([
+    'creditCard',
+    'consolidateDebt',
+    'bigPurchase',
+    'payOffCreditCard',
+  ]);
   const [checkNumCC, setCheckNumCC] = React.useState(false);
   const [checked, setChecked] = React.useState(false);
 
-  const handleDebtSelect = (newDebtType) => {
+  const handleDebtSelect = (newpersonalLoan) => {
     let selectedDebts;
-    const alreadySelected = debtType.find((dt) => dt === newDebtType);
+    const alreadySelected = personalLoan.find((dt) => dt === newpersonalLoan);
 
     if (typeof alreadySelected === 'undefined') {
-      selectedDebts = [...debtType, newDebtType];
+      selectedDebts = [...personalLoan, newpersonalLoan];
     } else {
-      selectedDebts = debtType.filter((dt) => dt != newDebtType);
+      selectedDebts = personalLoan.filter((dt) => dt != newpersonalLoan);
     }
 
-    setDebtType(selectedDebts);
+    setpersonalLoan(selectedDebts);
     context.dispatch({ type: 'userDebts', value: selectedDebts });
   };
 
   const handleNext = (e, goAhead) => {
     e && e.preventDefault();
-    if (debtType.length > 1 || (debtType.length === 1 && goAhead)) {
+    if (personalLoan.length > 1 || (personalLoan.length === 1 && goAhead)) {
       router.push('/personnal-loan-details');
-    } else if (debtType.length === 1 && debtType.indexOf('creditCard') > -1) {
+    } else if (
+      personalLoan.length === 1 &&
+      personalLoan.indexOf('creditCard') > -1
+    ) {
       setCheckNumCC(true);
     }
   };
@@ -340,38 +346,39 @@ export const NeedUserInputPersonnalLoan = React.memo(() => {
           <ToggleButton
             name="Consolidate debt"
             icon={<AutoLoan width="24px" />}
-            selected={debtType.indexOf('consolidateDebt') > -1}
+            selected={personalLoan.indexOf('consolidateDebt') > -1}
             onClick={() => handleDebtSelect('consolidateDebt')}
           />
           <ToggleButton
             name="Pay off credit cards"
             icon={<CreditCard width="26px" />}
-            selected={debtType.indexOf('payOffCreditCard') > -1}
+            selected={personalLoan.indexOf('payOffCreditCard') > -1}
             onClick={() => handleDebtSelect('payOffCreditCard')}
           />
 
           <ToggleButton
             name="Renovate home"
             icon={<StudentLoan width="27px" />}
-            selected={debtType.indexOf('renovateHome') > -1}
+            selected={personalLoan.indexOf('renovateHome') > -1}
             onClick={() => handleDebtSelect('renovateHome')}
           />
+
           <ToggleButton
             name="Cover for emergency"
             icon={<MedicalBill width="19px" />}
-            selected={debtType.indexOf('coverForEmergency') > -1}
+            selected={personalLoan.indexOf('coverForEmergency') > -1}
             onClick={() => handleDebtSelect('coverForEmergency')}
           />
           <ToggleButton
             name="Make a big purchase"
             icon={<PersonalLoan width="30px" />}
-            selected={debtType.indexOf('bigPurchase') > -1}
+            selected={personalLoan.indexOf('bigPurchase') > -1}
             onClick={() => handleDebtSelect('bigPurchase')}
           />
           <ToggleButton
             name="Others"
             icon={<Others width="24px" />}
-            selected={debtType.indexOf('others') > -1}
+            selected={personalLoan.indexOf('others') > -1}
             onClick={() => handleDebtSelect('others')}
           />
         </ManageDebtGrid>
@@ -384,9 +391,9 @@ export const NeedUserInputPersonnalLoan = React.memo(() => {
           disableElevation
           disabled={
             !(
-              debtType &&
-              (debtType.length > 1 ||
-                (debtType.indexOf('creditCard') > -1 && !checked))
+              personalLoan &&
+              (personalLoan.length > 1 ||
+                (personalLoan.indexOf('creditCard') > -1 && !checked))
             )
           }
         >
