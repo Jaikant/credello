@@ -106,6 +106,11 @@ const StyledHeadingTextContainer = styled.div`
   justify-content: start;
 `;
 const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
+  const [open, setClose] = React.useState(false);
+
+  const handleClick = () => {
+    setClose(true);
+  };
   return (
     <StyledTileContainer>
       <ComTileContainer pt="18px" pb="20px">
@@ -131,7 +136,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${pl.min_est_APR}-${pl.max_est_APR}`}
+                {`${pl.min_est_APR}-${pl.max_est_APR} %`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -206,7 +211,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           </TextBold>
         </StyledButton>
 
-        <TileNotifictionPopover />
+        {!open && <TileNotifictionPopover handleClick={handleClick} />}
       </ComTileContainer>
 
       <ComTileContainer pt="18px" pb="20px">
