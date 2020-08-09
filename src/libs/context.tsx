@@ -5,7 +5,7 @@ type ContextType = {
   appState: {
     userDebts: [string];
     noCreditCards: number;
-    debtDetails: { string: [any] };
+    debtDetails: [any];
     preference: string;
     creditScore: number;
     monthlyIncome: string;

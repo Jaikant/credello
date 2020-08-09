@@ -39,12 +39,12 @@ const DebtAccountTypes = React.memo((props: Props) => {
     >
       <StyledFormBgWrapper>
         {appState.debtDetails &&
-          Object.keys(appState.debtDetails).map((c, index) => (
+          appState.debtDetails.map((c, index) => (
             <DebtInputCard
               key={index}
               index={index}
-              card={appState.debtDetails[c].debtType}
-              values={appState.debtDetails[c]}
+              card={c.debtType}
+              values={c}
               register={register}
               errors={errors}
               {...props}
