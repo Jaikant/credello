@@ -11,8 +11,9 @@ import { YesOrNoButtons } from 'components/Buttons';
 
 export const HomeOwner: CredelloFC = () => {
   const context = useContext(MainContext);
-  const updateHomeOwner = (value) =>
-    context.dispatch({ type: 'homeOwner', value });
+  const updateHomeOwner = (value) => {
+    return context.dispatch({ type: 'homeOwner', value });
+  };
 
   return (
     <div>

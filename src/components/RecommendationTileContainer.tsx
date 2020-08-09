@@ -85,9 +85,14 @@ const StyledButtonFontColor = styled(TextBold)`
   color: #15db95 !important;
 `;
 
+type RectProps = {
+  pl?: any;
+  bt?: any;
+};
+
 const StyledTagInfoText = styled(Text)``;
 const StyledHeadingTextContainer = styled.div``;
-const RecTileContainer: React.FC = () => {
+const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
   return (
     <StyledTileContainer>
       <ComTileContainer pt="18px" pb="20px">
@@ -112,7 +117,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                12.5-25.9%
+                {`${pl.min_est_APR}-${pl.max_est_APR}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -123,7 +128,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                $4,000
+                {`${'$' + pl.mo_payment}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -134,7 +139,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                05/20
+                {`${pl.debt_free_date}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -211,7 +216,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                12.5-25.9%
+                {`${bt.min_est_APR}-${bt.max_est_APR + '%'} `}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -222,7 +227,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                $4,000
+                {`${'$' + pl.mo_payment}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -233,7 +238,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                05/20
+                {`${bt.debt_free_date}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -255,7 +260,7 @@ const RecTileContainer: React.FC = () => {
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
-            Next Step
+            Compare Personal Loans
           </TextBold>
         </StyledButton>
       </ComTileContainer>
@@ -281,7 +286,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                12.5-25.9%
+                {`${pl.min_est_APR}-${pl.max_est_APR + '%'}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -292,7 +297,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                $4,000
+                {`${'$' + pl.mo_payment}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -303,7 +308,7 @@ const RecTileContainer: React.FC = () => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                05/20
+                {`${pl.debt_free_date}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -325,7 +330,7 @@ const RecTileContainer: React.FC = () => {
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
-            Next Step
+            Compare Personal Loans
           </TextBold>
         </StyledButton>
       </ComTileContainer>

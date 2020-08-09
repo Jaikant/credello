@@ -16,6 +16,7 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Popover } from '@material-ui/core';
+import { dcprData } from 'data';
 
 const StyledTextArrowBg = styled(Text)`
     background-image: url('${require('../src/assets/images/down-arrow.svg')}'); 
@@ -101,6 +102,11 @@ const DropDown = styled(Select)`
 `;
 
 export const Recommendation: CredelloFC = () => {
+  const {
+    signature: {
+      op: { pl, bt },
+    },
+  } = dcprData;
   return (
     <div>
       <StyledBlueHeroBgContainer>
@@ -123,7 +129,7 @@ export const Recommendation: CredelloFC = () => {
         </StyledTextArrowBg>
       </StyledBlueHeroBgContainer>
 
-      <RecTileContainer />
+      <RecTileContainer pl={pl} bt={bt} />
 
       <TextBold
         size="14px"

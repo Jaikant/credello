@@ -5,6 +5,9 @@ import { TextMedium } from 'components/Typography';
 function getSteps() {
   return ['Debt details', 'Preferences', 'Financial health', 'Home details'];
 }
+function getStepsPl() {
+  return ['Debt details', 'Preferences', 'Financial health'];
+}
 
 type PropsStep = {
   index?: number;
@@ -15,7 +18,8 @@ const Step = styled.div<PropsStep>`
   height: 6px;
   background: ${({ active, index }) =>
     index < active ? '#02254d' : '#d8d9da'};
-  width: 24%;
+  flex: 1;
+  margin-right: 6px;
 `;
 
 const Stepper = styled.div`
@@ -37,6 +41,7 @@ const LabelSteps = styled.div<Props>`
 type ComponentProps = {
   mb?: string;
   active?: number;
+  pl?: boolean;
 };
 
 type WrappeProps = {
@@ -47,8 +52,8 @@ const StepperWrapper = styled.div<WrappeProps>`
   margin-bottom: ${({ mb }) => (mb ? mb : `0`)};
 `;
 export default function CustomizedSteppers(props: ComponentProps) {
-  const { active, mb } = props;
-  const steps = getSteps();
+  const { active, mb, pl } = props;
+  const steps = pl ? getStepsPl() : getSteps();
   return (
     <StepperWrapper mb={mb}>
       <Stepper>
@@ -56,11 +61,13 @@ export default function CustomizedSteppers(props: ComponentProps) {
           <Step key={index} active={active} index={index} />
         ))}
       </Stepper>
-      <LabelSteps padMultiple={active - 1}>
-        <TextMedium size="14px" color="#6c7f87">
-          {steps[active - 1]}{' '}
-        </TextMedium>
-      </LabelSteps>
+      {!pl && (
+        <LabelSteps padMultiple={active - 1}>
+          <TextMedium size="14px" color="#6c7f87">
+            {steps[active - 1]}{' '}
+          </TextMedium>
+        </LabelSteps>
+      )}
     </StepperWrapper>
   );
 }
