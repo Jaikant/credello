@@ -155,9 +155,10 @@ export const Recommendation: CredelloFC = () => {
             inputProps={{ 'aria-label': 'Without label' }}
             //variant="filled"
           >
-            <MenuItem value={10}>Sort By</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Match Score</MenuItem>
+            <MenuItem value={20}>Est. APR Range</MenuItem>
+            <MenuItem value={30}>Monthly Payment</MenuItem>
+            <MenuItem value={40}>Debt-free Date</MenuItem>
           </DropDown>
         </FormControl>
 

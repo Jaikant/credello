@@ -62,6 +62,16 @@ const StyleTickIcon = styled.i`
     display: inline-block;
     margin-right: 7px;
 `;
+const QuestionIcon = styled.i`
+ background: url('${require('../assets/svgs/question.svg')}');
+  background-repeat: no-repeat;
+   width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left:3px;
+   
+`;
 const StyleCrossIcon = styled.i`
     background: url('${require('../assets/svgs/close-tile.svg')}');
     background-repeat: no-repeat;
@@ -91,7 +101,10 @@ type RectProps = {
 };
 
 const StyledTagInfoText = styled(Text)``;
-const StyledHeadingTextContainer = styled.div``;
+const StyledHeadingTextContainer = styled.div`
+  display: flex;
+  justify-content: start;
+`;
 const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
   return (
     <StyledTileContainer>
@@ -100,6 +113,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -200,6 +214,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -247,9 +262,11 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           </StyledTagContainer>
         </StyledTagMainContainer>
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+          <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+          <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
         <Link href="/">
@@ -270,6 +287,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -317,9 +335,11 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           </StyledTagContainer>
         </StyledTagMainContainer>
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+          <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+          <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
         <Link href="/">
