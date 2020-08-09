@@ -11,7 +11,11 @@ import BottomBar from 'components/BottomBar';
 import { CardInput, InputAdornment } from 'components/Forms';
 import { useForm } from 'react-hook-form';
 import { StyledButton } from 'components/Buttons';
-
+const Wrapper = styled.div`
+  display: grid;
+  margin-top: calc(46px - 16px);
+  margin-bottom: 100px;
+`;
 export const HomeOwner: CredelloFC = () => {
   const router = useRouter();
   const submitRef = useRef<HTMLFormElement | null>();
@@ -80,18 +84,20 @@ export const HomeOwner: CredelloFC = () => {
           {` $250,000 `}
         </TextBold>
       </Text>
-      <StyledButton
-        bg={'#85a3b8'}
-        variant="contained"
-        // onClick={(e) => {}}
-        disableElevation
-        disabled={false}
-        fullWidth
-      >
-        <TextBold size="14px" color="#fff">
-          Use zip code average
-        </TextBold>
-      </StyledButton>
+      <Wrapper>
+        <StyledButton
+          bg={'#85a3b8'}
+          variant="contained"
+          // onClick={(e) => {}}
+          disableElevation
+          disabled={false}
+          fullWidth
+        >
+          <TextBold size="14px" color="#fff">
+            Use zip code average
+          </TextBold>
+        </StyledButton>
+      </Wrapper>
 
       <div>
         {errors && errors.homeValue && (
@@ -100,6 +106,7 @@ export const HomeOwner: CredelloFC = () => {
           </Text>
         )}
       </div>
+
       <BottomBar
         left="/debt-consolidation-home-owner"
         submit={() => {

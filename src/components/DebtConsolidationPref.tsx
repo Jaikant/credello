@@ -5,6 +5,8 @@ import { StyledButton } from 'components/Buttons';
 import { MainContext } from 'libs/context';
 
 const Wrapper = styled.div`
+  display: grid;
+  margin-top: calc(46px - 16px);
   margin-bottom: 12px;
 `;
 

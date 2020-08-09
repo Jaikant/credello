@@ -144,12 +144,17 @@ const DebtInputCard = ({
           <CardInput
             label="Balance"
             name={`${index}.balance`}
-            value={state.balance}
+            value={
+              state.balance &&
+              Number(state.balance.match(/\d+/g).join('')).toLocaleString(
+                'us-US'
+              )
+            }
             onChange={handleChange}
             margin="dense"
             inputRef={register({
               required: true,
-              pattern: /^(0|[1-9][0-9]*)$/,
+              // pattern: /^(0|[1-9][0-9]*)$/,
             })}
             placeholder={
               errors && errors[`${index}`] && errors[`${index}`].balance
@@ -182,6 +187,9 @@ const DebtInputCard = ({
                 : ''
             }
             InputLabelProps={{ shrink: true }}
+            InputProps={{
+              endAdornment: <InputAdornment position="end">%</InputAdornment>,
+            }}
             error={
               errors && errors[`${index}`] && errors[`${index}`].interestRate
             }
@@ -208,7 +216,12 @@ const DebtInputCard = ({
         <CardInput
           label="Minimum monthly payment"
           name={`${index}.minMonthlyPayment`}
-          value={state.minMonthlyPayment}
+          value={
+            state.minMonthlyPayment &&
+            Number(
+              state.minMonthlyPayment.match(/\d+/g).join('')
+            ).toLocaleString('us-US')
+          }
           onChange={handleChange}
           margin="dense"
           inputRef={register({ required: true })}

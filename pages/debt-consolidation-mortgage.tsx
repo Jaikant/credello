@@ -10,7 +10,7 @@ import BottomBar from 'components/BottomBar';
 import FormMortgageDetails from 'components/FormMortgageDetails';
 
 export const DebtAccounts: CredelloFC = () => {
-  const submitRef = useRef<HTMLFormElement | null>();
+  const submitRefMortage = useRef<HTMLFormElement | null>();
 
   return (
     <div>
@@ -23,11 +23,11 @@ export const DebtAccounts: CredelloFC = () => {
         Finally, tell us about your current mortgage loan, so we can assess if
         consolidating using home equity might work for you.
       </TextBold>
-      <FormMortgageDetails submitRef={submitRef} />
+      <FormMortgageDetails submitRefMortage={submitRefMortage} />
       <BottomBar
         left="/home-owner"
         submit={() => {
-          submitRef.current.dispatchEvent(
+          submitRefMortage.current.dispatchEvent(
             new Event('submit', { cancelable: true })
           );
         }}

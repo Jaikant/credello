@@ -40,7 +40,9 @@ export const StyledButton = styled(Button)<Props>`
 `;
 
 const Wrapper = styled.div`
-  margin-bottom: 40px;
+  display: grid;
+  margin-top: calc(46px - 16px);
+  margin-bottom: 24px;
 `;
 
 export const YesOrNoButtons = ({ fn, initial = null }) => {

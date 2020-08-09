@@ -26,7 +26,8 @@ const CredelloSlider = styled(SliderMui)`
     color: #15db95;
     height: 46px;
     width: 46px;
-    // border: 1px solid #6c7f87;
+    border: 1px solid #6c7f87;
+    //border: 6px solid #ffffff;
     margin-top: -8px;
     margin-right: -64px;
     margin-left: 0px;
@@ -36,6 +37,18 @@ const CredelloSlider = styled(SliderMui)`
     &:active {
       box-shadow: inherit;
     }
+  }
+  .MuiSlider-thumb::after {
+    background: none;
+    border: 6px solid #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
   }
   .MuiSlider-rail {
     height: 31px;

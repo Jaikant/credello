@@ -5,12 +5,24 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornmentMui from '@material-ui/core/InputAdornment';
 import SelectMui from '@material-ui/core/Select';
 import InputLabelMui from '@material-ui/core/InputLabel';
+import RadioGroupMui from '@material-ui/core/RadioGroup';
 
 type Props = {
   error?: boolean;
   card?: string;
 };
 
+export const RadioGroup = styled(RadioGroupMui)<Props>`
+  &.MuiFormGroup-root {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  &.MuiFormControlLabel-root {
+    margin-left: -11px;
+    margin-right: 20px;
+  }
+`;
 export const InputAdornment = styled(InputAdornmentMui)<Props>`
   p {
     color: ${(props) => (props.error ? '#941616' : 'auto')};

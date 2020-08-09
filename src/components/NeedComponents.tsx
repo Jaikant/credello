@@ -47,7 +47,7 @@ export const NeedHeader = ({ mb }: ComponentProps) => {
         </Text>
       </InlineDiv>
       <InlineDiv>
-        <Check width="15px" fill="#15db95" />
+        <Check width="16px" fill="#15db95" />
         <Text size="14px" lh="18px" color="#6c7f87" mb="24px">
           Match score based on your unique needs
         </Text>
@@ -225,6 +225,7 @@ export const NeedUserInput = React.memo(() => {
             onClick={() => handleDebtSelect('others')}
           />
         </ManageDebtGrid>
+
         <Text size="14px" color="#6c7f87" mt="16px" center>
           Select Multiple
         </Text>
@@ -293,6 +294,117 @@ export const NeedUserInput = React.memo(() => {
   );
 });
 
+export const NeedUserInputPersonnalLoan = React.memo(() => {
+  const context = useContext(MainContext);
+  const router = useRouter();
+  const [personalLoan, setpersonalLoan] = React.useState([
+    'creditCard',
+    'consolidateDebt',
+    'bigPurchase',
+    'payOffCreditCard',
+  ]);
+  const [checkNumCC, setCheckNumCC] = React.useState(false);
+  const [checked, setChecked] = React.useState(false);
+
+  const handleDebtSelect = (newpersonalLoan) => {
+    let selectedDebts;
+    const alreadySelected = personalLoan.find((dt) => dt === newpersonalLoan);
+
+    if (typeof alreadySelected === 'undefined') {
+      selectedDebts = [...personalLoan, newpersonalLoan];
+    } else {
+      selectedDebts = personalLoan.filter((dt) => dt != newpersonalLoan);
+    }
+
+    setpersonalLoan(selectedDebts);
+    context.dispatch({ type: 'userDebts', value: selectedDebts });
+  };
+
+  const handleNext = (e, goAhead) => {
+    e && e.preventDefault();
+    if (personalLoan.length > 1 || (personalLoan.length === 1 && goAhead)) {
+      router.push('/personnal-loan-details');
+    } else if (
+      personalLoan.length === 1 &&
+      personalLoan.indexOf('creditCard') > -1
+    ) {
+      setCheckNumCC(true);
+    }
+  };
+  return (
+    <div>
+      <div style={{ padding: '16px' }}>
+        <TextBold size="16px" color="#02254d" lh="20px" mb="35px">
+          What do you need a personal loan for?
+        </TextBold>
+
+        <Text size="14px" color="#6c7f87" mt="16px" mb="27px" center>
+          Please Choose One :
+        </Text>
+
+        <ManageDebtGrid>
+          <ToggleButton
+            name="Consolidate debt"
+            icon={<AutoLoan width="24px" />}
+            selected={personalLoan.indexOf('consolidateDebt') > -1}
+            onClick={() => handleDebtSelect('consolidateDebt')}
+          />
+          <ToggleButton
+            name="Pay off credit cards"
+            icon={<CreditCard width="26px" />}
+            selected={personalLoan.indexOf('payOffCreditCard') > -1}
+            onClick={() => handleDebtSelect('payOffCreditCard')}
+          />
+
+          <ToggleButton
+            name="Renovate home"
+            icon={<StudentLoan width="27px" />}
+            selected={personalLoan.indexOf('renovateHome') > -1}
+            onClick={() => handleDebtSelect('renovateHome')}
+          />
+
+          <ToggleButton
+            name="Cover for emergency"
+            icon={<MedicalBill width="19px" />}
+            selected={personalLoan.indexOf('coverForEmergency') > -1}
+            onClick={() => handleDebtSelect('coverForEmergency')}
+          />
+          <ToggleButton
+            name="Make a big purchase"
+            icon={<PersonalLoan width="30px" />}
+            selected={personalLoan.indexOf('bigPurchase') > -1}
+            onClick={() => handleDebtSelect('bigPurchase')}
+          />
+          <ToggleButton
+            name="Others"
+            icon={<Others width="24px" />}
+            selected={personalLoan.indexOf('others') > -1}
+            onClick={() => handleDebtSelect('others')}
+          />
+        </ManageDebtGrid>
+      </div>
+      <GridWrapper>
+        <StyledButton
+          bg="#15db95"
+          variant="contained"
+          onClick={(e) => handleNext(e, false)}
+          disableElevation
+          disabled={
+            !(
+              personalLoan &&
+              (personalLoan.length > 1 ||
+                (personalLoan.indexOf('creditCard') > -1 && !checked))
+            )
+          }
+        >
+          <TextBold size="14px" color="#fff">
+            Next Step
+          </TextBold>
+        </StyledButton>
+      </GridWrapper>
+    </div>
+  );
+});
 const LightPurpleBackground = styled(FullWidthWrapper)`
   background: #f3f4fd;
   padding-top: 51px;
@@ -342,6 +454,50 @@ export const NeedDescription = () => {
       <Text size="14px" color="#6c7f87" lh="20px" mb="24px">
         After viewing products matched to you, you can compare further with our
         debt consolidation calculator and get an estimate of potential savings.
+      </Text>
+    </LightPurpleBackground>
+  );
+};
+
+export const NeedDescriptionPersonnalLoan = () => {
+  return (
+    <LightPurpleBackground>
+      <TextBold size="14px" color="#02254d" lh="20px">
+        When to consider a personal loan Personal
+      </TextBold>
+      <Text size="14px" color="#6c7f87" lh="20px" mb="24px">
+        Personal loans are mainly used for debt consolidation, emergencies, home
+        renovations, or major events, like a wedding or vacation. In any of
+        these cases, you likely need cash quickly, and a personal loan could be
+        a good option.
+      </Text>
+
+      <TextBold size="14px" color="#02254d" lh="20px">
+        Decide how much to borrow
+      </TextBold>
+      <Text size="14px" color="#6c7f87" lh="20px" mb="24px">
+        Figure out the amount that will cover what you need, but also make sure
+        that number fits your budget. Taking on a personal loan is an added
+        expense every month, and you don’t want to break the bank to get one
+      </Text>
+
+      <TextBold size="14px" color="#02254d" lh="20px">
+        Where to apply for a personal loan
+      </TextBold>
+      <Text size="14px" color="#6c7f87" lh="20px" mb="24px">
+        The best place to apply for a personal loan depends on several factors.
+        How much you need, your credit score, your debt-to-income ratio, your
+        income, and the length of your loan all come into play.
+      </Text>
+      <TextBold size="14px" color="#02254d" lh="20px">
+        Determine your eligibility
+      </TextBold>
+      <Text size="14px" color="#6c7f87" lh="20px" mb="24px">
+        Each lender will have different eligibility requirements. For instance,
+        it’s common to need at least three years of credit history to be
+        eligible for a loan. Figure out if there’s a minimum for your credit
+        score, income, and debt-to-income ratio. This can help you eliminate
+        certain lenders right off the bat.
       </Text>
     </LightPurpleBackground>
   );

@@ -1,10 +1,11 @@
 import React from 'react';
+import { constants } from 'crypto';
 
 type ContextType = {
   appState: {
     userDebts: [string];
     noCreditCards: number;
-    debtDetails: { string: [any] };
+    debtDetails: [any];
     preference: string;
     creditScore: number;
     monthlyIncome: string;
@@ -23,6 +24,7 @@ type ContextType = {
       debtFreeDate: string;
       totalInterest: number;
     };
+    userPersonnalLoan: [string];
   };
   dispatch: ({ type: string, value: any }) => void;
 };
@@ -30,6 +32,7 @@ type ContextType = {
 export const MainContext = React.createContext<Partial<ContextType>>({});
 
 export const initialState = {
+  userPersonnalLoan: [],
   userDebts: [],
   noCreditCards: 0,
   debtDetails: null,
@@ -55,28 +58,34 @@ export const initialState = {
 
 type NperProp = {
   rate: number;
-  per?: number;
-  pmt: number;
-  pv?: number;
-  fv?: number;
+  payment?: number;
+  present: number;
+  future?: number;
+  type?: number;
 };
 
-const nper = ({ rate, per, pmt, pv, fv }: NperProp) => {
-  let nperValue: number;
-  // if (per == 0 || pmt == 0) {
-  //   alert('Why do you want to test me with zeros?');
-  //   return 0;
-  // }
-  rate = rate / (per * 100);
+const monthFromNow = (timeToDebtFree) => {
+  const debtFreeDate = new Date();
+  debtFreeDate.setMonth(debtFreeDate.getMonth() + Math.abs(timeToDebtFree));
+  return debtFreeDate;
+};
+
+const nper = ({ rate, payment, present, future, type }: NperProp) => {
+  type = typeof type === 'undefined' ? 0 : type;
+  future = typeof future === 'undefined' ? 0 : future;
+  if (present == 0 || payment == 0) {
+    return 0;
+  }
+  rate = rate / (payment * 100);
+  let nperValue = 0;
   if (rate == 0) {
-    // Interest rate is 0
-    nperValue = -(fv + pv) / pmt;
+    nperValue = -(future + present) / payment;
   } else {
     nperValue =
-      Math.log((-fv * rate + pmt) / (pmt + rate * pv)) / Math.log(1 + rate);
+      Math.log((-future * rate + payment) / (payment + rate * present)) /
+      Math.log(1 + rate);
   }
-
-  return nperValue;
+  return Math.ceil(nperValue);
 };
 
 const syncUserDebt = (state) => {
@@ -92,39 +101,38 @@ export const reducer = (state, action) => {
     let debtAmount = 0;
     let monthylyPayment = 0;
     let combinedInterest = 0;
-    const debtFreeDate = `06/2024`;
+    // const debtFreeDate = `06/2024`;
 
-    if (state.debtDetails) {
-      for (const debtKind in state.debtDetails) {
-        const debt = state.debtDetails[debtKind];
-        if (debt && debt.length > 0) {
-          debt.forEach((element) => {
-            // combined Interest rate: (i1*b1 + i2*b2) / (b1+b2)
-            const numerator: number =
-              combinedInterest * debtAmount +
-              parseInt(element.interestRate) * parseInt(element.balance);
-            combinedInterest =
-              numerator / (debtAmount + parseInt(element.balance));
-            //debtAmount
-            debtAmount = debtAmount + parseInt(element.balance);
-            // monthly payment
-            monthylyPayment =
-              monthylyPayment + parseInt(element.minMonthlyPayment);
-          });
-        }
-      }
+    if (state.debtDetails && state.debtDetails.length > 0) {
+      state.debtDetails.map((debt) => {
+        const balance = debt.balance.split(',').join('');
+        const minMonthlyPayment = debt.minMonthlyPayment.split(',').join('');
+        const numerator: number =
+          combinedInterest * debtAmount +
+          parseInt(debt.interestRate) * parseInt(balance);
+        combinedInterest = numerator / (debtAmount + parseInt(balance));
+        debtAmount = debtAmount + parseInt(balance);
+        monthylyPayment = monthylyPayment + parseInt(minMonthlyPayment);
+      });
     }
-    // let debtAmount = state.;
+
     const totalInterest = `26,500`;
+    const rate = combinedInterest / 12;
+    const payment = 0 - monthylyPayment;
+    const present = 0 - debtAmount;
 
     // current time to debt free
     const timeToDebtFree = nper({
-      rate: combinedInterest,
-      per: 0,
-      pmt: -debtAmount,
-      pv: null,
-      fv: 0,
+      rate,
+      payment,
+      present,
+      type: 0,
     });
+
+    const debtFree = monthFromNow(timeToDebtFree);
+    const debtFreeMonth = debtFree.getMonth() + 1;
+    const debtFreeYear = debtFree.getFullYear();
+    const debtFreeDate = `${debtFreeMonth}/${debtFreeYear}`;
 
     return {
       debtAmount,
