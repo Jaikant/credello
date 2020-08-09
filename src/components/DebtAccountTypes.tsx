@@ -52,7 +52,7 @@ const DebtAccountTypes = React.memo((props: Props) => {
               />
             );
           })}
-        <div style={{ marginBottom: '72px' }}>
+        <div style={{ paddingBottom: '30px' }}>
           {error && (
             <Text size="14px" lh="16px" color="#941616">
               Please fill missing fields above
