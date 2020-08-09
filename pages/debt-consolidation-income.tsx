@@ -52,6 +52,7 @@ export const MonthlyIncome: CredelloFC = () => {
           name="monthlyIncome"
           value={
             monthlyIncome &&
+            monthlyIncome.match(/\d+/g) &&
             Number(monthlyIncome.match(/\d+/g).join('')).toLocaleString('us-US')
           }
           onChange={handleChange}

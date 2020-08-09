@@ -10,7 +10,7 @@ type Props = {
   mt?: string;
   ml?: string;
   lh?: string;
-  style?: string;
+  fontstyle?: string;
   center?: boolean;
   color?: string;
   underline?: boolean;
@@ -25,7 +25,7 @@ export const Text = styled.div<Props>`
   margin: 0;
   margin-bottom: ${({ mb }) => (mb ? `${mb}` : '0')};
   margin-top: ${({ mt }) => (mt ? `${mt}` : '0')};
-  font-style: ${({ style }) => (style ? `italic` : `normal`)};
+  font-style: ${({ fontstyle }) => (fontstyle ? `italic` : `normal`)};
   margin-left: ${({ ml }) => (ml ? `${ml}` : '0')};
   color: ${({ color }) => (color ? `${color}` : 'inherit')};
   text-align: ${({ center }) => (center ? `center` : 'initial')};

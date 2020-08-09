@@ -8,8 +8,6 @@ import RecTileContainer from 'components/RecommendationTileContainer';
 import OptTileContainer from 'components/OptionTileContainer';
 import { TextBold, Text } from 'components/Typography';
 import { BlueBtmBar } from 'components/BottomBar';
-
-import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -123,7 +121,7 @@ export const Recommendation: CredelloFC = () => {
           lh="20px"
           mb="15px"
           color="#fff"
-          style="italic"
+          fontstyle="italic"
         >
           How we match you to available options
         </StyledTextArrowBg>

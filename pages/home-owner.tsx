@@ -50,6 +50,7 @@ export const HomeOwner: CredelloFC = () => {
           name="homeValue"
           value={
             homeValue &&
+            homeValue.match(/\d+/g) &&
             Number(homeValue.match(/\d+/g).join('')).toLocaleString('us-US')
           }
           onChange={handleChange}
