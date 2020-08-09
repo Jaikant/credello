@@ -107,9 +107,22 @@ const StyledHeadingTextContainer = styled.div`
 `;
 const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
   const [open, setClose] = React.useState(false);
+  const [expand3, toggleExpansion3] = React.useState(false);
+  const [expand2, toggleExpansion2] = React.useState(false);
+
+  const [expand1, toggleExpansion1] = React.useState(false);
 
   const handleClick = () => {
     setClose(true);
+  };
+  const handleExpension3 = () => {
+    toggleExpansion3(!expand3);
+  };
+  const handleExpension2 = () => {
+    toggleExpansion2(!expand2);
+  };
+  const handleExpension1 = () => {
+    toggleExpansion1(!expand1);
   };
   return (
     <StyledTileContainer>
@@ -166,34 +179,36 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
-
-        <StyledExpandedContainer>
-          <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
-            <StyleTickIcon />
-            Consolidate any type of debt
-          </Text>
-          <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
-            <StyleTickIcon />
-            1-8% origination fee may apply.
-          </Text>
-        </StyledExpandedContainer>
+        {expand1 && (
+          <>
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
 
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
           <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
-          <StyleCrossIcon />
+          <StyleTickIcon />
           1-8% origination fee may apply.
         </Text>
+
         {/* <Text size="14px" lh="16px" color="#03264e" as="a" underline>
           More
         </Text> */}
-        <Link href="/">
+        <span onClick={handleExpension1}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            Less
+            {expand1 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButtonInvert
           variant="contained"
@@ -266,6 +281,19 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
+        {expand2 && (
+          <>
+            {' '}
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
           <StyleTickIcon />
           Consolidate any type of debt
@@ -274,11 +302,11 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
-        <Link href="/">
+        <span onClick={handleExpension2}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            More
+            {expand2 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
@@ -339,6 +367,20 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
+
+        {expand3 && (
+          <>
+            {' '}
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
           <StyleTickIcon />
           Consolidate any type of debt
@@ -347,11 +389,11 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
-        <Link href="/">
+        <span onClick={handleExpension3}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            More
+            {expand3 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
