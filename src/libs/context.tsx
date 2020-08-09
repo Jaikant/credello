@@ -96,6 +96,13 @@ const syncUserDebt = (state) => {
   return state.userDebts;
 };
 
+const updateDebtDetails = (state, data) => {
+  if (state.debtDetails && state.debtDetails.length > 0) {
+    state.debtDetails[data.index] = { ...data.state };
+  }
+  return state.debtDetails;
+};
+
 export const reducer = (state, action) => {
   const calculateDebtSummary = () => {
     let debtAmount = 0;
@@ -180,6 +187,12 @@ export const reducer = (state, action) => {
       const userDebts = syncUserDebt(state);
       return { ...state, userDebts };
     }
+    case 'changeCard': {
+      const debtDetails = updateDebtDetails(state, action.value);
+      const userDebts = syncUserDebt(state);
+      return { ...state, userDebts, debtDetails };
+    }
+
     case 'debtDetails': {
       const debtDetails = Object.keys(action.value).map((c) => action.value[c]);
       return { ...state, debtDetails };

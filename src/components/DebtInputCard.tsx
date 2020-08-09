@@ -66,6 +66,7 @@ const DebtInputCard = ({
   errors,
   values,
 }: DebtInputCardProps) => {
+  const context = useContext(MainContext);
   const [state, setState] = React.useState({
     debtType: card,
     balance: values && values.balance,
@@ -88,6 +89,11 @@ const DebtInputCard = ({
     setState({
       ...state,
       [property]: event.target.value,
+    });
+
+    context.dispatch({
+      type: 'changeCard',
+      value: { state: { ...state, [property]: event.target.value }, index },
     });
   };
   return (
