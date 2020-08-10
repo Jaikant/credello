@@ -1,3 +1,4 @@
+import * as React from 'react';
 import Layout from 'components/Layout';
 import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
@@ -8,7 +9,9 @@ import RecTileContainer from 'components/RecommendationTileContainer';
 import OptTileContainer from 'components/OptionTileContainer';
 import { TextBold, Text } from 'components/Typography';
 import { BlueBtmBar } from 'components/BottomBar';
-
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -17,6 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Popover } from '@material-ui/core';
 import { dcprData } from 'data';
+import Check from '../src/assets/svgs/check.svg';
 
 const StyledTextArrowBg = styled(Text)`
     background-image: url('${require('../src/assets/images/down-arrow.svg')}'); 
@@ -39,8 +43,8 @@ const BlueBtnBarOption = styled.div`
 `;
 
 const DropDown = styled(Select)`
-  width: 150px;
 
+  }
   .MuiPaper-root {
     background-color: tomato;
   }
@@ -106,6 +110,11 @@ const Wrapper = styled.div`
   }
 `;
 export const Recommendation: CredelloFC = () => {
+  const [selected, setSelected] = React.useState('');
+
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+  };
   const {
     signature: {
       op: { pl, bt },
@@ -150,18 +159,19 @@ export const Recommendation: CredelloFC = () => {
       <BlueBtmBar>
         <FormControl>
           <DropDown
-            value={10}
-            onChange={() => {
-              /**/
-            }}
+            value={selected}
+            onChange={handleChange}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
             //variant="filled"
           >
-            <MenuItem value={10}>Match Score</MenuItem>
-            <MenuItem value={20}>Est. APR Range</MenuItem>
-            <MenuItem value={30}>Monthly Payment</MenuItem>
-            <MenuItem value={40}>Debt-free Date</MenuItem>
+            <MenuItem value="">Sort By</MenuItem>
+            <MenuItem value="matchScore">
+              <ListItemText primary="Match Score" />
+            </MenuItem>
+            <MenuItem value="aprRange">Est. APR Range</MenuItem>
+            <MenuItem value="monthlyPayment">Monthly Payment</MenuItem>
+            <MenuItem value="debt-freeDate">Debt-free Date</MenuItem>
           </DropDown>
         </FormControl>
 
