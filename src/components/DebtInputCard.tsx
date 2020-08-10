@@ -66,6 +66,7 @@ const DebtInputCard = ({
   errors,
   values,
 }: DebtInputCardProps) => {
+  const context = useContext(MainContext);
   const [state, setState] = React.useState({
     debtType: card,
     balance: '',
@@ -87,6 +88,11 @@ const DebtInputCard = ({
     setState({
       ...state,
       [property]: event.target.value,
+    });
+
+    context.dispatch({
+      type: 'changeCard',
+      value: { state: { ...state, [property]: event.target.value }, index },
     });
   };
   const deptAccountTypeCount = (array, value) => {
@@ -156,6 +162,7 @@ const DebtInputCard = ({
             name={`${index}.balance`}
             value={
               state.balance &&
+              state.balance.match(/\d+/g) &&
               Number(state.balance.match(/\d+/g).join('')).toLocaleString(
                 'us-US'
               )
@@ -164,7 +171,7 @@ const DebtInputCard = ({
             margin="dense"
             inputRef={register({
               required: true,
-              // pattern: /^(0|[1-9][0-9]*)$/,
+              pattern: /^(\d*\.?\d+|\d{1,3}(,\d{3})*(\.\d+)?)$/,
             })}
             placeholder={
               errors && errors[`${index}`] && errors[`${index}`].balance
@@ -187,9 +194,11 @@ const DebtInputCard = ({
             value={state.interestRate}
             onChange={handleChange}
             margin="dense"
+            type="number"
             inputRef={register({
               required: true,
-              pattern: /^(0|[1-9][0-9]*)$/,
+              min: 0,
+              max: 99,
             })}
             placeholder={
               errors && errors[`${index}`] && errors[`${index}`].interestRate
@@ -228,13 +237,17 @@ const DebtInputCard = ({
           name={`${index}.minMonthlyPayment`}
           value={
             state.minMonthlyPayment &&
+            state.minMonthlyPayment.match(/\d+/g) &&
             Number(
               state.minMonthlyPayment.match(/\d+/g).join('')
             ).toLocaleString('us-US')
           }
           onChange={handleChange}
           margin="dense"
-          inputRef={register({ required: true })}
+          inputRef={register({
+            required: true,
+            pattern: /^(\d*\.?\d+|\d{1,3}(,\d{3})*(\.\d+)?)$/,
+          })}
           placeholder={
             errors && errors[`${index}`] && errors[`${index}`].minMonthlyPayment
               ? 'Required field'

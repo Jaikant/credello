@@ -136,7 +136,7 @@ export const Recommendation: CredelloFC = () => {
           lh="20px"
           mb="15px"
           color="#fff"
-          style="italic"
+          fontstyle="italic"
         >
           How we match you to available options
         </StyledTextArrowBg>

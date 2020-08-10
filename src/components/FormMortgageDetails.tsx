@@ -75,6 +75,7 @@ const MortgageDetails = memo((props: Props) => {
           name="outstandingMortgage"
           value={
             state.outstandingMortgage &&
+            state.outstandingMortgage.match(/\d+/g) &&
             Number(
               state.outstandingMortgage.match(/\d+/g).join('')
             ).toLocaleString('us-US')
