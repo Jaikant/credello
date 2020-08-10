@@ -69,12 +69,11 @@ const DebtInputCard = ({
   const context = useContext(MainContext);
   const [state, setState] = React.useState({
     debtType: card,
-    balance: values && values.balance,
-    cardName: values && values.cardName,
-    interestRate: values && values.interestRate,
-    minMonthlyPayment: values && values.minMonthlyPayment,
+    balance: '',
+    cardName: card && card,
+    interestRate: '',
+    minMonthlyPayment: '',
   });
-
   useEffect(() => {
     if (state.debtType != card) {
       setState({
@@ -96,6 +95,17 @@ const DebtInputCard = ({
       value: { state: { ...state, [property]: event.target.value }, index },
     });
   };
+  const deptAccountTypeCount = (array, value) => {
+    return array.filter((v) => v === value).length + 1;
+  };
+  const handleDepTypeChange = (event) => {
+    const c = deptAccountTypeCount(values, event.target.value);
+    setState({
+      ...state,
+      cardName: `${event.target.value} ${c}`,
+      debtType: event.target.value,
+    });
+  };
   return (
     <DebtCard>
       <DebtHeader>
@@ -108,7 +118,7 @@ const DebtInputCard = ({
             <NativeSelect
               id="select"
               value={state.debtType}
-              onChange={handleChange}
+              onChange={handleDepTypeChange}
               inputRef={register}
               IconComponent={ExpandMoreIcon}
               name={`${index}.debtType`}

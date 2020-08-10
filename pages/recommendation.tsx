@@ -1,13 +1,18 @@
+import * as React from 'react';
 import Layout from 'components/Layout';
 import styled from 'styled-components';
 import { CredelloFC } from 'libs/types';
 import Footer from 'components/Footer';
-import BreadCrumbs from 'components/BreadCrumbs';
+import { RecommendationBreadCrumbs } from 'components/BreadCrumbs';
 import { StyledBlueHeroBgContainer } from 'components/LayoutComponents';
 import RecTileContainer from 'components/RecommendationTileContainer';
 import OptTileContainer from 'components/OptionTileContainer';
 import { TextBold, Text } from 'components/Typography';
 import { BlueBtmBar } from 'components/BottomBar';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -15,6 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Popover } from '@material-ui/core';
 import { dcprData } from 'data';
+import Check from '../src/assets/svgs/check.svg';
 
 const StyledTextArrowBg = styled(Text)`
     background-image: url('${require('../src/assets/images/down-arrow.svg')}'); 
@@ -37,8 +43,8 @@ const BlueBtnBarOption = styled.div`
 `;
 
 const DropDown = styled(Select)`
-  width: 150px;
 
+  }
   .MuiPaper-root {
     background-color: tomato;
   }
@@ -98,23 +104,32 @@ const DropDown = styled(Select)`
     width: 200px;
   }
 `;
-
+const Wrapper = styled.div`
+  .MuiBreadcrumbs-separator {
+    color: #cccccc;
+  }
+`;
 export const Recommendation: CredelloFC = () => {
+  const [selected, setSelected] = React.useState('');
+
+  const handleChange = (event) => {
+    setSelected(event.target.value);
+  };
   const {
     signature: {
       op: { pl, bt },
+      ip: { base_match_score },
     },
   } = dcprData;
   return (
-    <div>
+    <Wrapper>
       <StyledBlueHeroBgContainer>
-        <BreadCrumbs mb="32px" color="#ccc" />
-
+        <RecommendationBreadCrumbs mb="32px" />
         <TextBold size="24px" lh="28px" mb="13px" color="#fff">
           Credello&apos;s best match for you
         </TextBold>
         <Text size="14px" lh="20px" mb="42px" color="#fff">
-          We found 2 options with Match Score more than 4
+          {`We found ${base_match_score.hel}options with Match Score more than ${base_match_score.pl}`}
         </Text>
         <StyledTextArrowBg
           size="12"
@@ -144,17 +159,19 @@ export const Recommendation: CredelloFC = () => {
       <BlueBtmBar>
         <FormControl>
           <DropDown
-            value={10}
-            onChange={() => {
-              /**/
-            }}
+            value={selected}
+            onChange={handleChange}
             displayEmpty
             inputProps={{ 'aria-label': 'Without label' }}
             //variant="filled"
           >
-            <MenuItem value={10}>Sort By</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value="">Sort By</MenuItem>
+            <MenuItem value="matchScore">
+              <ListItemText primary="Match Score" />
+            </MenuItem>
+            <MenuItem value="aprRange">Est. APR Range</MenuItem>
+            <MenuItem value="monthlyPayment">Monthly Payment</MenuItem>
+            <MenuItem value="debt-freeDate">Debt-free Date</MenuItem>
           </DropDown>
         </FormControl>
 
@@ -165,7 +182,7 @@ export const Recommendation: CredelloFC = () => {
       </BlueBtmBar>
 
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 

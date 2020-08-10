@@ -29,6 +29,25 @@ export default function CustomSeparator({ mb, color }: ComponentProps) {
     </Wrapper>
   );
 }
+export const RecommendationBreadCrumbs = ({ mb, color }: ComponentProps) => {
+  return (
+    <Wrapper mb={mb}>
+      <Breadcrumbs separator="»" aria-label="breadcrumb">
+        <Link href="/">
+          <Text size="10px" lh="16px" color={color ? color : '#cccccc'}>
+            Manage debt
+          </Text>
+        </Link>
+        <Text size="10px" lh="16px" color={color ? color : '#cccccc'}>
+          Debt consolidation options
+        </Text>
+        <Text size="10px" lh="16px" color={color ? color : '#cccccc'}>
+          Recommendations
+        </Text>
+      </Breadcrumbs>
+    </Wrapper>
+  );
+};
 
 export const CustomSeparatorPl = ({ mb, color }: ComponentProps) => {
   return (

@@ -10,9 +10,7 @@ import DebtAccountTypes from 'components/DebtAccountTypes';
 import BottomBar from 'components/BottomBar';
 import styled from 'styled-components';
 
-const Space = styled.div`
-  height: 35px;
-`;
+const Space = styled.div``;
 
 export const DebtAccounts: CredelloFC = () => {
   const context = useContext(MainContext);
@@ -33,7 +31,6 @@ export const DebtAccounts: CredelloFC = () => {
         Tells us more about your debt accounts.
       </TextBold>
       <DebtAccountTypes submitRef={submitRef} onSubmit={onSubmit} />
-      <Space />
       <BottomBar
         left="/debt-consolidation"
         submit={() => {

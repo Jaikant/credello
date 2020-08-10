@@ -15,6 +15,9 @@ const StyleMatchScorePopOver = styled.div`
   padding-right: 30px;
 `;
 
+type Props = {
+  handleClick?: (any) => void;
+};
 const StyledPopoverCloseIcon = styled.i`
   background-image: url('${require('../assets/svgs/close.svg')}'); 
   background-size: 11px;
@@ -26,7 +29,7 @@ const StyledPopoverCloseIcon = styled.i`
     height: 11px;
     background-repeat: no-repeat;
 `;
-const TileNotifictionPopover: React.FC = () => {
+const TileNotifictionPopover: React.FC<any> = ({ handleClick }: Props) => {
   return (
     <StyleMatchScorePopOver>
       <Text size="14px" color="#6c7f87" lh="20px">
@@ -34,7 +37,7 @@ const TileNotifictionPopover: React.FC = () => {
         the product matches your goals &amp; requirements
       </Text>
 
-      <StyledPopoverCloseIcon />
+      <StyledPopoverCloseIcon onClick={handleClick} />
     </StyleMatchScorePopOver>
   );
 };

@@ -39,18 +39,20 @@ const DebtAccountTypes = React.memo((props: Props) => {
     >
       <StyledFormBgWrapper>
         {appState.debtDetails &&
-          appState.debtDetails.map((c, index) => (
-            <DebtInputCard
-              key={index}
-              index={index}
-              card={c.debtType}
-              values={c}
-              register={register}
-              errors={errors}
-              {...props}
-            />
-          ))}
-        <div style={{ marginBottom: '72px' }}>
+          appState.debtDetails.map((c, index) => {
+            return (
+              <DebtInputCard
+                key={index}
+                index={index}
+                card={appState.debtDetails[index].debtType}
+                values={appState.debtDetails}
+                register={register}
+                errors={errors}
+                {...props}
+              />
+            );
+          })}
+        <div style={{ paddingBottom: '30px' }}>
           {error && (
             <Text size="14px" lh="16px" color="#941616">
               Please fill missing fields above

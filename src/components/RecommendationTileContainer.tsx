@@ -62,6 +62,16 @@ const StyleTickIcon = styled.i`
     display: inline-block;
     margin-right: 7px;
 `;
+const QuestionIcon = styled.i`
+ background: url('${require('../assets/svgs/question.svg')}');
+  background-repeat: no-repeat;
+   width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 7px;
+    margin-left:3px;
+   
+`;
 const StyleCrossIcon = styled.i`
     background: url('${require('../assets/svgs/close-tile.svg')}');
     background-repeat: no-repeat;
@@ -91,8 +101,29 @@ type RectProps = {
 };
 
 const StyledTagInfoText = styled(Text)``;
-const StyledHeadingTextContainer = styled.div``;
+const StyledHeadingTextContainer = styled.div`
+  display: flex;
+  justify-content: start;
+`;
 const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
+  const [open, setClose] = React.useState(false);
+  const [expand3, toggleExpansion3] = React.useState(false);
+  const [expand2, toggleExpansion2] = React.useState(false);
+
+  const [expand1, toggleExpansion1] = React.useState(false);
+
+  const handleClick = () => {
+    setClose(true);
+  };
+  const handleExpension3 = () => {
+    toggleExpansion3(!expand3);
+  };
+  const handleExpension2 = () => {
+    toggleExpansion2(!expand2);
+  };
+  const handleExpension1 = () => {
+    toggleExpansion1(!expand1);
+  };
   return (
     <StyledTileContainer>
       <ComTileContainer pt="18px" pb="20px">
@@ -100,6 +131,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -117,7 +149,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${pl.min_est_APR}-${pl.max_est_APR}`}
+                {`${pl.min_est_APR}-${pl.max_est_APR} %`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -128,7 +160,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -147,34 +179,36 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
-
-        <StyledExpandedContainer>
-          <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
-            <StyleTickIcon />
-            Consolidate any type of debt
-          </Text>
-          <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
-            <StyleTickIcon />
-            1-8% origination fee may apply.
-          </Text>
-        </StyledExpandedContainer>
+        {expand1 && (
+          <>
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
 
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
           <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
-          <StyleCrossIcon />
+          <StyleTickIcon />
           1-8% origination fee may apply.
         </Text>
+
         {/* <Text size="14px" lh="16px" color="#03264e" as="a" underline>
           More
         </Text> */}
-        <Link href="/">
+        <span onClick={handleExpension1}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            Less
+            {expand1 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButtonInvert
           variant="contained"
@@ -192,7 +226,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           </TextBold>
         </StyledButton>
 
-        <TileNotifictionPopover />
+        {!open && <TileNotifictionPopover handleClick={handleClick} />}
       </ComTileContainer>
 
       <ComTileContainer pt="18px" pb="20px">
@@ -200,6 +234,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -227,7 +262,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -246,17 +281,32 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
+        {expand2 && (
+          <>
+            {' '}
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+          <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+          <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
-        <Link href="/">
+        <span onClick={handleExpension2}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            More
+            {expand2 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
@@ -270,6 +320,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTitleText size="14px" mb="14px" color="#02254d">
             Your Match Score
           </StyledTitleText>
+          <QuestionIcon />
           <StyledGreenIndicatorContainer>
             <StyledGreenIndicator />
             <StyledGreenIndicator />
@@ -297,7 +348,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -316,17 +367,33 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
             </StyledTagInfoText>
           </StyledTagContainer>
         </StyledTagMainContainer>
+
+        {expand3 && (
+          <>
+            {' '}
+            <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+              <StyleTickIcon />
+              Consolidate any type of debt
+            </Text>
+            <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+              <StyleCrossIcon />
+              1-8% origination fee may apply.
+            </Text>
+          </>
+        )}
         <Text mt="21px" mb="5px" size="14px" lh="16px" color="#6c7f87">
+          <StyleTickIcon />
           Consolidate any type of debt
         </Text>
         <Text mt="5px" size="14px" lh="16px" color="#6c7f87" as="span">
+          <StyleCrossIcon />
           1-8% origination fee may apply.
         </Text>
-        <Link href="/">
+        <span onClick={handleExpension3}>
           <Text as="span" size="14px" lh="16px" color="#03264e" underline>
-            More
+            {expand3 ? 'Less' : 'More'}
           </Text>
-        </Link>
+        </span>
         <Clearall />
         <StyledButton variant="contained" bg="#15db95" width="100%" mt="22px">
           <TextBold size="14px" color="#fff">
