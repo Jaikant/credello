@@ -160,7 +160,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -262,7 +262,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
@@ -348,7 +348,7 @@ const RecTileContainer: React.FC<any> = ({ pl, bt }: RectProps) => {
           <StyledTagContainer>
             <StyledTag>
               <StyledCenterText size="15px" color="#fff">
-                {`${'$' + pl.mo_payment}`}
+                {`${'$' + Number(pl.mo_payment).toLocaleString('us-US')}`}
               </StyledCenterText>
             </StyledTag>
             <StyledTagInfoText mt="8px" size="10px" color="#6c7f87" center>
